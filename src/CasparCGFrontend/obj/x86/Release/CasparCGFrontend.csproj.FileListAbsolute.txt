@@ -1,0 +1,11 @@
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\bin\Release\casparcg_frontend.exe.config
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\bin\Release\casparcg_frontend.exe
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\CasparCGFrontend.BluefishConsumerControl.resources
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\CasparCGFrontend.ConsumerControlBase.resources
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\CasparCGFrontend.DecklinkConsumerControl.resources
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\CasparCGFrontend.ScreenConsumerControl.resources
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\CasparCGFrontend.MainForm.resources
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\CasparCGFrontend.OscClientDialog.resources
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\CasparCGFrontend.Properties.Resources.resources
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\CasparCGFrontend.csproj.GenerateResource.Cache
+C:\Users\Peter\Projects\GitHub\CasparCG\Manager\CasparCGManager\obj\x86\Release\casparcg_frontend.exe
