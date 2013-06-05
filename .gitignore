@@ -2,3 +2,8 @@
 /src/bin/
 /src/obj/
 /src/CasparCGFrontend.suo
+
+# /src/CasparCGFrontend/
+/src/CasparCGFrontend/bin/
+/src/CasparCGFrontend/obj/
+/src/CasparCGFrontend/CasparCGFrontend.suo
