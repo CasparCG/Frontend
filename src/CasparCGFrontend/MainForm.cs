@@ -473,6 +473,11 @@ namespace CasparCGFrontend
             setTextboxFilepath(templatepathTextBox);
         }
 
+        private void button14_Click(object sender, EventArgs e)
+        {
+            setTextboxFilepath(thumbnailspathTextBox);
+        }
+
         private void setTextboxFilepath(TextBox control)
         {
             using (var fd = new FolderBrowserDialog())
@@ -601,5 +606,6 @@ namespace CasparCGFrontend
                 }
             }
         }
+
     }
 }
