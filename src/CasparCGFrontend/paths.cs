@@ -45,7 +45,15 @@ namespace CasparCGFrontend
             set { this.templatePath = value; NotifyChanged("TemplatePath"); }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged = delegate {};
+        private string thumbnailsPath = "thumbnails\\";
+        [XmlElement(ElementName = "thumbnails-path")]
+        public string ThumbnailsPath
+        {
+            get { return this.thumbnailsPath; }
+            set { this.thumbnailsPath = value; NotifyChanged("ThumbnailsPath"); }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         private void NotifyChanged(String info)
         {           

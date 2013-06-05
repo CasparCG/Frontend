@@ -62,6 +62,7 @@
             System.Windows.Forms.Label label42;
             System.Windows.Forms.Label label43;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.Label thumbnailspathLabel;
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -176,6 +177,8 @@
             this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.thumbnailspathTextBox = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
             datapathLabel = new System.Windows.Forms.Label();
             logpathLabel = new System.Windows.Forms.Label();
             mediapathLabel = new System.Windows.Forms.Label();
@@ -208,6 +211,7 @@
             label41 = new System.Windows.Forms.Label();
             label42 = new System.Windows.Forms.Label();
             label43 = new System.Windows.Forms.Label();
+            thumbnailspathLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -659,7 +663,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.datapathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.datapathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.datapathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "datapath", true));
+            this.datapathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "datapath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.datapathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.datapathTextBox.Location = new System.Drawing.Point(103, 24);
             this.datapathTextBox.Name = "datapathTextBox";
@@ -672,7 +676,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.logpathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.logpathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.logpathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "logpath", true));
+            this.logpathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "logpath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.logpathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.logpathTextBox.Location = new System.Drawing.Point(103, 50);
             this.logpathTextBox.Name = "logpathTextBox";
@@ -685,12 +689,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mediapathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.mediapathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mediapathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "mediapath", true));
+            this.mediapathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "mediapath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.mediapathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.mediapathTextBox.Location = new System.Drawing.Point(103, 76);
             this.mediapathTextBox.Name = "mediapathTextBox";
             this.mediapathTextBox.Size = new System.Drawing.Size(565, 22);
             this.mediapathTextBox.TabIndex = 5;
+            // 
+            // thumbnailspathTextBox
+            // 
+            this.thumbnailspathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.thumbnailspathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.thumbnailspathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thumbnailspathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "thumbnailspath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.thumbnailspathTextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.thumbnailspathTextBox.Location = new System.Drawing.Point(103, 129);
+            this.thumbnailspathTextBox.Name = "thumbnailspathTextBox";
+            this.thumbnailspathTextBox.Size = new System.Drawing.Size(565, 22);
+            this.thumbnailspathTextBox.TabIndex = 9;
             // 
             // templatepathTextBox
             // 
@@ -1004,6 +1021,9 @@
             // 
             // panelPaths
             // 
+            this.panelPaths.Controls.Add(this.thumbnailspathTextBox);
+            this.panelPaths.Controls.Add(this.button14);
+            this.panelPaths.Controls.Add(thumbnailspathLabel);
             this.panelPaths.Controls.Add(datapathLabel);
             this.panelPaths.Controls.Add(this.templatepathTextBox);
             this.panelPaths.Controls.Add(this.button11);
@@ -1893,7 +1913,7 @@
             this.tabPageConsole.Controls.Add(this.panelConsole);
             this.tabPageConsole.Location = new System.Drawing.Point(4, 22);
             this.tabPageConsole.Name = "tabPageConsole";
-            this.tabPageConsole.Size = new System.Drawing.Size(742, 567);
+            this.tabPageConsole.Size = new System.Drawing.Size(742, 579);
             this.tabPageConsole.TabIndex = 4;
             this.tabPageConsole.Text = "Console";
             // 
@@ -1905,7 +1925,7 @@
             this.panelConsole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelConsole.Location = new System.Drawing.Point(0, 0);
             this.panelConsole.Name = "panelConsole";
-            this.panelConsole.Size = new System.Drawing.Size(742, 567);
+            this.panelConsole.Size = new System.Drawing.Size(742, 579);
             this.panelConsole.TabIndex = 31;
             // 
             // textBoxCommand
@@ -1916,7 +1936,7 @@
             this.textBoxCommand.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.textBoxCommand.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCommand.ForeColor = System.Drawing.Color.White;
-            this.textBoxCommand.Location = new System.Drawing.Point(0, 553);
+            this.textBoxCommand.Location = new System.Drawing.Point(0, 565);
             this.textBoxCommand.Name = "textBoxCommand";
             this.textBoxCommand.Size = new System.Drawing.Size(742, 11);
             this.textBoxCommand.TabIndex = 1;
@@ -1934,7 +1954,7 @@
             this.textBoxLog.Name = "textBoxLog";
             this.textBoxLog.ReadOnly = true;
             this.textBoxLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxLog.Size = new System.Drawing.Size(742, 564);
+            this.textBoxLog.Size = new System.Drawing.Size(742, 576);
             this.textBoxLog.TabIndex = 0;
             this.textBoxLog.Enter += new System.EventHandler(this.textBoxLog_Enter);
             // 
@@ -1943,7 +1963,7 @@
             this.labelSpacerBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.labelSpacerBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.labelSpacerBottom.Enabled = false;
-            this.labelSpacerBottom.Location = new System.Drawing.Point(0, 564);
+            this.labelSpacerBottom.Location = new System.Drawing.Point(0, 576);
             this.labelSpacerBottom.Name = "labelSpacerBottom";
             this.labelSpacerBottom.Size = new System.Drawing.Size(742, 3);
             this.labelSpacerBottom.TabIndex = 2;
@@ -2013,6 +2033,29 @@
             // oscBindingSource
             // 
             this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
+            // 
+            // button14
+            // 
+            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.DarkGray;
+            this.button14.Location = new System.Drawing.Point(679, 130);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(29, 20);
+            this.button14.TabIndex = 14;
+            this.button14.Text = "...";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // thumbnailspathLabel
+            // 
+            thumbnailspathLabel.AutoSize = true;
+            thumbnailspathLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            thumbnailspathLabel.Location = new System.Drawing.Point(4, 131);
+            thumbnailspathLabel.Name = "thumbnailspathLabel";
+            thumbnailspathLabel.Size = new System.Drawing.Size(92, 13);
+            thumbnailspathLabel.TabIndex = 12;
+            thumbnailspathLabel.Text = "Thumbnails Path";
             // 
             // MainForm
             // 
@@ -2193,6 +2236,8 @@
         public System.Windows.Forms.CheckBox checkBox2;
         public System.Windows.Forms.CheckBox checkBox3;
         public System.Windows.Forms.CheckBox checkBox4;
+        public System.Windows.Forms.TextBox thumbnailspathTextBox;
+        public System.Windows.Forms.Button button14;
     }
 }
 
