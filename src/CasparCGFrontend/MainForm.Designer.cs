@@ -61,8 +61,8 @@
             System.Windows.Forms.Label label41;
             System.Windows.Forms.Label label42;
             System.Windows.Forms.Label label43;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.Label thumbnailspathLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,6 +73,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.datapathTextBox = new System.Windows.Forms.TextBox();
+            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.logpathTextBox = new System.Windows.Forms.TextBox();
             this.mediapathTextBox = new System.Windows.Forms.TextBox();
             this.templatepathTextBox = new System.Windows.Forms.TextBox();
@@ -100,9 +101,12 @@
             this.labelStatus = new System.Windows.Forms.Label();
             this.tabPagePaths = new System.Windows.Forms.TabPage();
             this.panelPaths = new System.Windows.Forms.Panel();
+            this.thumbnailspathTextBox = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
             this.tabPageChannels = new System.Windows.Forms.TabPage();
             this.panelChannels = new System.Windows.Forms.Panel();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -127,6 +131,7 @@
             this.panelAdvanced = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label44 = new System.Windows.Forms.Label();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
@@ -139,10 +144,13 @@
             this.label26 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button13 = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -171,14 +179,6 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.thumbnailspathTextBox = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
             datapathLabel = new System.Windows.Forms.Label();
             logpathLabel = new System.Windows.Forms.Label();
             mediapathLabel = new System.Windows.Forms.Label();
@@ -213,6 +213,7 @@
             label43 = new System.Windows.Forms.Label();
             thumbnailspathLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -225,22 +226,21 @@
             this.panelPaths.SuspendLayout();
             this.tabPageChannels.SuspendLayout();
             this.panelChannels.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
             this.tabPageAdvanced.SuspendLayout();
             this.panelAdvanced.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.tabPageConsole.SuspendLayout();
-            this.panelConsole.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).BeginInit();
+            this.tabPageConsole.SuspendLayout();
+            this.panelConsole.SuspendLayout();
             this.SuspendLayout();
             // 
             // datapathLabel
@@ -564,6 +564,16 @@
             label43.TabIndex = 47;
             label43.Text = "Generate Delay";
             // 
+            // thumbnailspathLabel
+            // 
+            thumbnailspathLabel.AutoSize = true;
+            thumbnailspathLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            thumbnailspathLabel.Location = new System.Drawing.Point(4, 131);
+            thumbnailspathLabel.Name = "thumbnailspathLabel";
+            thumbnailspathLabel.Size = new System.Drawing.Size(92, 13);
+            thumbnailspathLabel.TabIndex = 12;
+            thumbnailspathLabel.Text = "Thumbnails Path";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -670,6 +680,10 @@
             this.datapathTextBox.Size = new System.Drawing.Size(565, 22);
             this.datapathTextBox.TabIndex = 1;
             // 
+            // pathsBindingSource
+            // 
+            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
+            // 
             // logpathTextBox
             // 
             this.logpathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -695,19 +709,6 @@
             this.mediapathTextBox.Name = "mediapathTextBox";
             this.mediapathTextBox.Size = new System.Drawing.Size(565, 22);
             this.mediapathTextBox.TabIndex = 5;
-            // 
-            // thumbnailspathTextBox
-            // 
-            this.thumbnailspathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.thumbnailspathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.thumbnailspathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thumbnailspathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "thumbnailspath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.thumbnailspathTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.thumbnailspathTextBox.Location = new System.Drawing.Point(103, 129);
-            this.thumbnailspathTextBox.Name = "thumbnailspathTextBox";
-            this.thumbnailspathTextBox.Size = new System.Drawing.Size(565, 22);
-            this.thumbnailspathTextBox.TabIndex = 9;
             // 
             // templatepathTextBox
             // 
@@ -1042,6 +1043,32 @@
             this.panelPaths.Size = new System.Drawing.Size(736, 573);
             this.panelPaths.TabIndex = 0;
             // 
+            // thumbnailspathTextBox
+            // 
+            this.thumbnailspathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.thumbnailspathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.thumbnailspathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thumbnailspathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "thumbnailspath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.thumbnailspathTextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.thumbnailspathTextBox.Location = new System.Drawing.Point(103, 129);
+            this.thumbnailspathTextBox.Name = "thumbnailspathTextBox";
+            this.thumbnailspathTextBox.Size = new System.Drawing.Size(565, 22);
+            this.thumbnailspathTextBox.TabIndex = 9;
+            // 
+            // button14
+            // 
+            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.DarkGray;
+            this.button14.Location = new System.Drawing.Point(679, 130);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(29, 20);
+            this.button14.TabIndex = 14;
+            this.button14.Text = "...";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // tabPageChannels
             // 
             this.tabPageChannels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1099,6 +1126,10 @@
             this.comboBox5.Size = new System.Drawing.Size(140, 21);
             this.comboBox5.TabIndex = 40;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // channelBindingSource
+            // 
+            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
             // 
             // label1
             // 
@@ -1467,6 +1498,10 @@
             this.comboBox9.Size = new System.Drawing.Size(121, 21);
             this.comboBox9.TabIndex = 50;
             // 
+            // thumbnailBindingSource
+            // 
+            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
+            // 
             // label44
             // 
             this.label44.AutoSize = true;
@@ -1652,6 +1687,10 @@
             this.comboBox6.TabIndex = 30;
             this.comboBox6.Visible = false;
             // 
+            // configurationBindingSource
+            // 
+            this.configurationBindingSource.DataSource = typeof(CasparCGFrontend.configuration);
+            // 
             // button13
             // 
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1699,6 +1738,10 @@
             this.comboBox7.Size = new System.Drawing.Size(121, 21);
             this.comboBox7.TabIndex = 28;
             // 
+            // flashBindingSource
+            // 
+            this.flashBindingSource.DataSource = typeof(CasparCGFrontend.Flash);
+            // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1711,6 +1754,10 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 3;
+            // 
+            // oscBindingSource
+            // 
+            this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
             // 
             // comboBox8
             // 
@@ -2010,53 +2057,6 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
-            // pathsBindingSource
-            // 
-            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
-            // 
-            // channelBindingSource
-            // 
-            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
-            // 
-            // thumbnailBindingSource
-            // 
-            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
-            // 
-            // configurationBindingSource
-            // 
-            this.configurationBindingSource.DataSource = typeof(CasparCGFrontend.configuration);
-            // 
-            // flashBindingSource
-            // 
-            this.flashBindingSource.DataSource = typeof(CasparCGFrontend.Flash);
-            // 
-            // oscBindingSource
-            // 
-            this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
-            // 
-            // button14
-            // 
-            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.DarkGray;
-            this.button14.Location = new System.Drawing.Point(679, 130);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(29, 20);
-            this.button14.TabIndex = 14;
-            this.button14.Text = "...";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // thumbnailspathLabel
-            // 
-            thumbnailspathLabel.AutoSize = true;
-            thumbnailspathLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            thumbnailspathLabel.Location = new System.Drawing.Point(4, 131);
-            thumbnailspathLabel.Name = "thumbnailspathLabel";
-            thumbnailspathLabel.Size = new System.Drawing.Size(92, 13);
-            thumbnailspathLabel.TabIndex = 12;
-            thumbnailspathLabel.Text = "Thumbnails Path";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2070,6 +2070,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(940, 662);
@@ -2081,6 +2082,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2096,25 +2098,24 @@
             this.tabPageChannels.ResumeLayout(false);
             this.panelChannels.ResumeLayout(false);
             this.panelChannels.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
             this.tabPageAdvanced.ResumeLayout(false);
             this.panelAdvanced.ResumeLayout(false);
             this.panelAdvanced.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.tabPageConsole.ResumeLayout(false);
-            this.panelConsole.ResumeLayout(false);
-            this.panelConsole.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).EndInit();
+            this.tabPageConsole.ResumeLayout(false);
+            this.panelConsole.ResumeLayout(false);
+            this.panelConsole.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

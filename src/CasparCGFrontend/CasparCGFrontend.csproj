@@ -50,6 +50,9 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CasparCG.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -196,6 +199,7 @@
     <EmbeddedResource Include="Resources\CasparCG_10_128x128x32.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CasparCG.ico" />
     <Content Include="configdoc.txt" />
     <None Include="Resources\Log.png" />
     <None Include="Resources\Disconnection.png" />
