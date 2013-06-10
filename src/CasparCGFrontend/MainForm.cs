@@ -218,7 +218,6 @@ namespace CasparCGFrontend
                     this.statusLabel.Text = "Ready";
 
                     this.buttonRestart.Enabled = true;
-                    this.buttonRestart.Text = "Restart";
                     this.buttonChannelGrid.Enabled = true;
                     this.buttonDiag.Enabled = true;
                     this.buttonThumbnails.Enabled = true;
@@ -233,8 +232,7 @@ namespace CasparCGFrontend
                     this.statusLabel.Text = "";
                     this.labelUptime.Text = "";
 
-                    this.buttonRestart.Enabled = true;
-                    this.buttonRestart.Text = "Start";
+                    this.buttonRestart.Enabled = false;
                     this.buttonChannelGrid.Enabled = false;
                     this.buttonDiag.Enabled = false;
                     this.buttonThumbnails.Enabled = false;
@@ -566,7 +564,8 @@ namespace CasparCGFrontend
         {
             if (e.KeyCode == Keys.Return)
             {
-                ExecuteCommand();
+                if (!this.textBoxCommand.Text.Equals("exit") && !this.textBoxCommand.Text.Equals("q") && !this.textBoxCommand.Text.Equals("quit") && !this.textBoxCommand.Text.Equals("bye"))
+                    ExecuteCommand();
 
                 this.textBoxCommand.Clear();
             }
