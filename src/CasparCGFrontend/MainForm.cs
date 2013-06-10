@@ -152,27 +152,30 @@ namespace CasparCGFrontend
             }
             else
             {
-                if (e.Data.Contains("Starting CasparCG"))
-                    this.ServerVersion = LogParser.ParseServerVersion(e.Data);
-                else if (e.Data.Contains("FreeImage"))
-                    this.FreeImageVersion = LogParser.ParseComponentVersion(e.Data);
-                else if (e.Data.Contains("FFMPEG-avcodec"))
-                    this.FFmpegAVCodecVersion = LogParser.ParseComponentVersion(e.Data);
-                else if (e.Data.Contains("FFMPEG-avformat"))
-                    this.FFmpegAVFormatVersion = LogParser.ParseComponentVersion(e.Data);
-                else if (e.Data.Contains("FFMPEG-avfilter"))
-                    this.FFmpegAVFilterVersion = LogParser.ParseComponentVersion(e.Data);
-                else if (e.Data.Contains("FFMPEG-avutil"))
-                    this.FFmpegAVUtilVersion = LogParser.ParseComponentVersion(e.Data);
-                else if (e.Data.Contains("FFMPEG-swscale"))
-                    this.FFmpegSWScaleVersion = LogParser.ParseComponentVersion(e.Data);
-                else if (e.Data.Contains("Flash"))
-                    this.FlashVersion = LogParser.ParseComponentVersion(e.Data);
-                else if (e.Data.Contains("Template-Host"))
-                    this.TemplatehostVersion = LogParser.ParseComponentVersion(e.Data);
+                if (e.Data != null)
+                {
+                    if (e.Data.Contains("Starting CasparCG"))
+                        this.ServerVersion = LogParser.ParseServerVersion(e.Data);
+                    else if (e.Data.Contains("FreeImage"))
+                        this.FreeImageVersion = LogParser.ParseComponentVersion(e.Data);
+                    else if (e.Data.Contains("FFMPEG-avcodec"))
+                        this.FFmpegAVCodecVersion = LogParser.ParseComponentVersion(e.Data);
+                    else if (e.Data.Contains("FFMPEG-avformat"))
+                        this.FFmpegAVFormatVersion = LogParser.ParseComponentVersion(e.Data);
+                    else if (e.Data.Contains("FFMPEG-avfilter"))
+                        this.FFmpegAVFilterVersion = LogParser.ParseComponentVersion(e.Data);
+                    else if (e.Data.Contains("FFMPEG-avutil"))
+                        this.FFmpegAVUtilVersion = LogParser.ParseComponentVersion(e.Data);
+                    else if (e.Data.Contains("FFMPEG-swscale"))
+                        this.FFmpegSWScaleVersion = LogParser.ParseComponentVersion(e.Data);
+                    else if (e.Data.Contains("Flash"))
+                        this.FlashVersion = LogParser.ParseComponentVersion(e.Data);
+                    else if (e.Data.Contains("Template-Host"))
+                        this.TemplatehostVersion = LogParser.ParseComponentVersion(e.Data);
 
-                this.textBoxLog.AppendText(e.Data + "\r\n");
-                Interop.ScrollToBottom(this.textBoxLog);
+                    this.textBoxLog.AppendText(e.Data + "\r\n");
+                    Interop.ScrollToBottom(this.textBoxLog);
+                }
             }
         }
 
@@ -215,6 +218,7 @@ namespace CasparCGFrontend
                     this.statusLabel.Text = "Ready";
 
                     this.buttonRestart.Enabled = true;
+                    this.buttonRestart.Text = "Restart";
                     this.buttonChannelGrid.Enabled = true;
                     this.buttonDiag.Enabled = true;
                     this.buttonThumbnails.Enabled = true;
@@ -229,7 +233,8 @@ namespace CasparCGFrontend
                     this.statusLabel.Text = "";
                     this.labelUptime.Text = "";
 
-                    this.buttonRestart.Enabled = false;
+                    this.buttonRestart.Enabled = true;
+                    this.buttonRestart.Text = "Start";
                     this.buttonChannelGrid.Enabled = false;
                     this.buttonDiag.Enabled = false;
                     this.buttonThumbnails.Enabled = false;
@@ -545,7 +550,11 @@ namespace CasparCGFrontend
 
         private void ExecuteCommand()
         {
-            this.process.StandardInput.Write(string.Format("{0}\r\n", this.textBoxCommand.Text));
+            try
+            {
+                this.process.StandardInput.Write(string.Format("{0}\r\n", this.textBoxCommand.Text));
+            }
+            catch (Exception ex) { }
         }
 
         private void textBoxLog_Enter(object sender, EventArgs e)
