@@ -566,7 +566,8 @@ namespace CasparCGFrontend
         {
             if (e.KeyCode == Keys.Return)
             {
-                ExecuteCommand();
+                if (!this.textBoxCommand.Text.Equals("exit") && !this.textBoxCommand.Text.Equals("q") && !this.textBoxCommand.Text.Equals("quit") && !this.textBoxCommand.Text.Equals("bye"))
+                    ExecuteCommand();
 
                 this.textBoxCommand.Clear();
             }
