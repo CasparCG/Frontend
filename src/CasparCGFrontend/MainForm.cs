@@ -52,6 +52,17 @@ namespace CasparCGFrontend
             this.Text += " " + Settings.Default.Version;
 
             this.tabControl.SelectedTab = this.tabPageStatus;
+
+            this.InitializeMacros();
+        }
+
+        private void InitializeMacros()
+        {
+            textBoxMacro1.Text = Settings.Default.Macro1;
+            textBoxMacro2.Text = Settings.Default.Macro2;
+            textBoxMacro3.Text = Settings.Default.Macro3;
+            textBoxMacro4.Text = Settings.Default.Macro4;
+            textBoxMacro5.Text = Settings.Default.Macro5;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -78,6 +89,7 @@ namespace CasparCGFrontend
             this.panelChannels.Dock = DockStyle.Fill;
             this.panelAdvanced.Dock = DockStyle.Fill;
             this.panelConsole.Dock = DockStyle.Fill;
+            this.panelMacro.Dock = DockStyle.Fill;
         }
 
         private bool ProcessExists(string name)
@@ -521,6 +533,11 @@ namespace CasparCGFrontend
             this.textBoxCommand.Focus();
         }
 
+        private void buttonMacro_Click(object sender, EventArgs e)
+        {
+            this.tabControl.SelectedTab = this.tabPageMacro;
+        }
+
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -617,5 +634,97 @@ namespace CasparCGFrontend
             }
         }
 
+        private void ExecuteCommand(string sMultilineText)
+        {
+            string[] allLines = sMultilineText.Replace("\r", "").Split('\n');
+            foreach (string text in allLines)
+            {
+                try
+                {
+                    if (string.IsNullOrEmpty(text))
+                        System.Threading.Thread.Sleep(40);
+                    else
+                        this.process.StandardInput.Write(string.Format("{0}\r\n", text));
+                }
+                catch (Exception ex) { }
+            }
+        }
+
+        private void buttonMacro1_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(textBoxMacro1.Text);
+        }
+
+        private void buttonMacro2_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(textBoxMacro2.Text);
+        }
+
+        private void buttonMacro3_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(textBoxMacro3.Text);
+        }
+
+        private void buttonMacro4_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(textBoxMacro4.Text);
+        }
+
+        private void buttonMacro5_Click(object sender, EventArgs e)
+        {
+            ExecuteCommand(textBoxMacro5.Text);
+        }
+
+        private void buttonMacroSave_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Macro1 = textBoxMacro1.Text;
+            Settings.Default.Macro2 = textBoxMacro2.Text;
+            Settings.Default.Macro3 = textBoxMacro3.Text;
+            Settings.Default.Macro4 = textBoxMacro4.Text;
+            Settings.Default.Macro5 = textBoxMacro5.Text;
+            Settings.Default.Save();
+        }
+
+        private void buttonMacroRestore_Click(object sender, EventArgs e)
+        {
+            this.InitializeMacros();
+        }
+
+        private void buttonMacroReset_Click(object sender, EventArgs e)
+        {
+            textBoxMacro1.Text = "";
+            textBoxMacro2.Text = "";
+            textBoxMacro3.Text = "";
+            textBoxMacro4.Text = "";
+            textBoxMacro5.Text = "";
+        }
+
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                ExecuteCommand(textBoxMacro1.Text);
+            }
+            else
+            if (e.KeyCode == Keys.F2)
+            {
+                ExecuteCommand(textBoxMacro2.Text);
+            }
+            else
+            if (e.KeyCode == Keys.F3)
+            {
+                ExecuteCommand(textBoxMacro3.Text);
+            }
+            else
+            if (e.KeyCode == Keys.F4)
+            {
+                ExecuteCommand(textBoxMacro4.Text);
+            }
+            else
+            if (e.KeyCode == Keys.F5)
+            {
+                ExecuteCommand(textBoxMacro5.Text);
+            }
+        }
     }
 }

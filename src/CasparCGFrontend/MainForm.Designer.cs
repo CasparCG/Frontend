@@ -62,6 +62,11 @@
             System.Windows.Forms.Label label42;
             System.Windows.Forms.Label label43;
             System.Windows.Forms.Label thumbnailspathLabel;
+            System.Windows.Forms.Label label48;
+            System.Windows.Forms.Label label47;
+            System.Windows.Forms.Label label46;
+            System.Windows.Forms.Label label31;
+            System.Windows.Forms.Label label45;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +78,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.datapathTextBox = new System.Windows.Forms.TextBox();
-            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.logpathTextBox = new System.Windows.Forms.TextBox();
             this.mediapathTextBox = new System.Windows.Forms.TextBox();
             this.templatepathTextBox = new System.Windows.Forms.TextBox();
@@ -84,6 +88,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.buttonMacro = new System.Windows.Forms.Button();
             this.buttonConsole = new System.Windows.Forms.Button();
             this.labelSeparatorRight = new System.Windows.Forms.Label();
             this.buttonStatus = new System.Windows.Forms.Button();
@@ -106,7 +111,6 @@
             this.tabPageChannels = new System.Windows.Forms.TabPage();
             this.panelChannels = new System.Windows.Forms.Panel();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -131,7 +135,6 @@
             this.panelAdvanced = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label44 = new System.Windows.Forms.Label();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
@@ -144,13 +147,10 @@
             this.label26 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button13 = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -173,12 +173,33 @@
             this.textBoxCommand = new System.Windows.Forms.TextBox();
             this.textBoxLog = new System.Windows.Forms.TextBox();
             this.labelSpacerBottom = new System.Windows.Forms.Label();
+            this.tabPageMacro = new System.Windows.Forms.TabPage();
+            this.panelMacro = new System.Windows.Forms.Panel();
+            this.buttonMacro5 = new System.Windows.Forms.Button();
+            this.textBoxMacro5 = new System.Windows.Forms.TextBox();
+            this.buttonMacro4 = new System.Windows.Forms.Button();
+            this.textBoxMacro4 = new System.Windows.Forms.TextBox();
+            this.buttonMacro3 = new System.Windows.Forms.Button();
+            this.textBoxMacro3 = new System.Windows.Forms.TextBox();
+            this.buttonMacro2 = new System.Windows.Forms.Button();
+            this.textBoxMacro2 = new System.Windows.Forms.TextBox();
+            this.buttonMacro1 = new System.Windows.Forms.Button();
+            this.textBoxMacro1 = new System.Windows.Forms.TextBox();
             this.labelSeparatorTop = new System.Windows.Forms.Label();
             this.labelSeparatorBottom = new System.Windows.Forms.Label();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.buttonMacroRestore = new System.Windows.Forms.Button();
+            this.buttonMacroReset = new System.Windows.Forms.Button();
+            this.buttonMacroSave = new System.Windows.Forms.Button();
+            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
             datapathLabel = new System.Windows.Forms.Label();
             logpathLabel = new System.Windows.Forms.Label();
             mediapathLabel = new System.Windows.Forms.Label();
@@ -212,8 +233,12 @@
             label42 = new System.Windows.Forms.Label();
             label43 = new System.Windows.Forms.Label();
             thumbnailspathLabel = new System.Windows.Forms.Label();
+            label48 = new System.Windows.Forms.Label();
+            label47 = new System.Windows.Forms.Label();
+            label46 = new System.Windows.Forms.Label();
+            label31 = new System.Windows.Forms.Label();
+            label45 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -226,21 +251,24 @@
             this.panelPaths.SuspendLayout();
             this.tabPageChannels.SuspendLayout();
             this.panelChannels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
             this.tabPageAdvanced.SuspendLayout();
             this.panelAdvanced.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPageConsole.SuspendLayout();
+            this.panelConsole.SuspendLayout();
+            this.tabPageMacro.SuspendLayout();
+            this.panelMacro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).BeginInit();
-            this.tabPageConsole.SuspendLayout();
-            this.panelConsole.SuspendLayout();
             this.SuspendLayout();
             // 
             // datapathLabel
@@ -574,6 +602,56 @@
             thumbnailspathLabel.TabIndex = 12;
             thumbnailspathLabel.Text = "Thumbnails Path";
             // 
+            // label48
+            // 
+            label48.AutoSize = true;
+            label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label48.Location = new System.Drawing.Point(39, 441);
+            label48.Name = "label48";
+            label48.Size = new System.Drawing.Size(45, 13);
+            label48.TabIndex = 18;
+            label48.Text = "Macro5";
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label47.Location = new System.Drawing.Point(39, 338);
+            label47.Name = "label47";
+            label47.Size = new System.Drawing.Size(45, 13);
+            label47.TabIndex = 15;
+            label47.Text = "Macro4";
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label46.Location = new System.Drawing.Point(39, 232);
+            label46.Name = "label46";
+            label46.Size = new System.Drawing.Size(45, 13);
+            label46.TabIndex = 12;
+            label46.Text = "Macro3";
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label31.Location = new System.Drawing.Point(39, 129);
+            label31.Name = "label31";
+            label31.Size = new System.Drawing.Size(45, 13);
+            label31.TabIndex = 9;
+            label31.Text = "Macro2";
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label45.Location = new System.Drawing.Point(39, 26);
+            label45.Name = "label45";
+            label45.Size = new System.Drawing.Size(45, 13);
+            label45.TabIndex = 0;
+            label45.Text = "Macro1";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -679,10 +757,6 @@
             this.datapathTextBox.Name = "datapathTextBox";
             this.datapathTextBox.Size = new System.Drawing.Size(565, 22);
             this.datapathTextBox.TabIndex = 1;
-            // 
-            // pathsBindingSource
-            // 
-            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
             // 
             // logpathTextBox
             // 
@@ -804,6 +878,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.splitContainer1.Panel1.Controls.Add(this.buttonMacro);
             this.splitContainer1.Panel1.Controls.Add(this.buttonConsole);
             this.splitContainer1.Panel1.Controls.Add(this.labelSeparatorRight);
             this.splitContainer1.Panel1.Controls.Add(this.buttonStatus);
@@ -820,13 +895,28 @@
             this.splitContainer1.SplitterDistance = 177;
             this.splitContainer1.TabIndex = 7;
             // 
+            // buttonMacro
+            // 
+            this.buttonMacro.FlatAppearance.BorderSize = 0;
+            this.buttonMacro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMacro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.buttonMacro.Image = global::CasparCGFrontend.Properties.Resources.Macro;
+            this.buttonMacro.Location = new System.Drawing.Point(51, 284);
+            this.buttonMacro.Name = "buttonMacro";
+            this.buttonMacro.Size = new System.Drawing.Size(75, 57);
+            this.buttonMacro.TabIndex = 10;
+            this.buttonMacro.Text = "Macro";
+            this.buttonMacro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonMacro.UseVisualStyleBackColor = true;
+            this.buttonMacro.Click += new System.EventHandler(this.buttonMacro_Click);
+            // 
             // buttonConsole
             // 
             this.buttonConsole.FlatAppearance.BorderSize = 0;
             this.buttonConsole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.buttonConsole.Image = global::CasparCGFrontend.Properties.Resources.Log;
-            this.buttonConsole.Location = new System.Drawing.Point(50, 292);
+            this.buttonConsole.Location = new System.Drawing.Point(50, 346);
             this.buttonConsole.Name = "buttonConsole";
             this.buttonConsole.Size = new System.Drawing.Size(75, 57);
             this.buttonConsole.TabIndex = 8;
@@ -877,6 +967,7 @@
             this.tabControl.Controls.Add(this.tabPageChannels);
             this.tabControl.Controls.Add(this.tabPageAdvanced);
             this.tabControl.Controls.Add(this.tabPageConsole);
+            this.tabControl.Controls.Add(this.tabPageMacro);
             this.tabControl.Location = new System.Drawing.Point(-3, -24);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -1126,10 +1217,6 @@
             this.comboBox5.Size = new System.Drawing.Size(140, 21);
             this.comboBox5.TabIndex = 40;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // channelBindingSource
-            // 
-            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
             // 
             // label1
             // 
@@ -1498,10 +1585,6 @@
             this.comboBox9.Size = new System.Drawing.Size(121, 21);
             this.comboBox9.TabIndex = 50;
             // 
-            // thumbnailBindingSource
-            // 
-            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
-            // 
             // label44
             // 
             this.label44.AutoSize = true;
@@ -1687,10 +1770,6 @@
             this.comboBox6.TabIndex = 30;
             this.comboBox6.Visible = false;
             // 
-            // configurationBindingSource
-            // 
-            this.configurationBindingSource.DataSource = typeof(CasparCGFrontend.configuration);
-            // 
             // button13
             // 
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1738,10 +1817,6 @@
             this.comboBox7.Size = new System.Drawing.Size(121, 21);
             this.comboBox7.TabIndex = 28;
             // 
-            // flashBindingSource
-            // 
-            this.flashBindingSource.DataSource = typeof(CasparCGFrontend.Flash);
-            // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1754,10 +1829,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 3;
-            // 
-            // oscBindingSource
-            // 
-            this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
             // 
             // comboBox8
             // 
@@ -2015,6 +2086,182 @@
             this.labelSpacerBottom.Size = new System.Drawing.Size(742, 3);
             this.labelSpacerBottom.TabIndex = 2;
             // 
+            // tabPageMacro
+            // 
+            this.tabPageMacro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPageMacro.Controls.Add(this.panelMacro);
+            this.tabPageMacro.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMacro.Name = "tabPageMacro";
+            this.tabPageMacro.Size = new System.Drawing.Size(742, 579);
+            this.tabPageMacro.TabIndex = 5;
+            this.tabPageMacro.Text = "Macro";
+            // 
+            // panelMacro
+            // 
+            this.panelMacro.Controls.Add(this.buttonMacroRestore);
+            this.panelMacro.Controls.Add(this.buttonMacroReset);
+            this.panelMacro.Controls.Add(this.buttonMacroSave);
+            this.panelMacro.Controls.Add(label48);
+            this.panelMacro.Controls.Add(this.buttonMacro5);
+            this.panelMacro.Controls.Add(this.textBoxMacro5);
+            this.panelMacro.Controls.Add(label47);
+            this.panelMacro.Controls.Add(this.buttonMacro4);
+            this.panelMacro.Controls.Add(this.textBoxMacro4);
+            this.panelMacro.Controls.Add(label46);
+            this.panelMacro.Controls.Add(this.buttonMacro3);
+            this.panelMacro.Controls.Add(this.textBoxMacro3);
+            this.panelMacro.Controls.Add(label31);
+            this.panelMacro.Controls.Add(this.buttonMacro2);
+            this.panelMacro.Controls.Add(this.textBoxMacro2);
+            this.panelMacro.Controls.Add(label45);
+            this.panelMacro.Controls.Add(this.buttonMacro1);
+            this.panelMacro.Controls.Add(this.textBoxMacro1);
+            this.panelMacro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMacro.Location = new System.Drawing.Point(0, 0);
+            this.panelMacro.Name = "panelMacro";
+            this.panelMacro.Size = new System.Drawing.Size(742, 579);
+            this.panelMacro.TabIndex = 2;
+            // 
+            // buttonMacro5
+            // 
+            this.buttonMacro5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMacro5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMacro5.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonMacro5.Location = new System.Drawing.Point(685, 440);
+            this.buttonMacro5.Name = "buttonMacro5";
+            this.buttonMacro5.Size = new System.Drawing.Size(29, 20);
+            this.buttonMacro5.TabIndex = 20;
+            this.buttonMacro5.Text = "F5";
+            this.buttonMacro5.UseVisualStyleBackColor = true;
+            this.buttonMacro5.Click += new System.EventHandler(this.buttonMacro5_Click);
+            // 
+            // textBoxMacro5
+            // 
+            this.textBoxMacro5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMacro5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBoxMacro5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMacro5.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBoxMacro5.Location = new System.Drawing.Point(103, 439);
+            this.textBoxMacro5.Multiline = true;
+            this.textBoxMacro5.Name = "textBoxMacro5";
+            this.textBoxMacro5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxMacro5.Size = new System.Drawing.Size(571, 87);
+            this.textBoxMacro5.TabIndex = 19;
+            this.textBoxMacro5.Text = "call 1-1 audio 1";
+            // 
+            // buttonMacro4
+            // 
+            this.buttonMacro4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMacro4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMacro4.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonMacro4.Location = new System.Drawing.Point(685, 337);
+            this.buttonMacro4.Name = "buttonMacro4";
+            this.buttonMacro4.Size = new System.Drawing.Size(29, 20);
+            this.buttonMacro4.TabIndex = 17;
+            this.buttonMacro4.Text = "F4";
+            this.buttonMacro4.UseVisualStyleBackColor = true;
+            this.buttonMacro4.Click += new System.EventHandler(this.buttonMacro4_Click);
+            // 
+            // textBoxMacro4
+            // 
+            this.textBoxMacro4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMacro4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBoxMacro4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMacro4.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBoxMacro4.Location = new System.Drawing.Point(103, 336);
+            this.textBoxMacro4.Multiline = true;
+            this.textBoxMacro4.Name = "textBoxMacro4";
+            this.textBoxMacro4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxMacro4.Size = new System.Drawing.Size(571, 87);
+            this.textBoxMacro4.TabIndex = 16;
+            this.textBoxMacro4.Text = "call 1-1 audio 2";
+            // 
+            // buttonMacro3
+            // 
+            this.buttonMacro3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMacro3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMacro3.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonMacro3.Location = new System.Drawing.Point(685, 231);
+            this.buttonMacro3.Name = "buttonMacro3";
+            this.buttonMacro3.Size = new System.Drawing.Size(29, 20);
+            this.buttonMacro3.TabIndex = 14;
+            this.buttonMacro3.Text = "F3";
+            this.buttonMacro3.UseVisualStyleBackColor = true;
+            this.buttonMacro3.Click += new System.EventHandler(this.buttonMacro3_Click);
+            // 
+            // textBoxMacro3
+            // 
+            this.textBoxMacro3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMacro3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBoxMacro3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMacro3.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBoxMacro3.Location = new System.Drawing.Point(103, 230);
+            this.textBoxMacro3.Multiline = true;
+            this.textBoxMacro3.Name = "textBoxMacro3";
+            this.textBoxMacro3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxMacro3.Size = new System.Drawing.Size(571, 87);
+            this.textBoxMacro3.TabIndex = 13;
+            this.textBoxMacro3.Text = "play 3-1 bones";
+            // 
+            // buttonMacro2
+            // 
+            this.buttonMacro2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMacro2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMacro2.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonMacro2.Location = new System.Drawing.Point(685, 128);
+            this.buttonMacro2.Name = "buttonMacro2";
+            this.buttonMacro2.Size = new System.Drawing.Size(29, 20);
+            this.buttonMacro2.TabIndex = 11;
+            this.buttonMacro2.Text = "F2";
+            this.buttonMacro2.UseVisualStyleBackColor = true;
+            this.buttonMacro2.Click += new System.EventHandler(this.buttonMacro2_Click);
+            // 
+            // textBoxMacro2
+            // 
+            this.textBoxMacro2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMacro2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBoxMacro2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMacro2.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBoxMacro2.Location = new System.Drawing.Point(103, 127);
+            this.textBoxMacro2.Multiline = true;
+            this.textBoxMacro2.Name = "textBoxMacro2";
+            this.textBoxMacro2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxMacro2.Size = new System.Drawing.Size(571, 87);
+            this.textBoxMacro2.TabIndex = 10;
+            this.textBoxMacro2.Text = "play 2-1 cartier";
+            // 
+            // buttonMacro1
+            // 
+            this.buttonMacro1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMacro1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonMacro1.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonMacro1.Location = new System.Drawing.Point(685, 25);
+            this.buttonMacro1.Name = "buttonMacro1";
+            this.buttonMacro1.Size = new System.Drawing.Size(29, 20);
+            this.buttonMacro1.TabIndex = 8;
+            this.buttonMacro1.Text = "F1";
+            this.buttonMacro1.UseVisualStyleBackColor = true;
+            this.buttonMacro1.Click += new System.EventHandler(this.buttonMacro1_Click);
+            // 
+            // textBoxMacro1
+            // 
+            this.textBoxMacro1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMacro1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBoxMacro1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxMacro1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBoxMacro1.Location = new System.Drawing.Point(103, 24);
+            this.textBoxMacro1.Multiline = true;
+            this.textBoxMacro1.Name = "textBoxMacro1";
+            this.textBoxMacro1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxMacro1.Size = new System.Drawing.Size(571, 87);
+            this.textBoxMacro1.TabIndex = 1;
+            this.textBoxMacro1.Text = "play 1-1 EARL";
+            // 
             // labelSeparatorTop
             // 
             this.labelSeparatorTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
@@ -2057,6 +2304,69 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
+            // buttonMacroRestore
+            // 
+            this.buttonMacroRestore.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonMacroRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMacroRestore.ForeColor = System.Drawing.Color.White;
+            this.buttonMacroRestore.Location = new System.Drawing.Point(465, 541);
+            this.buttonMacroRestore.Name = "buttonMacroRestore";
+            this.buttonMacroRestore.Size = new System.Drawing.Size(146, 23);
+            this.buttonMacroRestore.TabIndex = 43;
+            this.buttonMacroRestore.Text = "Restore Macros";
+            this.buttonMacroRestore.UseVisualStyleBackColor = true;
+            this.buttonMacroRestore.Click += new System.EventHandler(this.buttonMacroRestore_Click);
+            // 
+            // buttonMacroReset
+            // 
+            this.buttonMacroReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonMacroReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMacroReset.ForeColor = System.Drawing.Color.White;
+            this.buttonMacroReset.Location = new System.Drawing.Point(298, 541);
+            this.buttonMacroReset.Name = "buttonMacroReset";
+            this.buttonMacroReset.Size = new System.Drawing.Size(146, 23);
+            this.buttonMacroReset.TabIndex = 42;
+            this.buttonMacroReset.Text = "Reset Macros";
+            this.buttonMacroReset.UseVisualStyleBackColor = true;
+            this.buttonMacroReset.Click += new System.EventHandler(this.buttonMacroReset_Click);
+            // 
+            // buttonMacroSave
+            // 
+            this.buttonMacroSave.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonMacroSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMacroSave.ForeColor = System.Drawing.Color.White;
+            this.buttonMacroSave.Location = new System.Drawing.Point(131, 541);
+            this.buttonMacroSave.Name = "buttonMacroSave";
+            this.buttonMacroSave.Size = new System.Drawing.Size(146, 23);
+            this.buttonMacroSave.TabIndex = 41;
+            this.buttonMacroSave.Text = "Save Macros";
+            this.buttonMacroSave.UseVisualStyleBackColor = true;
+            this.buttonMacroSave.Click += new System.EventHandler(this.buttonMacroSave_Click);
+            // 
+            // pathsBindingSource
+            // 
+            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
+            // 
+            // channelBindingSource
+            // 
+            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
+            // 
+            // thumbnailBindingSource
+            // 
+            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
+            // 
+            // configurationBindingSource
+            // 
+            this.configurationBindingSource.DataSource = typeof(CasparCGFrontend.configuration);
+            // 
+            // flashBindingSource
+            // 
+            this.flashBindingSource.DataSource = typeof(CasparCGFrontend.Flash);
+            // 
+            // oscBindingSource
+            // 
+            this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2071,6 +2381,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(940, 662);
@@ -2080,9 +2391,9 @@
             this.Text = "CasparCG Frontend";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2098,24 +2409,28 @@
             this.tabPageChannels.ResumeLayout(false);
             this.panelChannels.ResumeLayout(false);
             this.panelChannels.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
             this.tabPageAdvanced.ResumeLayout(false);
             this.panelAdvanced.ResumeLayout(false);
             this.panelAdvanced.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).EndInit();
             this.tabPageConsole.ResumeLayout(false);
             this.panelConsole.ResumeLayout(false);
             this.panelConsole.PerformLayout();
+            this.tabPageMacro.ResumeLayout(false);
+            this.panelMacro.ResumeLayout(false);
+            this.panelMacro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2239,6 +2554,22 @@
         public System.Windows.Forms.CheckBox checkBox4;
         public System.Windows.Forms.TextBox thumbnailspathTextBox;
         public System.Windows.Forms.Button button14;
+        private System.Windows.Forms.TabPage tabPageMacro;
+        private System.Windows.Forms.Button buttonMacro;
+        private System.Windows.Forms.Panel panelMacro;
+        public System.Windows.Forms.Button buttonMacro5;
+        public System.Windows.Forms.TextBox textBoxMacro5;
+        public System.Windows.Forms.Button buttonMacro4;
+        public System.Windows.Forms.TextBox textBoxMacro4;
+        public System.Windows.Forms.Button buttonMacro3;
+        public System.Windows.Forms.TextBox textBoxMacro3;
+        public System.Windows.Forms.Button buttonMacro2;
+        public System.Windows.Forms.TextBox textBoxMacro2;
+        public System.Windows.Forms.Button buttonMacro1;
+        public System.Windows.Forms.TextBox textBoxMacro1;
+        private System.Windows.Forms.Button buttonMacroRestore;
+        private System.Windows.Forms.Button buttonMacroReset;
+        private System.Windows.Forms.Button buttonMacroSave;
     }
 }
 
