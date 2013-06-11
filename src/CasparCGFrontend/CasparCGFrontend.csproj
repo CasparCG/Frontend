@@ -201,6 +201,7 @@
   <ItemGroup>
     <Content Include="CasparCG.ico" />
     <Content Include="configdoc.txt" />
+    <None Include="Resources\Macro.png" />
     <None Include="Resources\Log.png" />
     <None Include="Resources\Disconnection.png" />
     <None Include="Resources\Status.png" />
