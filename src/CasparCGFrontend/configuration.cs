@@ -130,11 +130,20 @@ namespace CasparCGFrontend
                 defaultDecklinkIDs.ForEach(id => availableDecklinkIDs.Add(id));
                 foreach (Channel ch in this.Channels)
                 {
-                    foreach (AbstractConsumer cs in ch.Consumers)
+                    BindingList<AbstractConsumer> consumers = ch.Consumers;
+
+                    if (consumers.Count > 0 && consumers[0] is SynchronizingConsumer)
+                        consumers = (consumers[0] as SynchronizingConsumer).Consumers;
+
+                    foreach (AbstractConsumer cs in consumers)
                     {
                         if (cs.GetType() == typeof(DecklinkConsumer))
                         {
                             availableDecklinkIDs.Remove(((DecklinkConsumer)cs).Device);
+                        }
+                        else if (cs.GetType() == typeof(BlockingDecklinkConsumer))
+                        {
+                            availableDecklinkIDs.Remove(((BlockingDecklinkConsumer)cs).Device);
                         }
                     }
                 }
@@ -152,7 +161,12 @@ namespace CasparCGFrontend
                 defaultBluefishIDs.ForEach(id => availableBluefishIDs.Add(id));
                 foreach (Channel ch in this.Channels)
                 {
-                    foreach (AbstractConsumer cs in ch.Consumers)
+                    BindingList<AbstractConsumer> consumers = ch.Consumers;
+
+                    if (consumers.Count > 0 && consumers[0] is SynchronizingConsumer)
+                        consumers = (consumers[0] as SynchronizingConsumer).Consumers;
+
+                    foreach (AbstractConsumer cs in consumers)
                     {
                         if (cs.GetType() == typeof(BluefishConsumer))
                         {

@@ -105,6 +105,8 @@
             this.button14 = new System.Windows.Forms.Button();
             this.tabPageChannels = new System.Windows.Forms.TabPage();
             this.panelChannels = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button15 = new System.Windows.Forms.Button();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -1081,6 +1083,8 @@
             // 
             // panelChannels
             // 
+            this.panelChannels.Controls.Add(this.checkBox1);
+            this.panelChannels.Controls.Add(this.button15);
             this.panelChannels.Controls.Add(this.comboBox5);
             this.panelChannels.Controls.Add(this.label1);
             this.panelChannels.Controls.Add(this.button2);
@@ -1107,6 +1111,29 @@
             this.panelChannels.Name = "panelChannels";
             this.panelChannels.Size = new System.Drawing.Size(742, 579);
             this.panelChannels.TabIndex = 8;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(299, 363);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(223, 17);
+            this.checkBox1.TabIndex = 42;
+            this.checkBox1.Text = "Synchronize Consumers (experimental)";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // button15
+            // 
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.Location = new System.Drawing.Point(299, 334);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(128, 23);
+            this.button15.TabIndex = 41;
+            this.button15.Text = "Add Syn&c Decklink";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // comboBox5
             // 
@@ -2239,6 +2266,8 @@
         public System.Windows.Forms.CheckBox checkBox4;
         public System.Windows.Forms.TextBox thumbnailspathTextBox;
         public System.Windows.Forms.Button button14;
+        public System.Windows.Forms.Button button15;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

@@ -20,6 +20,7 @@ namespace CasparCGFrontend
 {
     public partial class MainForm : Form
     {
+        private bool ignoreEvents = false;
         private int dueTime = 3;
         private Process process;
         private AbstractConsumer lastConsumer;
@@ -332,6 +333,11 @@ namespace CasparCGFrontend
                         this.consumerEditorControl = new BluefishConsumerControl(listBox2.SelectedItem as BluefishConsumer,config.AvailableBluefishIDs);
                         this.panelOutput.Controls.Add(consumerEditorControl);
                     }
+                    else if (listBox2.SelectedItem.GetType() == typeof(BlockingDecklinkConsumer))
+                    {
+                        this.consumerEditorControl = new BlockingDecklinkConsumerControl(listBox2.SelectedItem as BlockingDecklinkConsumer, config.AvailableDecklinkIDs);
+                        this.panelOutput.Controls.Add(consumerEditorControl);
+                    }
                 }
             }
             lastConsumer = (AbstractConsumer)listBox2.SelectedItem;
@@ -349,7 +355,10 @@ namespace CasparCGFrontend
                 this.button7.Enabled = true;
                 this.button1.Enabled = true;
                 this.button2.Enabled = true;
-                this.listBox2.DataSource = ((Channel)listBox1.SelectedItem).Consumers;
+                ignoreEvents = true;
+                this.checkBox1.Checked = false;
+                ignoreEvents = false;
+                this.listBox2.DataSource = getConsumerList();
                 this.comboBox1.SelectedItem = ((Channel)listBox1.SelectedItem).VideoMode;
                 this.comboBox5.SelectedItem = ((Channel)listBox1.SelectedItem).ChannelLayout;
             }
@@ -363,6 +372,7 @@ namespace CasparCGFrontend
                 this.button7.Enabled = false;
                 this.button1.Enabled = false;
                 this.button2.Enabled = false;
+                this.checkBox1.Checked = false;
                 this.listBox2.DataSource = null;
                 this.comboBox1.SelectedItem = null;
             }
@@ -382,6 +392,13 @@ namespace CasparCGFrontend
         private void button4_Click(object sender, EventArgs e)
         {
             (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new DecklinkConsumer(config.AvailableDecklinkIDs));
+
+            RefreshConsumerPanel();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new BlockingDecklinkConsumer(config.AvailableDecklinkIDs));
 
             RefreshConsumerPanel();
         }
@@ -409,9 +426,32 @@ namespace CasparCGFrontend
         private void button7_Click(object sender, EventArgs e)
         {
             if (listBox2.SelectedItems.Count > 0)            
-                (listBox1.SelectedItem as Channel).Consumers.Remove(listBox2.SelectedItem as AbstractConsumer);
+                getConsumerList().Remove(listBox2.SelectedItem as AbstractConsumer);
             
             this.RefreshConsumerPanel();
+        }
+
+        private BindingList<AbstractConsumer> getConsumerList()
+        {
+            if (checkBox1.Checked)
+            {
+                return ((listBox1.SelectedItem as Channel).Consumers[0] as SynchronizingConsumer).Consumers;
+            }
+            else
+            {
+                var consumers = (listBox1.SelectedItem as Channel).Consumers;
+
+                if (consumers.Count > 0 && consumers[0] is SynchronizingConsumer)
+                {
+                    ignoreEvents = true;
+                    checkBox1.Checked = true;
+                    ignoreEvents = false;
+
+                    return getConsumerList();
+                }
+
+                return consumers;
+            }
         }
 
         private void showXMLToolStripMenuItem_Click(object sender, EventArgs e)
@@ -612,6 +652,35 @@ namespace CasparCGFrontend
                         ((PredefinedClient)listBox4.SelectedItem).Port = dialog.GetPort();
                     }
                 }
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ignoreEvents)
+                return;
+
+            BindingList<AbstractConsumer> consumers;
+            if (checkBox1.Checked)
+            {
+                consumers = (listBox1.SelectedItem as Channel).Consumers;
+                SynchronizingConsumer synchronizing = new SynchronizingConsumer();
+
+                foreach (AbstractConsumer consumer in consumers)
+                    synchronizing.Consumers.Add(consumer);
+
+                consumers.Clear();
+                consumers.Add(synchronizing);
+            }
+            else
+            {
+                consumers = ((listBox1.SelectedItem as Channel).Consumers[0] as SynchronizingConsumer).Consumers;
+                var destination = (listBox1.SelectedItem as Channel).Consumers;
+
+                foreach (AbstractConsumer consumer in consumers)
+                    destination.Add(consumer);
+
+                destination.RemoveAt(0);
             }
         }
 

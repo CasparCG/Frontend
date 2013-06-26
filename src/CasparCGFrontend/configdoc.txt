@@ -43,6 +43,12 @@
                 <auto-deinterlace>true [true|false]</auto-deinterlace>
                 <vsync>fasle [true|false]</vsync>
             </screen>
+            <blocking-decklink>
+                <device>[1..]</device>
+                <embedded-audio>false [true|false]</embedded-audio>
+                <keyer>external [external|internal|default]</keyer>
+                <key-only>false [true|false]</key-only>
+            </blocking-decklink>
         </consumers>
     </channel>
 </channels>

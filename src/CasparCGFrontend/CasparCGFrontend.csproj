@@ -83,6 +83,14 @@
     <Compile Include="Consumers\ConsumerControlBase.designer.cs">
       <DependentUpon>ConsumerControlBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consumers\BlockingDecklinkConsumer.cs" />
+    <Compile Include="Consumers\BlockingDecklinkConsumerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consumers\BlockingDecklinkConsumerControl.designer.cs">
+      <DependentUpon>BlockingDecklinkConsumerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumers\SynchronizingConsumer.cs" />
     <Compile Include="Consumers\DecklinkConsumer.cs" />
     <Compile Include="Consumers\DecklinkConsumerControl.cs">
       <SubType>UserControl</SubType>
@@ -126,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consumers\ConsumerControlBase.resx">
       <DependentUpon>ConsumerControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumers\BlockingDecklinkConsumerControl.resx">
+      <DependentUpon>BlockingDecklinkConsumerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consumers\DecklinkConsumerControl.resx">
       <DependentUpon>DecklinkConsumerControl.cs</DependentUpon>
