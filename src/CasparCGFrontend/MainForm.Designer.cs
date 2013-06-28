@@ -1327,14 +1327,14 @@
             "1080p2997",
             "1080p3000",
             "1080p5000",
-            "2k2398",
-            "2k2400",
-            "2k2500",
-            "4k2398",
-            "4k2400",
-            "4k2500",
-            "4k2997",
-            "4k3000"});
+            "1556p2398",
+            "1556p2400",
+            "1556p2500",
+            "2160p2398",
+            "2160p2400",
+            "2160p2500",
+            "2160p2997",
+            "2160p3000"});
             this.comboBox1.Location = new System.Drawing.Point(153, 55);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(140, 21);
@@ -1512,14 +1512,14 @@
             "1080p2997",
             "1080p3000",
             "1080p5000",
-            "2k2398",
-            "2k2400",
-            "2k2500",
-            "4k2398",
-            "4k2400",
-            "4k2500",
-            "4k2997",
-            "4k3000"});
+            "1556p2398",
+            "1556p2400",
+            "1556p2500",
+            "2160p2398",
+            "2160p2400",
+            "2160p2500",
+            "2160p2997",
+            "2160p3000"});
             this.comboBox9.Location = new System.Drawing.Point(508, 176);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(121, 21);
