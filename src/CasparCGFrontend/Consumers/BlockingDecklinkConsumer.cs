@@ -61,7 +61,7 @@ namespace CasparCGFrontend
 
         public override String ToString()
         {
-            return "New Decklink";
+            return "Sync Decklink";
         }
 
         public override event PropertyChangedEventHandler PropertyChanged = delegate { };
