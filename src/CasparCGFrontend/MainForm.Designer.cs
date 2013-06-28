@@ -181,6 +181,7 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             datapathLabel = new System.Windows.Forms.Label();
             logpathLabel = new System.Windows.Forms.Label();
             mediapathLabel = new System.Windows.Forms.Label();
@@ -1083,6 +1084,7 @@
             // 
             // panelChannels
             // 
+            this.panelChannels.Controls.Add(this.checkBox6);
             this.panelChannels.Controls.Add(this.checkBox1);
             this.panelChannels.Controls.Add(this.button15);
             this.panelChannels.Controls.Add(this.comboBox5);
@@ -2084,6 +2086,17 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(153, 123);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(122, 17);
+            this.checkBox6.TabIndex = 43;
+            this.checkBox6.Text = "Use Straight Alpha";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2268,6 +2281,7 @@
         public System.Windows.Forms.Button button14;
         public System.Windows.Forms.Button button15;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox6;
     }
 }
 

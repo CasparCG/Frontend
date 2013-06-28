@@ -35,6 +35,14 @@ namespace CasparCGFrontend
             set { this.channelLayout = value; NotifyChanged("ChannelLayout"); }
         }
 
+        private Boolean straightAlphaOutput = false;
+        [XmlElement(ElementName = "straight-alpha-output")]
+        public Boolean StraightAlphaOutput
+        {
+            get { return this.straightAlphaOutput; }
+            set { this.straightAlphaOutput = value; NotifyChanged("StraightAlphaOutput"); }
+        }
+
         private BindingList<AbstractConsumer> consumers = new BindingList<AbstractConsumer>();
         [XmlArray("consumers")]
         [XmlArrayItem("decklink", Type = typeof(DecklinkConsumer))]

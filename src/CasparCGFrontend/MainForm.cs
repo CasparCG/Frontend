@@ -361,6 +361,7 @@ namespace CasparCGFrontend
                 this.listBox2.DataSource = getConsumerList();
                 this.comboBox1.SelectedItem = ((Channel)listBox1.SelectedItem).VideoMode;
                 this.comboBox5.SelectedItem = ((Channel)listBox1.SelectedItem).ChannelLayout;
+                this.checkBox6.Checked = ((Channel)listBox1.SelectedItem).StraightAlphaOutput;
             }
             else
             {
@@ -375,6 +376,7 @@ namespace CasparCGFrontend
                 this.checkBox1.Checked = false;
                 this.listBox2.DataSource = null;
                 this.comboBox1.SelectedItem = null;
+                this.checkBox6.Checked = false;
             }
         }
 
@@ -682,6 +684,12 @@ namespace CasparCGFrontend
 
                 destination.RemoveAt(0);
             }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null)
+                (listBox1.SelectedItem as Channel).StraightAlphaOutput = checkBox6.Checked;
         }
 
     }
