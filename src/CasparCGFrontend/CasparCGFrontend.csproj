@@ -107,6 +107,7 @@
     </Compile>
     <Compile Include="Consumers\SystemaudioConsumer.cs" />
     <Compile Include="Audio.cs" />
+    <Compile Include="Mixer.cs" />
     <Compile Include="PredefinedClient.cs" />
     <Compile Include="Osc.cs" />
     <Compile Include="OscClientDialog.cs">
@@ -163,12 +164,14 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\BlockingDecklinkConsumer.datasource" />
     <None Include="Properties\DataSources\BluefishConsumer.datasource" />
     <None Include="Properties\DataSources\Channel.datasource" />
     <None Include="Properties\DataSources\configuration.datasource" />
     <None Include="Properties\DataSources\configuration1.datasource" />
     <None Include="Properties\DataSources\DecklinkConsumer.datasource" />
     <None Include="Properties\DataSources\Flash.datasource" />
+    <None Include="Properties\DataSources\Mixer.datasource" />
     <None Include="Properties\DataSources\Osc.datasource" />
     <None Include="Properties\DataSources\Paths.datasource" />
     <None Include="Properties\DataSources\PredefinedClient.datasource" />

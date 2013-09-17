@@ -118,13 +118,22 @@ namespace CasparCGFrontend
 
         private void StopServer()
         {
-            this.TimeTimer.Dispose();
-            this.StatusTimer.Dispose();
+            if (this.TimeTimer != null)
+                this.TimeTimer.Dispose();
+            
+            if (this.StatusTimer != null)
+                this.StatusTimer.Dispose();
 
-            this.process.OutputDataReceived -= new DataReceivedEventHandler(OnProcessOutputData);
+            if (this.process != null)
+            {
+                this.process.OutputDataReceived -= new DataReceivedEventHandler(OnProcessOutputData);
 
-            this.process.StandardInput.Write("KILL\r\n");
-            this.process.WaitForExit();
+                if (this.process.IsRunning())
+                {
+                    this.process.StandardInput.Write("KILL\r\n");
+                    this.process.WaitForExit();
+                }
+            }
         }
 
         private void CheckStatus(object state)
@@ -245,6 +254,7 @@ namespace CasparCGFrontend
         {
             this.pathsBindingSource.DataSource = this.config.Paths;
             this.flashBindingSource.DataSource = this.config.Flash;
+            this.mixerBindingSource.DataSource = this.config.Mixer;
             this.oscBindingSource.DataSource = this.config.Osc;
             this.thumbnailBindingSource.DataSource = this.config.Thumbnails;
             this.configurationBindingSource.DataSource = this.config;
@@ -458,6 +468,8 @@ namespace CasparCGFrontend
 
         private void showXMLToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Unfocus current control, so that data binding update is performed.
+            this.tabControl.SelectedTab.Focus();
             this.SerializeConfig();
         }
 
@@ -690,6 +702,19 @@ namespace CasparCGFrontend
         {
             if (comboBox1.SelectedItem != null)
                 (listBox1.SelectedItem as Channel).StraightAlphaOutput = checkBox6.Checked;
+
+            checkStraightAlphaInconsistency();
+        }
+
+        private void checkStraightAlphaInconsistency()
+        {
+            labelStraightAlphaNote.Visible = checkBox6.Checked && !config.Mixer.StraightAlpha;
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.tabControl.SelectedTab == this.tabPageChannels)
+                checkStraightAlphaInconsistency();
         }
 
     }

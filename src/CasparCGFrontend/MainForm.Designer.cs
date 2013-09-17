@@ -63,6 +63,8 @@
             System.Windows.Forms.Label label43;
             System.Windows.Forms.Label thumbnailspathLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            System.Windows.Forms.Label label31;
+            System.Windows.Forms.Label label45;
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,7 +75,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.datapathTextBox = new System.Windows.Forms.TextBox();
-            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.logpathTextBox = new System.Windows.Forms.TextBox();
             this.mediapathTextBox = new System.Windows.Forms.TextBox();
             this.templatepathTextBox = new System.Windows.Forms.TextBox();
@@ -105,10 +106,10 @@
             this.button14 = new System.Windows.Forms.Button();
             this.tabPageChannels = new System.Windows.Forms.TabPage();
             this.panelChannels = new System.Windows.Forms.Panel();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button15 = new System.Windows.Forms.Button();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -133,7 +134,6 @@
             this.panelAdvanced = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label44 = new System.Windows.Forms.Label();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
@@ -146,13 +146,10 @@
             this.label26 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button13 = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -181,7 +178,16 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.labelStraightAlphaNote = new System.Windows.Forms.Label();
+            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mixerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
             datapathLabel = new System.Windows.Forms.Label();
             logpathLabel = new System.Windows.Forms.Label();
             mediapathLabel = new System.Windows.Forms.Label();
@@ -215,8 +221,9 @@
             label42 = new System.Windows.Forms.Label();
             label43 = new System.Windows.Forms.Label();
             thumbnailspathLabel = new System.Windows.Forms.Label();
+            label31 = new System.Windows.Forms.Label();
+            label45 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -229,21 +236,23 @@
             this.panelPaths.SuspendLayout();
             this.tabPageChannels.SuspendLayout();
             this.panelChannels.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
             this.tabPageAdvanced.SuspendLayout();
             this.panelAdvanced.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPageConsole.SuspendLayout();
+            this.panelConsole.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).BeginInit();
-            this.tabPageConsole.SuspendLayout();
-            this.panelConsole.SuspendLayout();
             this.SuspendLayout();
             // 
             // datapathLabel
@@ -430,7 +439,7 @@
             // 
             label28.AutoSize = true;
             label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label28.Location = new System.Drawing.Point(262, 102);
+            label28.Location = new System.Drawing.Point(439, 101);
             label28.Name = "label28";
             label28.Size = new System.Drawing.Size(61, 13);
             label28.TabIndex = 29;
@@ -451,7 +460,7 @@
             // 
             label30.AutoSize = true;
             label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label30.Location = new System.Drawing.Point(220, 72);
+            label30.Location = new System.Drawing.Point(396, 72);
             label30.Name = "label30";
             label30.Size = new System.Drawing.Size(104, 13);
             label30.TabIndex = 27;
@@ -471,11 +480,11 @@
             // 
             label33.AutoSize = true;
             label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label33.Location = new System.Drawing.Point(76, 72);
+            label33.Location = new System.Drawing.Point(29, 72);
             label33.Name = "label33";
-            label33.Size = new System.Drawing.Size(75, 13);
+            label33.Size = new System.Drawing.Size(120, 13);
             label33.TabIndex = 21;
-            label33.Text = "Blend Modes";
+            label33.Text = "Blend Modes Support";
             // 
             // label34
             // 
@@ -491,7 +500,7 @@
             // 
             label35.AutoSize = true;
             label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label35.Location = new System.Drawing.Point(269, 42);
+            label35.Location = new System.Drawing.Point(446, 42);
             label35.Name = "label35";
             label35.Size = new System.Drawing.Size(54, 13);
             label35.TabIndex = 25;
@@ -682,10 +691,6 @@
             this.datapathTextBox.Name = "datapathTextBox";
             this.datapathTextBox.Size = new System.Drawing.Size(565, 22);
             this.datapathTextBox.TabIndex = 1;
-            // 
-            // pathsBindingSource
-            // 
-            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
             // 
             // logpathTextBox
             // 
@@ -885,6 +890,7 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(750, 605);
             this.tabControl.TabIndex = 38;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
             // tabPageStatus
             // 
@@ -1084,6 +1090,7 @@
             // 
             // panelChannels
             // 
+            this.panelChannels.Controls.Add(this.labelStraightAlphaNote);
             this.panelChannels.Controls.Add(this.checkBox6);
             this.panelChannels.Controls.Add(this.checkBox1);
             this.panelChannels.Controls.Add(this.button15);
@@ -1113,6 +1120,17 @@
             this.panelChannels.Name = "panelChannels";
             this.panelChannels.Size = new System.Drawing.Size(742, 579);
             this.panelChannels.TabIndex = 8;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(153, 123);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(122, 17);
+            this.checkBox6.TabIndex = 43;
+            this.checkBox6.Text = "Use Straight Alpha";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -1155,10 +1173,6 @@
             this.comboBox5.Size = new System.Drawing.Size(140, 21);
             this.comboBox5.TabIndex = 40;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // channelBindingSource
-            // 
-            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
             // 
             // label1
             // 
@@ -1449,6 +1463,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBox8);
+            this.panel1.Controls.Add(label45);
+            this.panel1.Controls.Add(this.checkBox7);
+            this.panel1.Controls.Add(label31);
             this.panel1.Controls.Add(this.comboBox9);
             this.panel1.Controls.Add(this.label44);
             this.panel1.Controls.Add(this.numericUpDown5);
@@ -1526,10 +1544,6 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(121, 21);
             this.comboBox9.TabIndex = 50;
-            // 
-            // thumbnailBindingSource
-            // 
-            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
             // 
             // label44
             // 
@@ -1710,15 +1724,11 @@
             "auto",
             "gpu",
             "cpu"});
-            this.comboBox6.Location = new System.Drawing.Point(331, 99);
+            this.comboBox6.Location = new System.Drawing.Point(508, 98);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 21);
             this.comboBox6.TabIndex = 30;
             this.comboBox6.Visible = false;
-            // 
-            // configurationBindingSource
-            // 
-            this.configurationBindingSource.DataSource = typeof(CasparCGFrontend.configuration);
             // 
             // button13
             // 
@@ -1762,14 +1772,10 @@
             "8",
             "9",
             "10"});
-            this.comboBox7.Location = new System.Drawing.Point(331, 69);
+            this.comboBox7.Location = new System.Drawing.Point(508, 69);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(121, 21);
             this.comboBox7.TabIndex = 28;
-            // 
-            // flashBindingSource
-            // 
-            this.flashBindingSource.DataSource = typeof(CasparCGFrontend.Flash);
             // 
             // textBox2
             // 
@@ -1784,10 +1790,6 @@
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 3;
             // 
-            // oscBindingSource
-            // 
-            this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
-            // 
             // comboBox8
             // 
             this.comboBox8.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.configurationBindingSource, "loglevel", true));
@@ -1799,10 +1801,10 @@
             "info",
             "warning",
             "error"});
-            this.comboBox8.Location = new System.Drawing.Point(331, 39);
+            this.comboBox8.Location = new System.Drawing.Point(508, 39);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(121, 21);
-            this.comboBox8.TabIndex = 26;
+            this.comboBox8.TabIndex = 27;
             // 
             // checkBox2
             // 
@@ -1815,7 +1817,7 @@
             // 
             // checkBox3
             // 
-            this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.configurationBindingSource, "blendmodes", true));
+            this.checkBox3.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "blendmodes", true));
             this.checkBox3.Location = new System.Drawing.Point(157, 67);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(25, 24);
@@ -1967,7 +1969,7 @@
             // 
             // blendmodesCheckBox
             // 
-            this.blendmodesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.configurationBindingSource, "blendmodes", true));
+            this.blendmodesCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "blendmodes", true));
             this.blendmodesCheckBox.Location = new System.Drawing.Point(132, 89);
             this.blendmodesCheckBox.Name = "blendmodesCheckBox";
             this.blendmodesCheckBox.Size = new System.Drawing.Size(104, 24);
@@ -2086,16 +2088,81 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
-            // checkBox6
+            // label31
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(153, 123);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(122, 17);
-            this.checkBox6.TabIndex = 43;
-            this.checkBox6.Text = "Use Straight Alpha";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            label31.AutoSize = true;
+            label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label31.Location = new System.Drawing.Point(197, 42);
+            label31.Name = "label31";
+            label31.Size = new System.Drawing.Size(126, 13);
+            label31.TabIndex = 51;
+            label31.Text = "Straight Alpha Support";
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "StraightAlpha", true));
+            this.checkBox7.Location = new System.Drawing.Point(329, 37);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(25, 24);
+            this.checkBox7.TabIndex = 25;
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "ChromaKey", true));
+            this.checkBox8.Location = new System.Drawing.Point(329, 67);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(25, 24);
+            this.checkBox8.TabIndex = 26;
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label45.Location = new System.Drawing.Point(211, 72);
+            label45.Name = "label45";
+            label45.Size = new System.Drawing.Size(112, 13);
+            label45.TabIndex = 53;
+            label45.Text = "Chroma Key Support";
+            // 
+            // labelStraightAlphaNote
+            // 
+            this.labelStraightAlphaNote.Location = new System.Drawing.Point(152, 143);
+            this.labelStraightAlphaNote.Name = "labelStraightAlphaNote";
+            this.labelStraightAlphaNote.Size = new System.Drawing.Size(140, 83);
+            this.labelStraightAlphaNote.TabIndex = 44;
+            this.labelStraightAlphaNote.Text = "Warning: Without checking Straight Alpha Support under Advanced, this setting wil" +
+    "l be uneffective";
+            this.labelStraightAlphaNote.Visible = false;
+            // 
+            // pathsBindingSource
+            // 
+            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
+            // 
+            // channelBindingSource
+            // 
+            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
+            // 
+            // mixerBindingSource
+            // 
+            this.mixerBindingSource.DataSource = typeof(CasparCGFrontend.Mixer);
+            // 
+            // thumbnailBindingSource
+            // 
+            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
+            // 
+            // configurationBindingSource
+            // 
+            this.configurationBindingSource.DataSource = typeof(CasparCGFrontend.configuration);
+            // 
+            // flashBindingSource
+            // 
+            this.flashBindingSource.DataSource = typeof(CasparCGFrontend.Flash);
+            // 
+            // oscBindingSource
+            // 
+            this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
             // 
             // MainForm
             // 
@@ -2122,7 +2189,6 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2138,24 +2204,26 @@
             this.tabPageChannels.ResumeLayout(false);
             this.panelChannels.ResumeLayout(false);
             this.panelChannels.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
             this.tabPageAdvanced.ResumeLayout(false);
             this.panelAdvanced.ResumeLayout(false);
             this.panelAdvanced.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).EndInit();
             this.tabPageConsole.ResumeLayout(false);
             this.panelConsole.ResumeLayout(false);
             this.panelConsole.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2168,6 +2236,7 @@
         private System.Windows.Forms.BindingSource channelBindingSource;
         private System.Windows.Forms.BindingSource configurationBindingSource;
         private System.Windows.Forms.BindingSource flashBindingSource;
+        private System.Windows.Forms.BindingSource mixerBindingSource;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Button buttonPaths;
         private System.Windows.Forms.Button buttonChannels;
@@ -2282,6 +2351,9 @@
         public System.Windows.Forms.Button button15;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox6;
+        public System.Windows.Forms.CheckBox checkBox8;
+        public System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.Label labelStraightAlphaNote;
     }
 }
 

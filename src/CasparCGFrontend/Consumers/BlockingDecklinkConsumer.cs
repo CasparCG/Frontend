@@ -59,6 +59,14 @@ namespace CasparCGFrontend
             set { this.keyonly = value; NotifyChanged("KeyOnly"); }
         }
 
+        private Boolean customAllocator = true;
+        [XmlElement(ElementName = "custom-allocator")]
+        public Boolean CustomAllocator
+        {
+            get { return this.customAllocator; }
+            set { this.customAllocator = value; NotifyChanged("CustomAllocator"); }
+        }
+
         public override String ToString()
         {
             return "Sync Decklink";

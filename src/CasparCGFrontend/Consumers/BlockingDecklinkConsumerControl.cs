@@ -18,12 +18,12 @@ namespace CasparCGFrontend
             ar.Add(consumer.Device);
             ar.Sort();
             comboBox4.Items.AddRange(ar.ToArray());
-            decklinkConsumerBindingSource.DataSource = consumer;
+            blockingDecklinkConsumerBindingSource.DataSource = consumer;
         }
 
         ~BlockingDecklinkConsumerControl()
         {
-            decklinkConsumerBindingSource.Dispose();
+            blockingDecklinkConsumerBindingSource.Dispose();
         }
     }
 }

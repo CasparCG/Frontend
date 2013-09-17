@@ -75,6 +75,14 @@ namespace CasparCGFrontend
             set { this.bufferdepth = value; NotifyChanged("BufferDepth"); }
         }
 
+        private Boolean customAllocator = true;
+        [XmlElement(ElementName = "custom-allocator")]
+        public Boolean CustomAllocator
+        {
+            get { return this.customAllocator; }
+            set { this.customAllocator = value; NotifyChanged("CustomAllocator"); }
+        }
+
         public override String ToString()
         {
             return "Decklink";

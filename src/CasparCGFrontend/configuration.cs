@@ -43,12 +43,12 @@ namespace CasparCGFrontend
             set { this.channelGrid = value; NotifyChanged("ChannelGrid"); }
         }
 
-        private Boolean blendModes = true;
-        [XmlElement(ElementName = "blend-modes")]
-        public Boolean BlendModes
+        private Mixer mixer = new Mixer();
+        [XmlElement(ElementName = "mixer")]
+        public Mixer Mixer
         {
-            get { return this.blendModes; }
-            set { this.blendModes = value; NotifyChanged("BlendModes"); }
+            get { return this.mixer; }
+            set { this.mixer = value; NotifyChanged("Mixer"); }
         }
 
         /*

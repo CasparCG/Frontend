@@ -36,6 +36,7 @@
             System.Windows.Forms.Label keyonlyLabel;
             System.Windows.Forms.Label latencyLabel;
             System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
             this.decklinkConsumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.embeddedaudioCheckBox = new System.Windows.Forms.CheckBox();
             this.keyonlyCheckBox = new System.Windows.Forms.CheckBox();
@@ -45,6 +46,7 @@
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.availableIDsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             bufferdepthLabel = new System.Windows.Forms.Label();
             deviceLabel = new System.Windows.Forms.Label();
             embeddedaudioLabel = new System.Windows.Forms.Label();
@@ -52,6 +54,7 @@
             keyonlyLabel = new System.Windows.Forms.Label();
             latencyLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.decklinkConsumerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.availableIDsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -125,6 +128,16 @@
             label1.Size = new System.Drawing.Size(87, 13);
             label1.TabIndex = 17;
             label1.Text = "Channel Layout";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label2.Location = new System.Drawing.Point(4, 204);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(95, 13);
+            label2.TabIndex = 20;
+            label2.Text = "Custom Allocator";
             // 
             // decklinkConsumerBindingSource
             // 
@@ -230,11 +243,22 @@
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 18;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.decklinkConsumerBindingSource, "CustomAllocator", true));
+            this.checkBox1.Location = new System.Drawing.Point(105, 199);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(104, 24);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // DecklinkConsumerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(label2);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(label1);
             this.Controls.Add(this.comboBox4);
@@ -269,5 +293,6 @@
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.BindingSource availableIDsBindingSource;
         private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

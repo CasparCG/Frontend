@@ -21,6 +21,10 @@ namespace CasparCGFrontend
             {
                 return false;
             }
+            catch (InvalidOperationException)
+            {
+                return false;
+            }
             return true;
         }
     }
