@@ -62,9 +62,9 @@
             System.Windows.Forms.Label label42;
             System.Windows.Forms.Label label43;
             System.Windows.Forms.Label thumbnailspathLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.Label label31;
             System.Windows.Forms.Label label45;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,8 +82,6 @@
             this.buttonPaths = new System.Windows.Forms.Button();
             this.buttonChannels = new System.Windows.Forms.Button();
             this.buttonAdvanced = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.buttonConsole = new System.Windows.Forms.Button();
             this.labelSeparatorRight = new System.Windows.Forms.Label();
@@ -106,6 +104,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.tabPageChannels = new System.Windows.Forms.TabPage();
             this.panelChannels = new System.Windows.Forms.Panel();
+            this.labelStraightAlphaNote = new System.Windows.Forms.Label();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button15 = new System.Windows.Forms.Button();
@@ -133,6 +132,8 @@
             this.tabPageAdvanced = new System.Windows.Forms.TabPage();
             this.panelAdvanced = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.label44 = new System.Windows.Forms.Label();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
@@ -178,9 +179,9 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.labelStraightAlphaNote = new System.Windows.Forms.Label();
+            this.statusLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mixerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -224,7 +225,6 @@
             label31 = new System.Windows.Forms.Label();
             label45 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -246,6 +246,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPageConsole.SuspendLayout();
             this.panelConsole.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).BeginInit();
@@ -586,6 +588,26 @@
             thumbnailspathLabel.TabIndex = 12;
             thumbnailspathLabel.Text = "Thumbnails Path";
             // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label31.Location = new System.Drawing.Point(197, 42);
+            label31.Name = "label31";
+            label31.Size = new System.Drawing.Size(126, 13);
+            label31.TabIndex = 51;
+            label31.Text = "Straight Alpha Support";
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label45.Location = new System.Drawing.Point(211, 72);
+            label45.Name = "label45";
+            label45.Size = new System.Drawing.Size(112, 13);
+            label45.TabIndex = 53;
+            label45.Text = "Chroma Key Support";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
@@ -593,7 +615,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(924, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(932, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -605,7 +627,7 @@
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // saveToolStripMenuItem1
@@ -630,9 +652,9 @@
             // button11
             // 
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.DarkGray;
-            this.button11.Location = new System.Drawing.Point(679, 103);
+            this.button11.Location = new System.Drawing.Point(686, 103);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(29, 20);
             this.button11.TabIndex = 11;
@@ -643,9 +665,9 @@
             // button10
             // 
             this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.DarkGray;
-            this.button10.Location = new System.Drawing.Point(679, 77);
+            this.button10.Location = new System.Drawing.Point(686, 77);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(29, 20);
             this.button10.TabIndex = 10;
@@ -656,9 +678,9 @@
             // button9
             // 
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.DarkGray;
-            this.button9.Location = new System.Drawing.Point(679, 51);
+            this.button9.Location = new System.Drawing.Point(686, 51);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(29, 20);
             this.button9.TabIndex = 9;
@@ -669,9 +691,9 @@
             // button8
             // 
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.DarkGray;
-            this.button8.Location = new System.Drawing.Point(679, 25);
+            this.button8.Location = new System.Drawing.Point(686, 25);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(29, 20);
             this.button8.TabIndex = 8;
@@ -689,7 +711,7 @@
             this.datapathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.datapathTextBox.Location = new System.Drawing.Point(103, 24);
             this.datapathTextBox.Name = "datapathTextBox";
-            this.datapathTextBox.Size = new System.Drawing.Size(565, 22);
+            this.datapathTextBox.Size = new System.Drawing.Size(572, 22);
             this.datapathTextBox.TabIndex = 1;
             // 
             // logpathTextBox
@@ -702,7 +724,7 @@
             this.logpathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.logpathTextBox.Location = new System.Drawing.Point(103, 50);
             this.logpathTextBox.Name = "logpathTextBox";
-            this.logpathTextBox.Size = new System.Drawing.Size(565, 22);
+            this.logpathTextBox.Size = new System.Drawing.Size(572, 22);
             this.logpathTextBox.TabIndex = 3;
             // 
             // mediapathTextBox
@@ -715,7 +737,7 @@
             this.mediapathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.mediapathTextBox.Location = new System.Drawing.Point(103, 76);
             this.mediapathTextBox.Name = "mediapathTextBox";
-            this.mediapathTextBox.Size = new System.Drawing.Size(565, 22);
+            this.mediapathTextBox.Size = new System.Drawing.Size(572, 22);
             this.mediapathTextBox.TabIndex = 5;
             // 
             // templatepathTextBox
@@ -728,7 +750,7 @@
             this.templatepathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.templatepathTextBox.Location = new System.Drawing.Point(103, 102);
             this.templatepathTextBox.Name = "templatepathTextBox";
-            this.templatepathTextBox.Size = new System.Drawing.Size(565, 22);
+            this.templatepathTextBox.Size = new System.Drawing.Size(572, 22);
             this.templatepathTextBox.TabIndex = 7;
             // 
             // imageList1
@@ -782,26 +804,6 @@
             this.buttonAdvanced.UseVisualStyleBackColor = true;
             this.buttonAdvanced.Click += new System.EventHandler(this.buttonAdvanced_Click);
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.BackColor = System.Drawing.Color.Transparent;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 602);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(924, 22);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 6;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // statusLabel
-            // 
-            this.statusLabel.ForeColor = System.Drawing.Color.White;
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(909, 17);
-            this.statusLabel.Spring = true;
-            this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -824,8 +826,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.labelSeparatorLeft);
             this.splitContainer1.Panel2.Controls.Add(this.tabControl);
-            this.splitContainer1.Size = new System.Drawing.Size(924, 578);
-            this.splitContainer1.SplitterDistance = 177;
+            this.splitContainer1.Size = new System.Drawing.Size(932, 611);
+            this.splitContainer1.SplitterDistance = 178;
             this.splitContainer1.TabIndex = 7;
             // 
             // buttonConsole
@@ -847,9 +849,9 @@
             // 
             this.labelSeparatorRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.labelSeparatorRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelSeparatorRight.Location = new System.Drawing.Point(176, 0);
+            this.labelSeparatorRight.Location = new System.Drawing.Point(177, 0);
             this.labelSeparatorRight.Name = "labelSeparatorRight";
-            this.labelSeparatorRight.Size = new System.Drawing.Size(1, 578);
+            this.labelSeparatorRight.Size = new System.Drawing.Size(1, 611);
             this.labelSeparatorRight.TabIndex = 7;
             this.labelSeparatorRight.Text = "label1";
             // 
@@ -874,7 +876,7 @@
             this.labelSeparatorLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelSeparatorLeft.Location = new System.Drawing.Point(0, 0);
             this.labelSeparatorLeft.Name = "labelSeparatorLeft";
-            this.labelSeparatorLeft.Size = new System.Drawing.Size(1, 578);
+            this.labelSeparatorLeft.Size = new System.Drawing.Size(1, 611);
             this.labelSeparatorLeft.TabIndex = 8;
             this.labelSeparatorLeft.Text = "label2";
             // 
@@ -885,10 +887,10 @@
             this.tabControl.Controls.Add(this.tabPageChannels);
             this.tabControl.Controls.Add(this.tabPageAdvanced);
             this.tabControl.Controls.Add(this.tabPageConsole);
-            this.tabControl.Location = new System.Drawing.Point(-3, -24);
+            this.tabControl.Location = new System.Drawing.Point(-3, -21);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(750, 605);
+            this.tabControl.Size = new System.Drawing.Size(757, 617);
             this.tabControl.TabIndex = 38;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
@@ -899,7 +901,7 @@
             this.tabPageStatus.Location = new System.Drawing.Point(4, 22);
             this.tabPageStatus.Name = "tabPageStatus";
             this.tabPageStatus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStatus.Size = new System.Drawing.Size(742, 579);
+            this.tabPageStatus.Size = new System.Drawing.Size(749, 591);
             this.tabPageStatus.TabIndex = 0;
             this.tabPageStatus.Text = "Status";
             // 
@@ -916,7 +918,7 @@
             this.panelStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelStatus.Location = new System.Drawing.Point(3, 3);
             this.panelStatus.Name = "panelStatus";
-            this.panelStatus.Size = new System.Drawing.Size(736, 573);
+            this.panelStatus.Size = new System.Drawing.Size(743, 585);
             this.panelStatus.TabIndex = 31;
             // 
             // buttonThumbnails
@@ -924,8 +926,8 @@
             this.buttonThumbnails.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonThumbnails.Enabled = false;
             this.buttonThumbnails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThumbnails.ForeColor = System.Drawing.Color.White;
-            this.buttonThumbnails.Location = new System.Drawing.Point(460, 486);
+            this.buttonThumbnails.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonThumbnails.Location = new System.Drawing.Point(463, 486);
             this.buttonThumbnails.Name = "buttonThumbnails";
             this.buttonThumbnails.Size = new System.Drawing.Size(146, 23);
             this.buttonThumbnails.TabIndex = 37;
@@ -937,7 +939,7 @@
             // 
             this.labelComponentVersion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelComponentVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelComponentVersion.Location = new System.Drawing.Point(167, 372);
+            this.labelComponentVersion.Location = new System.Drawing.Point(170, 372);
             this.labelComponentVersion.Name = "labelComponentVersion";
             this.labelComponentVersion.Size = new System.Drawing.Size(400, 47);
             this.labelComponentVersion.TabIndex = 36;
@@ -947,7 +949,7 @@
             // 
             this.labelUptime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelUptime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelUptime.Location = new System.Drawing.Point(284, 314);
+            this.labelUptime.Location = new System.Drawing.Point(287, 314);
             this.labelUptime.Name = "labelUptime";
             this.labelUptime.Size = new System.Drawing.Size(166, 13);
             this.labelUptime.TabIndex = 35;
@@ -958,8 +960,8 @@
             this.buttonChannelGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonChannelGrid.Enabled = false;
             this.buttonChannelGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChannelGrid.ForeColor = System.Drawing.Color.White;
-            this.buttonChannelGrid.Location = new System.Drawing.Point(293, 486);
+            this.buttonChannelGrid.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonChannelGrid.Location = new System.Drawing.Point(296, 486);
             this.buttonChannelGrid.Name = "buttonChannelGrid";
             this.buttonChannelGrid.Size = new System.Drawing.Size(146, 23);
             this.buttonChannelGrid.TabIndex = 34;
@@ -972,8 +974,8 @@
             this.buttonDiag.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonDiag.Enabled = false;
             this.buttonDiag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDiag.ForeColor = System.Drawing.Color.White;
-            this.buttonDiag.Location = new System.Drawing.Point(126, 486);
+            this.buttonDiag.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonDiag.Location = new System.Drawing.Point(129, 486);
             this.buttonDiag.Name = "buttonDiag";
             this.buttonDiag.Size = new System.Drawing.Size(146, 23);
             this.buttonDiag.TabIndex = 33;
@@ -985,7 +987,7 @@
             // 
             this.labelServerVersion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelServerVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelServerVersion.Location = new System.Drawing.Point(190, 344);
+            this.labelServerVersion.Location = new System.Drawing.Point(193, 344);
             this.labelServerVersion.Name = "labelServerVersion";
             this.labelServerVersion.Size = new System.Drawing.Size(355, 13);
             this.labelServerVersion.TabIndex = 2;
@@ -996,8 +998,8 @@
             this.buttonRestart.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonRestart.Enabled = false;
             this.buttonRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRestart.ForeColor = System.Drawing.Color.White;
-            this.buttonRestart.Location = new System.Drawing.Point(329, 442);
+            this.buttonRestart.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonRestart.Location = new System.Drawing.Point(332, 442);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(75, 23);
             this.buttonRestart.TabIndex = 1;
@@ -1011,7 +1013,7 @@
             this.labelStatus.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.labelStatus.Image = global::CasparCGFrontend.Properties.Resources.Disconnection;
-            this.labelStatus.Location = new System.Drawing.Point(279, 22);
+            this.labelStatus.Location = new System.Drawing.Point(282, 22);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(179, 398);
             this.labelStatus.TabIndex = 0;
@@ -1025,7 +1027,7 @@
             this.tabPagePaths.Location = new System.Drawing.Point(4, 22);
             this.tabPagePaths.Name = "tabPagePaths";
             this.tabPagePaths.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePaths.Size = new System.Drawing.Size(742, 579);
+            this.tabPagePaths.Size = new System.Drawing.Size(749, 591);
             this.tabPagePaths.TabIndex = 1;
             this.tabPagePaths.Text = "Paths";
             // 
@@ -1049,7 +1051,7 @@
             this.panelPaths.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPaths.Location = new System.Drawing.Point(3, 3);
             this.panelPaths.Name = "panelPaths";
-            this.panelPaths.Size = new System.Drawing.Size(736, 573);
+            this.panelPaths.Size = new System.Drawing.Size(743, 585);
             this.panelPaths.TabIndex = 0;
             // 
             // thumbnailspathTextBox
@@ -1062,15 +1064,15 @@
             this.thumbnailspathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.thumbnailspathTextBox.Location = new System.Drawing.Point(103, 129);
             this.thumbnailspathTextBox.Name = "thumbnailspathTextBox";
-            this.thumbnailspathTextBox.Size = new System.Drawing.Size(565, 22);
+            this.thumbnailspathTextBox.Size = new System.Drawing.Size(572, 22);
             this.thumbnailspathTextBox.TabIndex = 9;
             // 
             // button14
             // 
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.DarkGray;
-            this.button14.Location = new System.Drawing.Point(679, 130);
+            this.button14.Location = new System.Drawing.Point(686, 130);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(29, 20);
             this.button14.TabIndex = 14;
@@ -1084,7 +1086,7 @@
             this.tabPageChannels.Controls.Add(this.panelChannels);
             this.tabPageChannels.Location = new System.Drawing.Point(4, 22);
             this.tabPageChannels.Name = "tabPageChannels";
-            this.tabPageChannels.Size = new System.Drawing.Size(742, 579);
+            this.tabPageChannels.Size = new System.Drawing.Size(749, 591);
             this.tabPageChannels.TabIndex = 2;
             this.tabPageChannels.Text = "Channels";
             // 
@@ -1118,8 +1120,18 @@
             this.panelChannels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChannels.Location = new System.Drawing.Point(0, 0);
             this.panelChannels.Name = "panelChannels";
-            this.panelChannels.Size = new System.Drawing.Size(742, 579);
+            this.panelChannels.Size = new System.Drawing.Size(749, 591);
             this.panelChannels.TabIndex = 8;
+            // 
+            // labelStraightAlphaNote
+            // 
+            this.labelStraightAlphaNote.Location = new System.Drawing.Point(152, 143);
+            this.labelStraightAlphaNote.Name = "labelStraightAlphaNote";
+            this.labelStraightAlphaNote.Size = new System.Drawing.Size(140, 83);
+            this.labelStraightAlphaNote.TabIndex = 44;
+            this.labelStraightAlphaNote.Text = "Warning: Without checking Straight Alpha Support under Advanced, this setting wil" +
+    "l be uneffective";
+            this.labelStraightAlphaNote.Visible = false;
             // 
             // checkBox6
             // 
@@ -1146,7 +1158,7 @@
             // button15
             // 
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.Color.White;
+            this.button15.ForeColor = System.Drawing.Color.DarkGray;
             this.button15.Location = new System.Drawing.Point(299, 334);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(128, 23);
@@ -1187,7 +1199,7 @@
             // button2
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.DarkGray;
             this.button2.Location = new System.Drawing.Point(299, 309);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(128, 23);
@@ -1199,7 +1211,7 @@
             // button1
             // 
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.DarkGray;
             this.button1.Location = new System.Drawing.Point(299, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 23);
@@ -1292,7 +1304,7 @@
             // button7
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.ForeColor = System.Drawing.Color.DarkGray;
             this.button7.Location = new System.Drawing.Point(433, 234);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(25, 23);
@@ -1304,7 +1316,7 @@
             // button6
             // 
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.ForeColor = System.Drawing.Color.DarkGray;
             this.button6.Location = new System.Drawing.Point(121, 234);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(25, 23);
@@ -1360,7 +1372,7 @@
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.ForeColor = System.Drawing.Color.DarkGray;
             this.button5.Location = new System.Drawing.Point(299, 259);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(128, 23);
@@ -1372,7 +1384,7 @@
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.ForeColor = System.Drawing.Color.DarkGray;
             this.button4.Location = new System.Drawing.Point(299, 234);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 23);
@@ -1396,7 +1408,7 @@
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.ForeColor = System.Drawing.Color.DarkGray;
             this.button3.Location = new System.Drawing.Point(16, 234);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(98, 23);
@@ -1424,7 +1436,7 @@
             this.tabPageAdvanced.Controls.Add(this.panelAdvanced);
             this.tabPageAdvanced.Location = new System.Drawing.Point(4, 22);
             this.tabPageAdvanced.Name = "tabPageAdvanced";
-            this.tabPageAdvanced.Size = new System.Drawing.Size(742, 579);
+            this.tabPageAdvanced.Size = new System.Drawing.Size(749, 591);
             this.tabPageAdvanced.TabIndex = 3;
             this.tabPageAdvanced.Text = "Advanced";
             // 
@@ -1458,7 +1470,7 @@
             this.panelAdvanced.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAdvanced.Location = new System.Drawing.Point(0, 0);
             this.panelAdvanced.Name = "panelAdvanced";
-            this.panelAdvanced.Size = new System.Drawing.Size(742, 579);
+            this.panelAdvanced.Size = new System.Drawing.Size(749, 591);
             this.panelAdvanced.TabIndex = 9;
             // 
             // panel1
@@ -1508,8 +1520,26 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(742, 579);
+            this.panel1.Size = new System.Drawing.Size(749, 591);
             this.panel1.TabIndex = 35;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "ChromaKey", true));
+            this.checkBox8.Location = new System.Drawing.Point(329, 67);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(25, 24);
+            this.checkBox8.TabIndex = 26;
+            this.checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "StraightAlpha", true));
+            this.checkBox7.Location = new System.Drawing.Point(329, 37);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(25, 24);
+            this.checkBox7.TabIndex = 25;
+            this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // comboBox9
             // 
@@ -1706,7 +1736,7 @@
             // button12
             // 
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.White;
+            this.button12.ForeColor = System.Drawing.Color.DarkGray;
             this.button12.Location = new System.Drawing.Point(132, 505);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(25, 23);
@@ -1733,7 +1763,7 @@
             // button13
             // 
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.White;
+            this.button13.ForeColor = System.Drawing.Color.DarkGray;
             this.button13.Location = new System.Drawing.Point(163, 505);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(25, 23);
@@ -1787,7 +1817,7 @@
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox2.Location = new System.Drawing.Point(132, 300);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 22);
+            this.textBox2.Size = new System.Drawing.Size(139, 22);
             this.textBox2.TabIndex = 3;
             // 
             // comboBox8
@@ -1932,7 +1962,7 @@
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(132, 292);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 22);
+            this.textBox1.Size = new System.Drawing.Size(139, 22);
             this.textBox1.TabIndex = 3;
             // 
             // comboBox2
@@ -1987,23 +2017,21 @@
             // 
             // tabPageConsole
             // 
-            this.tabPageConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPageConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.tabPageConsole.Controls.Add(this.panelConsole);
             this.tabPageConsole.Location = new System.Drawing.Point(4, 22);
             this.tabPageConsole.Name = "tabPageConsole";
-            this.tabPageConsole.Size = new System.Drawing.Size(742, 579);
+            this.tabPageConsole.Size = new System.Drawing.Size(749, 591);
             this.tabPageConsole.TabIndex = 4;
             this.tabPageConsole.Text = "Console";
             // 
             // panelConsole
             // 
-            this.panelConsole.Controls.Add(this.textBoxCommand);
-            this.panelConsole.Controls.Add(this.textBoxLog);
+            this.panelConsole.Controls.Add(this.panel3);
             this.panelConsole.Controls.Add(this.labelSpacerBottom);
-            this.panelConsole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelConsole.Location = new System.Drawing.Point(0, 0);
             this.panelConsole.Name = "panelConsole";
-            this.panelConsole.Size = new System.Drawing.Size(742, 579);
+            this.panelConsole.Size = new System.Drawing.Size(749, 579);
             this.panelConsole.TabIndex = 31;
             // 
             // textBoxCommand
@@ -2016,7 +2044,7 @@
             this.textBoxCommand.ForeColor = System.Drawing.Color.White;
             this.textBoxCommand.Location = new System.Drawing.Point(0, 565);
             this.textBoxCommand.Name = "textBoxCommand";
-            this.textBoxCommand.Size = new System.Drawing.Size(742, 11);
+            this.textBoxCommand.Size = new System.Drawing.Size(749, 11);
             this.textBoxCommand.TabIndex = 1;
             this.textBoxCommand.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCommand_KeyDown);
             // 
@@ -2032,7 +2060,7 @@
             this.textBoxLog.Name = "textBoxLog";
             this.textBoxLog.ReadOnly = true;
             this.textBoxLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxLog.Size = new System.Drawing.Size(742, 576);
+            this.textBoxLog.Size = new System.Drawing.Size(749, 565);
             this.textBoxLog.TabIndex = 0;
             this.textBoxLog.Enter += new System.EventHandler(this.textBoxLog_Enter);
             // 
@@ -2043,7 +2071,7 @@
             this.labelSpacerBottom.Enabled = false;
             this.labelSpacerBottom.Location = new System.Drawing.Point(0, 576);
             this.labelSpacerBottom.Name = "labelSpacerBottom";
-            this.labelSpacerBottom.Size = new System.Drawing.Size(742, 3);
+            this.labelSpacerBottom.Size = new System.Drawing.Size(749, 3);
             this.labelSpacerBottom.TabIndex = 2;
             // 
             // labelSeparatorTop
@@ -2052,16 +2080,16 @@
             this.labelSeparatorTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelSeparatorTop.Location = new System.Drawing.Point(0, 24);
             this.labelSeparatorTop.Name = "labelSeparatorTop";
-            this.labelSeparatorTop.Size = new System.Drawing.Size(924, 1);
+            this.labelSeparatorTop.Size = new System.Drawing.Size(932, 1);
             this.labelSeparatorTop.TabIndex = 12;
             // 
             // labelSeparatorBottom
             // 
             this.labelSeparatorBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
-            this.labelSeparatorBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.labelSeparatorBottom.Location = new System.Drawing.Point(0, 601);
+            this.labelSeparatorBottom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelSeparatorBottom.Location = new System.Drawing.Point(0, 0);
             this.labelSeparatorBottom.Name = "labelSeparatorBottom";
-            this.labelSeparatorBottom.Size = new System.Drawing.Size(924, 1);
+            this.labelSeparatorBottom.Size = new System.Drawing.Size(932, 1);
             this.labelSeparatorBottom.TabIndex = 13;
             // 
             // fileToolStripMenuItem1
@@ -2088,53 +2116,36 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
             // 
-            // label31
+            // statusLabel
             // 
-            label31.AutoSize = true;
-            label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label31.Location = new System.Drawing.Point(197, 42);
-            label31.Name = "label31";
-            label31.Size = new System.Drawing.Size(126, 13);
-            label31.TabIndex = 51;
-            label31.Text = "Straight Alpha Support";
+            this.statusLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.statusLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statusLabel.ForeColor = System.Drawing.Color.White;
+            this.statusLabel.Location = new System.Drawing.Point(0, 1);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(932, 21);
+            this.statusLabel.TabIndex = 9;
+            this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // checkBox7
+            // panel2
             // 
-            this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "StraightAlpha", true));
-            this.checkBox7.Location = new System.Drawing.Point(329, 37);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(25, 24);
-            this.checkBox7.TabIndex = 25;
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.statusLabel);
+            this.panel2.Controls.Add(this.labelSeparatorBottom);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 613);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(932, 22);
+            this.panel2.TabIndex = 15;
             // 
-            // checkBox8
+            // panel3
             // 
-            this.checkBox8.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "ChromaKey", true));
-            this.checkBox8.Location = new System.Drawing.Point(329, 67);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(25, 24);
-            this.checkBox8.TabIndex = 26;
-            this.checkBox8.UseVisualStyleBackColor = true;
-            // 
-            // label45
-            // 
-            label45.AutoSize = true;
-            label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label45.Location = new System.Drawing.Point(211, 72);
-            label45.Name = "label45";
-            label45.Size = new System.Drawing.Size(112, 13);
-            label45.TabIndex = 53;
-            label45.Text = "Chroma Key Support";
-            // 
-            // labelStraightAlphaNote
-            // 
-            this.labelStraightAlphaNote.Location = new System.Drawing.Point(152, 143);
-            this.labelStraightAlphaNote.Name = "labelStraightAlphaNote";
-            this.labelStraightAlphaNote.Size = new System.Drawing.Size(140, 83);
-            this.labelStraightAlphaNote.TabIndex = 44;
-            this.labelStraightAlphaNote.Text = "Warning: Without checking Straight Alpha Support under Advanced, this setting wil" +
-    "l be uneffective";
-            this.labelStraightAlphaNote.Visible = false;
+            this.panel3.Controls.Add(this.textBoxLog);
+            this.panel3.Controls.Add(this.textBoxCommand);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(749, 576);
+            this.panel3.TabIndex = 3;
             // 
             // pathsBindingSource
             // 
@@ -2169,12 +2180,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(924, 624);
-            this.Controls.Add(this.labelSeparatorBottom);
+            this.ClientSize = new System.Drawing.Size(932, 635);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelSeparatorTop);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2189,8 +2199,6 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -2216,7 +2224,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPageConsole.ResumeLayout(false);
             this.panelConsole.ResumeLayout(false);
-            this.panelConsole.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).EndInit();
@@ -2241,7 +2251,6 @@
         private System.Windows.Forms.Button buttonPaths;
         private System.Windows.Forms.Button buttonChannels;
         private System.Windows.Forms.Button buttonAdvanced;
-        private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel panelPaths;
         private System.Windows.Forms.Panel panelChannels;
@@ -2304,7 +2313,6 @@
         private System.Windows.Forms.Button buttonChannelGrid;
         private System.Windows.Forms.Button buttonDiag;
         private System.Windows.Forms.Label labelUptime;
-        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.Windows.Forms.Label labelComponentVersion;
         private System.Windows.Forms.Label labelSpacerBottom;
         private System.Windows.Forms.Button buttonThumbnails;
@@ -2354,6 +2362,9 @@
         public System.Windows.Forms.CheckBox checkBox8;
         public System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.Label labelStraightAlphaNote;
+        private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
