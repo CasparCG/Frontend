@@ -53,6 +53,14 @@
                 <keyer>external [external|internal|default]</keyer>
                 <key-only>false [true|false]</key-only>
             </blocking-decklink>
+            <newtek>
+              <channel-layout>stereo [mono|stereo|dts|dolbye|dolbydigital|smpte|passthru]</channel-layout>
+            </newtek>
+            <file>
+                <path></path>
+                <vcodec>libx264 [libx264|qtrle]</vcodec>
+                <separate-key>false [true|false]</separate-key>
+            </file>
         </consumers>
     </channel>
 </channels>
