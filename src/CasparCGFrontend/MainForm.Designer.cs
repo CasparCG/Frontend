@@ -75,6 +75,7 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.datapathTextBox = new System.Windows.Forms.TextBox();
+            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.logpathTextBox = new System.Windows.Forms.TextBox();
             this.mediapathTextBox = new System.Windows.Forms.TextBox();
             this.templatepathTextBox = new System.Windows.Forms.TextBox();
@@ -109,6 +110,7 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button15 = new System.Windows.Forms.Button();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -133,8 +135,10 @@
             this.panelAdvanced = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.mixerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label44 = new System.Windows.Forms.Label();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
@@ -147,10 +151,13 @@
             this.label26 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button13 = new System.Windows.Forms.Button();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -170,8 +177,9 @@
             this.channelgridCheckBox = new System.Windows.Forms.CheckBox();
             this.tabPageConsole = new System.Windows.Forms.TabPage();
             this.panelConsole = new System.Windows.Forms.Panel();
-            this.textBoxCommand = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxLog = new System.Windows.Forms.TextBox();
+            this.textBoxCommand = new System.Windows.Forms.TextBox();
             this.labelSpacerBottom = new System.Windows.Forms.Label();
             this.labelSeparatorTop = new System.Windows.Forms.Label();
             this.labelSeparatorBottom = new System.Windows.Forms.Label();
@@ -181,14 +189,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.statusLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mixerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button16 = new System.Windows.Forms.Button();
             datapathLabel = new System.Windows.Forms.Label();
             logpathLabel = new System.Windows.Forms.Label();
             mediapathLabel = new System.Windows.Forms.Label();
@@ -225,6 +226,7 @@
             label31 = new System.Windows.Forms.Label();
             label45 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -236,25 +238,24 @@
             this.panelPaths.SuspendLayout();
             this.tabPageChannels.SuspendLayout();
             this.panelChannels.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
             this.tabPageAdvanced.SuspendLayout();
             this.panelAdvanced.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.tabPageConsole.SuspendLayout();
-            this.panelConsole.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).BeginInit();
+            this.tabPageConsole.SuspendLayout();
+            this.panelConsole.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // datapathLabel
@@ -615,7 +616,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(932, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(924, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -627,7 +628,7 @@
             this.quitToolStripMenuItem});
             this.fileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
             // saveToolStripMenuItem1
@@ -713,6 +714,10 @@
             this.datapathTextBox.Name = "datapathTextBox";
             this.datapathTextBox.Size = new System.Drawing.Size(572, 22);
             this.datapathTextBox.TabIndex = 1;
+            // 
+            // pathsBindingSource
+            // 
+            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
             // 
             // logpathTextBox
             // 
@@ -826,8 +831,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.labelSeparatorLeft);
             this.splitContainer1.Panel2.Controls.Add(this.tabControl);
-            this.splitContainer1.Size = new System.Drawing.Size(932, 611);
-            this.splitContainer1.SplitterDistance = 178;
+            this.splitContainer1.Size = new System.Drawing.Size(924, 600);
+            this.splitContainer1.SplitterDistance = 176;
             this.splitContainer1.TabIndex = 7;
             // 
             // buttonConsole
@@ -849,9 +854,9 @@
             // 
             this.labelSeparatorRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.labelSeparatorRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.labelSeparatorRight.Location = new System.Drawing.Point(177, 0);
+            this.labelSeparatorRight.Location = new System.Drawing.Point(175, 0);
             this.labelSeparatorRight.Name = "labelSeparatorRight";
-            this.labelSeparatorRight.Size = new System.Drawing.Size(1, 611);
+            this.labelSeparatorRight.Size = new System.Drawing.Size(1, 600);
             this.labelSeparatorRight.TabIndex = 7;
             this.labelSeparatorRight.Text = "label1";
             // 
@@ -876,7 +881,7 @@
             this.labelSeparatorLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.labelSeparatorLeft.Location = new System.Drawing.Point(0, 0);
             this.labelSeparatorLeft.Name = "labelSeparatorLeft";
-            this.labelSeparatorLeft.Size = new System.Drawing.Size(1, 611);
+            this.labelSeparatorLeft.Size = new System.Drawing.Size(1, 600);
             this.labelSeparatorLeft.TabIndex = 8;
             this.labelSeparatorLeft.Text = "label2";
             // 
@@ -1092,6 +1097,7 @@
             // 
             // panelChannels
             // 
+            this.panelChannels.Controls.Add(this.button16);
             this.panelChannels.Controls.Add(this.labelStraightAlphaNote);
             this.panelChannels.Controls.Add(this.checkBox6);
             this.panelChannels.Controls.Add(this.checkBox1);
@@ -1147,7 +1153,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(299, 363);
+            this.checkBox1.Location = new System.Drawing.Point(299, 388);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(223, 17);
             this.checkBox1.TabIndex = 42;
@@ -1185,6 +1191,10 @@
             this.comboBox5.Size = new System.Drawing.Size(140, 21);
             this.comboBox5.TabIndex = 40;
             this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // channelBindingSource
+            // 
+            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
             // 
             // label1
             // 
@@ -1532,6 +1542,10 @@
             this.checkBox8.TabIndex = 26;
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
+            // mixerBindingSource
+            // 
+            this.mixerBindingSource.DataSource = typeof(CasparCGFrontend.Mixer);
+            // 
             // checkBox7
             // 
             this.checkBox7.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "StraightAlpha", true));
@@ -1574,6 +1588,10 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(121, 21);
             this.comboBox9.TabIndex = 50;
+            // 
+            // thumbnailBindingSource
+            // 
+            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
             // 
             // label44
             // 
@@ -1760,6 +1778,10 @@
             this.comboBox6.TabIndex = 30;
             this.comboBox6.Visible = false;
             // 
+            // configurationBindingSource
+            // 
+            this.configurationBindingSource.DataSource = typeof(CasparCGFrontend.configuration);
+            // 
             // button13
             // 
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1807,6 +1829,10 @@
             this.comboBox7.Size = new System.Drawing.Size(121, 21);
             this.comboBox7.TabIndex = 28;
             // 
+            // flashBindingSource
+            // 
+            this.flashBindingSource.DataSource = typeof(CasparCGFrontend.Flash);
+            // 
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1819,6 +1845,10 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(139, 22);
             this.textBox2.TabIndex = 3;
+            // 
+            // oscBindingSource
+            // 
+            this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
             // 
             // comboBox8
             // 
@@ -2034,19 +2064,15 @@
             this.panelConsole.Size = new System.Drawing.Size(749, 579);
             this.panelConsole.TabIndex = 31;
             // 
-            // textBoxCommand
+            // panel3
             // 
-            this.textBoxCommand.AcceptsReturn = true;
-            this.textBoxCommand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.textBoxCommand.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCommand.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxCommand.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCommand.ForeColor = System.Drawing.Color.White;
-            this.textBoxCommand.Location = new System.Drawing.Point(0, 565);
-            this.textBoxCommand.Name = "textBoxCommand";
-            this.textBoxCommand.Size = new System.Drawing.Size(749, 11);
-            this.textBoxCommand.TabIndex = 1;
-            this.textBoxCommand.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCommand_KeyDown);
+            this.panel3.Controls.Add(this.textBoxLog);
+            this.panel3.Controls.Add(this.textBoxCommand);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(749, 576);
+            this.panel3.TabIndex = 3;
             // 
             // textBoxLog
             // 
@@ -2064,6 +2090,20 @@
             this.textBoxLog.TabIndex = 0;
             this.textBoxLog.Enter += new System.EventHandler(this.textBoxLog_Enter);
             // 
+            // textBoxCommand
+            // 
+            this.textBoxCommand.AcceptsReturn = true;
+            this.textBoxCommand.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.textBoxCommand.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCommand.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxCommand.Font = new System.Drawing.Font("Lucida Console", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCommand.ForeColor = System.Drawing.Color.White;
+            this.textBoxCommand.Location = new System.Drawing.Point(0, 565);
+            this.textBoxCommand.Name = "textBoxCommand";
+            this.textBoxCommand.Size = new System.Drawing.Size(749, 11);
+            this.textBoxCommand.TabIndex = 1;
+            this.textBoxCommand.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxCommand_KeyDown);
+            // 
             // labelSpacerBottom
             // 
             this.labelSpacerBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -2080,7 +2120,7 @@
             this.labelSeparatorTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelSeparatorTop.Location = new System.Drawing.Point(0, 24);
             this.labelSeparatorTop.Name = "labelSeparatorTop";
-            this.labelSeparatorTop.Size = new System.Drawing.Size(932, 1);
+            this.labelSeparatorTop.Size = new System.Drawing.Size(924, 1);
             this.labelSeparatorTop.TabIndex = 12;
             // 
             // labelSeparatorBottom
@@ -2089,7 +2129,7 @@
             this.labelSeparatorBottom.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelSeparatorBottom.Location = new System.Drawing.Point(0, 0);
             this.labelSeparatorBottom.Name = "labelSeparatorBottom";
-            this.labelSeparatorBottom.Size = new System.Drawing.Size(932, 1);
+            this.labelSeparatorBottom.Size = new System.Drawing.Size(924, 1);
             this.labelSeparatorBottom.TabIndex = 13;
             // 
             // fileToolStripMenuItem1
@@ -2123,7 +2163,7 @@
             this.statusLabel.ForeColor = System.Drawing.Color.White;
             this.statusLabel.Location = new System.Drawing.Point(0, 1);
             this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(932, 21);
+            this.statusLabel.Size = new System.Drawing.Size(924, 21);
             this.statusLabel.TabIndex = 9;
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -2132,55 +2172,29 @@
             this.panel2.Controls.Add(this.statusLabel);
             this.panel2.Controls.Add(this.labelSeparatorBottom);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 613);
+            this.panel2.Location = new System.Drawing.Point(0, 602);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(932, 22);
+            this.panel2.Size = new System.Drawing.Size(924, 22);
             this.panel2.TabIndex = 15;
             // 
-            // panel3
+            // button16
             // 
-            this.panel3.Controls.Add(this.textBoxLog);
-            this.panel3.Controls.Add(this.textBoxCommand);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(749, 576);
-            this.panel3.TabIndex = 3;
-            // 
-            // pathsBindingSource
-            // 
-            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
-            // 
-            // channelBindingSource
-            // 
-            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
-            // 
-            // mixerBindingSource
-            // 
-            this.mixerBindingSource.DataSource = typeof(CasparCGFrontend.Mixer);
-            // 
-            // thumbnailBindingSource
-            // 
-            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
-            // 
-            // configurationBindingSource
-            // 
-            this.configurationBindingSource.DataSource = typeof(CasparCGFrontend.configuration);
-            // 
-            // flashBindingSource
-            // 
-            this.flashBindingSource.DataSource = typeof(CasparCGFrontend.Flash);
-            // 
-            // oscBindingSource
-            // 
-            this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.ForeColor = System.Drawing.Color.DarkGray;
+            this.button16.Location = new System.Drawing.Point(299, 359);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(128, 23);
+            this.button16.TabIndex = 45;
+            this.button16.Text = "Add &NewTek";
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(932, 635);
+            this.ClientSize = new System.Drawing.Size(924, 624);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.labelSeparatorTop);
             this.Controls.Add(this.splitContainer1);
@@ -2199,6 +2213,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -2212,28 +2227,27 @@
             this.tabPageChannels.ResumeLayout(false);
             this.panelChannels.ResumeLayout(false);
             this.panelChannels.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
             this.tabPageAdvanced.ResumeLayout(false);
             this.panelAdvanced.ResumeLayout(false);
             this.panelAdvanced.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.tabPageConsole.ResumeLayout(false);
-            this.panelConsole.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).EndInit();
+            this.tabPageConsole.ResumeLayout(false);
+            this.panelConsole.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2365,6 +2379,7 @@
         private System.Windows.Forms.Label statusLabel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Button button16;
     }
 }
 

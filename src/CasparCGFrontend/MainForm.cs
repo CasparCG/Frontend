@@ -348,6 +348,11 @@ namespace CasparCGFrontend
                         this.consumerEditorControl = new BlockingDecklinkConsumerControl(listBox2.SelectedItem as BlockingDecklinkConsumer, config.AvailableDecklinkIDs);
                         this.panelOutput.Controls.Add(consumerEditorControl);
                     }
+                    else if (listBox2.SelectedItem.GetType() == typeof(NewTekConsumer))
+                    {
+                        this.consumerEditorControl = new NewTekConsumerControl(listBox2.SelectedItem as NewTekConsumer);
+                        this.panelOutput.Controls.Add(consumerEditorControl);
+                    }
                 }
             }
             lastConsumer = (AbstractConsumer)listBox2.SelectedItem;
@@ -411,6 +416,13 @@ namespace CasparCGFrontend
         private void button15_Click(object sender, EventArgs e)
         {
             (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new BlockingDecklinkConsumer(config.AvailableDecklinkIDs));
+
+            RefreshConsumerPanel();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new NewTekConsumer());
 
             RefreshConsumerPanel();
         }

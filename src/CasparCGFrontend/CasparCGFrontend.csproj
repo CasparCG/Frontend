@@ -90,6 +90,13 @@
     <Compile Include="Consumers\BlockingDecklinkConsumerControl.designer.cs">
       <DependentUpon>BlockingDecklinkConsumerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consumers\NewTekConsumerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consumers\NewTekConsumerControl.designer.cs">
+      <DependentUpon>NewTekConsumerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Consumers\NewTekConsumer.cs" />
     <Compile Include="Consumers\SynchronizingConsumer.cs" />
     <Compile Include="Consumers\DecklinkConsumer.cs" />
     <Compile Include="Consumers\DecklinkConsumerControl.cs">
@@ -138,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consumers\BlockingDecklinkConsumerControl.resx">
       <DependentUpon>BlockingDecklinkConsumerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumers\NewTekConsumerControl.resx">
+      <DependentUpon>NewTekConsumerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consumers\DecklinkConsumerControl.resx">
       <DependentUpon>DecklinkConsumerControl.cs</DependentUpon>
