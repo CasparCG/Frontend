@@ -105,6 +105,7 @@
             this.button14 = new System.Windows.Forms.Button();
             this.tabPageChannels = new System.Windows.Forms.TabPage();
             this.panelChannels = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
             this.labelStraightAlphaNote = new System.Windows.Forms.Label();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -189,7 +190,6 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.statusLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
             datapathLabel = new System.Windows.Forms.Label();
             logpathLabel = new System.Windows.Forms.Label();
             mediapathLabel = new System.Windows.Forms.Label();
@@ -895,7 +895,7 @@
             this.tabControl.Location = new System.Drawing.Point(-3, -21);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(757, 617);
+            this.tabControl.Size = new System.Drawing.Size(758, 617);
             this.tabControl.TabIndex = 38;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             // 
@@ -906,7 +906,7 @@
             this.tabPageStatus.Location = new System.Drawing.Point(4, 22);
             this.tabPageStatus.Name = "tabPageStatus";
             this.tabPageStatus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStatus.Size = new System.Drawing.Size(749, 591);
+            this.tabPageStatus.Size = new System.Drawing.Size(750, 591);
             this.tabPageStatus.TabIndex = 0;
             this.tabPageStatus.Text = "Status";
             // 
@@ -923,7 +923,7 @@
             this.panelStatus.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelStatus.Location = new System.Drawing.Point(3, 3);
             this.panelStatus.Name = "panelStatus";
-            this.panelStatus.Size = new System.Drawing.Size(743, 585);
+            this.panelStatus.Size = new System.Drawing.Size(744, 585);
             this.panelStatus.TabIndex = 31;
             // 
             // buttonThumbnails
@@ -932,7 +932,7 @@
             this.buttonThumbnails.Enabled = false;
             this.buttonThumbnails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonThumbnails.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonThumbnails.Location = new System.Drawing.Point(463, 486);
+            this.buttonThumbnails.Location = new System.Drawing.Point(464, 486);
             this.buttonThumbnails.Name = "buttonThumbnails";
             this.buttonThumbnails.Size = new System.Drawing.Size(146, 23);
             this.buttonThumbnails.TabIndex = 37;
@@ -944,7 +944,7 @@
             // 
             this.labelComponentVersion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelComponentVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelComponentVersion.Location = new System.Drawing.Point(170, 372);
+            this.labelComponentVersion.Location = new System.Drawing.Point(171, 372);
             this.labelComponentVersion.Name = "labelComponentVersion";
             this.labelComponentVersion.Size = new System.Drawing.Size(400, 47);
             this.labelComponentVersion.TabIndex = 36;
@@ -954,7 +954,7 @@
             // 
             this.labelUptime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelUptime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelUptime.Location = new System.Drawing.Point(287, 314);
+            this.labelUptime.Location = new System.Drawing.Point(288, 314);
             this.labelUptime.Name = "labelUptime";
             this.labelUptime.Size = new System.Drawing.Size(166, 13);
             this.labelUptime.TabIndex = 35;
@@ -966,7 +966,7 @@
             this.buttonChannelGrid.Enabled = false;
             this.buttonChannelGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonChannelGrid.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonChannelGrid.Location = new System.Drawing.Point(296, 486);
+            this.buttonChannelGrid.Location = new System.Drawing.Point(297, 486);
             this.buttonChannelGrid.Name = "buttonChannelGrid";
             this.buttonChannelGrid.Size = new System.Drawing.Size(146, 23);
             this.buttonChannelGrid.TabIndex = 34;
@@ -980,7 +980,7 @@
             this.buttonDiag.Enabled = false;
             this.buttonDiag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDiag.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonDiag.Location = new System.Drawing.Point(129, 486);
+            this.buttonDiag.Location = new System.Drawing.Point(130, 486);
             this.buttonDiag.Name = "buttonDiag";
             this.buttonDiag.Size = new System.Drawing.Size(146, 23);
             this.buttonDiag.TabIndex = 33;
@@ -992,7 +992,7 @@
             // 
             this.labelServerVersion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelServerVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelServerVersion.Location = new System.Drawing.Point(193, 344);
+            this.labelServerVersion.Location = new System.Drawing.Point(194, 344);
             this.labelServerVersion.Name = "labelServerVersion";
             this.labelServerVersion.Size = new System.Drawing.Size(355, 13);
             this.labelServerVersion.TabIndex = 2;
@@ -1004,7 +1004,7 @@
             this.buttonRestart.Enabled = false;
             this.buttonRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRestart.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonRestart.Location = new System.Drawing.Point(332, 442);
+            this.buttonRestart.Location = new System.Drawing.Point(333, 442);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(75, 23);
             this.buttonRestart.TabIndex = 1;
@@ -1018,7 +1018,7 @@
             this.labelStatus.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             this.labelStatus.Image = global::CasparCGFrontend.Properties.Resources.Disconnection;
-            this.labelStatus.Location = new System.Drawing.Point(282, 22);
+            this.labelStatus.Location = new System.Drawing.Point(283, 22);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(179, 398);
             this.labelStatus.TabIndex = 0;
@@ -1128,6 +1128,18 @@
             this.panelChannels.Name = "panelChannels";
             this.panelChannels.Size = new System.Drawing.Size(749, 591);
             this.panelChannels.TabIndex = 8;
+            // 
+            // button16
+            // 
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.ForeColor = System.Drawing.Color.DarkGray;
+            this.button16.Location = new System.Drawing.Point(299, 359);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(128, 23);
+            this.button16.TabIndex = 45;
+            this.button16.Text = "Add &NewTek";
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // labelStraightAlphaNote
             // 
@@ -2176,18 +2188,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(924, 22);
             this.panel2.TabIndex = 15;
-            // 
-            // button16
-            // 
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.Color.DarkGray;
-            this.button16.Location = new System.Drawing.Point(299, 359);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(128, 23);
-            this.button16.TabIndex = 45;
-            this.button16.Text = "Add &NewTek";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // MainForm
             // 
