@@ -27,7 +27,7 @@ namespace CasparCGFrontend
             set { this.paths = value; NotifyChanged("Paths"); }
         }
 
-        private string logLevel = "trace";
+        private string logLevel = "debug";
         [XmlElement(ElementName = "log-level")]
         public string LogLevel
         {
