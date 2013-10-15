@@ -12,7 +12,7 @@ namespace CasparCGFrontend
     [XmlInclude(typeof(SystemAudioConsumer))]
     [XmlInclude(typeof(BluefishConsumer))]
     [XmlInclude(typeof(BlockingDecklinkConsumer))]
-    [XmlInclude(typeof(NewTekConsumer))]
+    [XmlInclude(typeof(NewTekIVGAConsumer))]
     public abstract class AbstractConsumer : INotifyPropertyChanged
     {
         public virtual event PropertyChangedEventHandler PropertyChanged = delegate{};

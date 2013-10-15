@@ -45,6 +45,7 @@ namespace CasparCGFrontend
         private delegate void UpdateStatusCallback(bool isRunning);
         private delegate void UpdateUptimeCallback(bool isRunning);
         private delegate void ProcessOutputDataCallback(object sender, DataReceivedEventArgs e);
+        private delegate void RestartProcessCallback(object sender, EventArgs e);
 
         public MainForm()
         {
@@ -99,6 +100,7 @@ namespace CasparCGFrontend
                 TerminateProcess("casparcg");
 
             this.process = new Process();
+            this.process.EnableRaisingEvents = true;
             this.process.StartInfo.FileName = Settings.Default.ServerPath;
             this.process.StartInfo.WorkingDirectory = Path.GetDirectoryName(Settings.Default.ServerPath);
             this.process.StartInfo.CreateNoWindow = true;
@@ -107,6 +109,8 @@ namespace CasparCGFrontend
             this.process.StartInfo.RedirectStandardInput = true;
             this.process.OutputDataReceived += new DataReceivedEventHandler(OnProcessOutputData);
 
+            this.process.Exited += new EventHandler(process_Exited);
+
             this.process.Start();
             this.process.BeginOutputReadLine();
 
@@ -114,6 +118,24 @@ namespace CasparCGFrontend
 
             this.StartTime = DateTime.Now;
             this.TimeTimer = new Timer(CheckUptime, null, this.dueTime * 1000, 1000);
+        }
+
+        private void process_Exited(object sender, EventArgs e)
+        {
+            if (this.process.ExitCode == 5)
+            {
+                if (this.InvokeRequired)
+                {
+                    this.BeginInvoke(new RestartProcessCallback(process_Exited), sender, e);
+                }
+                else
+                {
+                    UpdateStatus(false);
+                    this.textBoxLog.Clear();
+
+                    StartServer();
+                }
+            }
         }
 
         private void StopServer()
@@ -348,9 +370,9 @@ namespace CasparCGFrontend
                         this.consumerEditorControl = new BlockingDecklinkConsumerControl(listBox2.SelectedItem as BlockingDecklinkConsumer, config.AvailableDecklinkIDs);
                         this.panelOutput.Controls.Add(consumerEditorControl);
                     }
-                    else if (listBox2.SelectedItem.GetType() == typeof(NewTekConsumer))
+                    else if (listBox2.SelectedItem.GetType() == typeof(NewTekIVGAConsumer))
                     {
-                        this.consumerEditorControl = new NewTekConsumerControl(listBox2.SelectedItem as NewTekConsumer);
+                        this.consumerEditorControl = new NewTekIVGAConsumerControl(listBox2.SelectedItem as NewTekIVGAConsumer);
                         this.panelOutput.Controls.Add(consumerEditorControl);
                     }
                 }
@@ -370,6 +392,8 @@ namespace CasparCGFrontend
                 this.button7.Enabled = true;
                 this.button1.Enabled = true;
                 this.button2.Enabled = true;
+                this.button15.Enabled = true;
+                this.button16.Enabled = true;
                 ignoreEvents = true;
                 this.checkBox1.Checked = false;
                 ignoreEvents = false;
@@ -388,6 +412,8 @@ namespace CasparCGFrontend
                 this.button7.Enabled = false;
                 this.button1.Enabled = false;
                 this.button2.Enabled = false;
+                this.button15.Enabled = false;
+                this.button16.Enabled = false;
                 this.checkBox1.Checked = false;
                 this.listBox2.DataSource = null;
                 this.comboBox1.SelectedItem = null;
@@ -422,7 +448,7 @@ namespace CasparCGFrontend
 
         private void button16_Click(object sender, EventArgs e)
         {
-            (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new NewTekConsumer());
+            (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new NewTekIVGAConsumer());
 
             RefreshConsumerPanel();
         }

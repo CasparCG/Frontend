@@ -7,15 +7,15 @@ using System.Xml.Serialization;
 
 namespace CasparCGFrontend
 {
-    public class NewTekConsumer : AbstractConsumer, INotifyPropertyChanged
+    public class NewTekIVGAConsumer : AbstractConsumer, INotifyPropertyChanged
     {
-        public NewTekConsumer()
+        public NewTekIVGAConsumer()
         {
         }
 
         public override string ToString()
         {
-            return "NewTek";
+            return "NewTek iVGA";
         }
 
         private string channelLayout = "stereo";

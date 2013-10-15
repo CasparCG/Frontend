@@ -9,15 +9,15 @@ using System.Windows.Forms;
 
 namespace CasparCGFrontend
 {
-    public partial class NewTekConsumerControl : ConsumerControlBase
+    public partial class NewTekIVGAConsumerControl : ConsumerControlBase
     {
-        public NewTekConsumerControl(NewTekConsumer consumer)
+        public NewTekIVGAConsumerControl(NewTekIVGAConsumer consumer)
         {
             InitializeComponent();
             newTekConsumerBindingSource.DataSource = consumer;
         }
 
-        ~NewTekConsumerControl()
+        ~NewTekIVGAConsumerControl()
         {
             newTekConsumerBindingSource.Dispose();
         }

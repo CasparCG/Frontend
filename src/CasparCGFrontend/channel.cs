@@ -51,7 +51,7 @@ namespace CasparCGFrontend
         [XmlArrayItem("system-audio", Type = typeof(SystemAudioConsumer))]
         [XmlArrayItem("bluefish", Type = typeof(BluefishConsumer))]
         [XmlArrayItem("synchronizing", Type = typeof(SynchronizingConsumer))]
-        [XmlArrayItem("newtek", Type = typeof(NewTekConsumer))]
+        [XmlArrayItem("newtek-ivga", Type = typeof(NewTekIVGAConsumer))]
         public BindingList<AbstractConsumer> Consumers
         {
             get { return this.consumers; }

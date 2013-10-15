@@ -90,13 +90,13 @@
     <Compile Include="Consumers\BlockingDecklinkConsumerControl.designer.cs">
       <DependentUpon>BlockingDecklinkConsumerControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consumers\NewTekConsumerControl.cs">
+    <Compile Include="Consumers\NewTekIVGAConsumerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Consumers\NewTekConsumerControl.designer.cs">
-      <DependentUpon>NewTekConsumerControl.cs</DependentUpon>
+    <Compile Include="Consumers\NewTekIVGAConsumerControl.designer.cs">
+      <DependentUpon>NewTekIVGAConsumerControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consumers\NewTekConsumer.cs" />
+    <Compile Include="Consumers\NewTekIVGAConsumer.cs" />
     <Compile Include="Consumers\SynchronizingConsumer.cs" />
     <Compile Include="Consumers\DecklinkConsumer.cs" />
     <Compile Include="Consumers\DecklinkConsumerControl.cs">
@@ -146,8 +146,8 @@
     <EmbeddedResource Include="Consumers\BlockingDecklinkConsumerControl.resx">
       <DependentUpon>BlockingDecklinkConsumerControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consumers\NewTekConsumerControl.resx">
-      <DependentUpon>NewTekConsumerControl.cs</DependentUpon>
+    <EmbeddedResource Include="Consumers\NewTekIVGAConsumerControl.resx">
+      <DependentUpon>NewTekIVGAConsumerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consumers\DecklinkConsumerControl.resx">
       <DependentUpon>DecklinkConsumerControl.cs</DependentUpon>

@@ -655,7 +655,7 @@
             this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.ForeColor = System.Drawing.Color.DarkGray;
-            this.button11.Location = new System.Drawing.Point(686, 103);
+            this.button11.Location = new System.Drawing.Point(687, 103);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(29, 20);
             this.button11.TabIndex = 11;
@@ -668,7 +668,7 @@
             this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.Color.DarkGray;
-            this.button10.Location = new System.Drawing.Point(686, 77);
+            this.button10.Location = new System.Drawing.Point(687, 77);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(29, 20);
             this.button10.TabIndex = 10;
@@ -681,7 +681,7 @@
             this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.ForeColor = System.Drawing.Color.DarkGray;
-            this.button9.Location = new System.Drawing.Point(686, 51);
+            this.button9.Location = new System.Drawing.Point(687, 51);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(29, 20);
             this.button9.TabIndex = 9;
@@ -694,7 +694,7 @@
             this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.DarkGray;
-            this.button8.Location = new System.Drawing.Point(686, 25);
+            this.button8.Location = new System.Drawing.Point(687, 25);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(29, 20);
             this.button8.TabIndex = 8;
@@ -712,7 +712,7 @@
             this.datapathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.datapathTextBox.Location = new System.Drawing.Point(103, 24);
             this.datapathTextBox.Name = "datapathTextBox";
-            this.datapathTextBox.Size = new System.Drawing.Size(572, 22);
+            this.datapathTextBox.Size = new System.Drawing.Size(573, 22);
             this.datapathTextBox.TabIndex = 1;
             // 
             // pathsBindingSource
@@ -729,7 +729,7 @@
             this.logpathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.logpathTextBox.Location = new System.Drawing.Point(103, 50);
             this.logpathTextBox.Name = "logpathTextBox";
-            this.logpathTextBox.Size = new System.Drawing.Size(572, 22);
+            this.logpathTextBox.Size = new System.Drawing.Size(573, 22);
             this.logpathTextBox.TabIndex = 3;
             // 
             // mediapathTextBox
@@ -742,7 +742,7 @@
             this.mediapathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.mediapathTextBox.Location = new System.Drawing.Point(103, 76);
             this.mediapathTextBox.Name = "mediapathTextBox";
-            this.mediapathTextBox.Size = new System.Drawing.Size(572, 22);
+            this.mediapathTextBox.Size = new System.Drawing.Size(573, 22);
             this.mediapathTextBox.TabIndex = 5;
             // 
             // templatepathTextBox
@@ -755,7 +755,7 @@
             this.templatepathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.templatepathTextBox.Location = new System.Drawing.Point(103, 102);
             this.templatepathTextBox.Name = "templatepathTextBox";
-            this.templatepathTextBox.Size = new System.Drawing.Size(572, 22);
+            this.templatepathTextBox.Size = new System.Drawing.Size(573, 22);
             this.templatepathTextBox.TabIndex = 7;
             // 
             // imageList1
@@ -1032,7 +1032,7 @@
             this.tabPagePaths.Location = new System.Drawing.Point(4, 22);
             this.tabPagePaths.Name = "tabPagePaths";
             this.tabPagePaths.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePaths.Size = new System.Drawing.Size(749, 591);
+            this.tabPagePaths.Size = new System.Drawing.Size(750, 591);
             this.tabPagePaths.TabIndex = 1;
             this.tabPagePaths.Text = "Paths";
             // 
@@ -1056,7 +1056,7 @@
             this.panelPaths.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPaths.Location = new System.Drawing.Point(3, 3);
             this.panelPaths.Name = "panelPaths";
-            this.panelPaths.Size = new System.Drawing.Size(743, 585);
+            this.panelPaths.Size = new System.Drawing.Size(744, 585);
             this.panelPaths.TabIndex = 0;
             // 
             // thumbnailspathTextBox
@@ -1069,7 +1069,7 @@
             this.thumbnailspathTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.thumbnailspathTextBox.Location = new System.Drawing.Point(103, 129);
             this.thumbnailspathTextBox.Name = "thumbnailspathTextBox";
-            this.thumbnailspathTextBox.Size = new System.Drawing.Size(572, 22);
+            this.thumbnailspathTextBox.Size = new System.Drawing.Size(573, 22);
             this.thumbnailspathTextBox.TabIndex = 9;
             // 
             // button14
@@ -1077,7 +1077,7 @@
             this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.ForeColor = System.Drawing.Color.DarkGray;
-            this.button14.Location = new System.Drawing.Point(686, 130);
+            this.button14.Location = new System.Drawing.Point(687, 130);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(29, 20);
             this.button14.TabIndex = 14;
@@ -1091,7 +1091,7 @@
             this.tabPageChannels.Controls.Add(this.panelChannels);
             this.tabPageChannels.Location = new System.Drawing.Point(4, 22);
             this.tabPageChannels.Name = "tabPageChannels";
-            this.tabPageChannels.Size = new System.Drawing.Size(749, 591);
+            this.tabPageChannels.Size = new System.Drawing.Size(750, 591);
             this.tabPageChannels.TabIndex = 2;
             this.tabPageChannels.Text = "Channels";
             // 
@@ -1126,7 +1126,7 @@
             this.panelChannels.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChannels.Location = new System.Drawing.Point(0, 0);
             this.panelChannels.Name = "panelChannels";
-            this.panelChannels.Size = new System.Drawing.Size(749, 591);
+            this.panelChannels.Size = new System.Drawing.Size(750, 591);
             this.panelChannels.TabIndex = 8;
             // 
             // button16
@@ -1137,7 +1137,7 @@
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(128, 23);
             this.button16.TabIndex = 45;
-            this.button16.Text = "Add &NewTek";
+            this.button16.Text = "Add &NewTek iVGA";
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
@@ -1458,7 +1458,7 @@
             this.tabPageAdvanced.Controls.Add(this.panelAdvanced);
             this.tabPageAdvanced.Location = new System.Drawing.Point(4, 22);
             this.tabPageAdvanced.Name = "tabPageAdvanced";
-            this.tabPageAdvanced.Size = new System.Drawing.Size(749, 591);
+            this.tabPageAdvanced.Size = new System.Drawing.Size(750, 591);
             this.tabPageAdvanced.TabIndex = 3;
             this.tabPageAdvanced.Text = "Advanced";
             // 
@@ -1492,7 +1492,7 @@
             this.panelAdvanced.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAdvanced.Location = new System.Drawing.Point(0, 0);
             this.panelAdvanced.Name = "panelAdvanced";
-            this.panelAdvanced.Size = new System.Drawing.Size(749, 591);
+            this.panelAdvanced.Size = new System.Drawing.Size(750, 591);
             this.panelAdvanced.TabIndex = 9;
             // 
             // panel1
@@ -1542,7 +1542,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(749, 591);
+            this.panel1.Size = new System.Drawing.Size(750, 591);
             this.panel1.TabIndex = 35;
             // 
             // checkBox8
@@ -1855,7 +1855,7 @@
             this.textBox2.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox2.Location = new System.Drawing.Point(132, 300);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 22);
+            this.textBox2.Size = new System.Drawing.Size(140, 22);
             this.textBox2.TabIndex = 3;
             // 
             // oscBindingSource
@@ -2004,7 +2004,7 @@
             this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.textBox1.Location = new System.Drawing.Point(132, 292);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 22);
+            this.textBox1.Size = new System.Drawing.Size(140, 22);
             this.textBox1.TabIndex = 3;
             // 
             // comboBox2
@@ -2063,7 +2063,7 @@
             this.tabPageConsole.Controls.Add(this.panelConsole);
             this.tabPageConsole.Location = new System.Drawing.Point(4, 22);
             this.tabPageConsole.Name = "tabPageConsole";
-            this.tabPageConsole.Size = new System.Drawing.Size(749, 591);
+            this.tabPageConsole.Size = new System.Drawing.Size(750, 591);
             this.tabPageConsole.TabIndex = 4;
             this.tabPageConsole.Text = "Console";
             // 

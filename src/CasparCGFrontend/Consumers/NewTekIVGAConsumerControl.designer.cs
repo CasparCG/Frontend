@@ -1,6 +1,6 @@
 ﻿namespace CasparCGFrontend
 {
-    partial class NewTekConsumerControl
+    partial class NewTekIVGAConsumerControl
     {
         /// <summary> 
         /// Required designer variable.
