@@ -28,6 +28,10 @@ namespace CasparCGFrontend
             get { return this.name; }
             set { this.name = value; NotifyChanged("Name"); }
         }
+        public bool ShouldSerializeName()
+        {
+            return name != null && name != "" && name != "ogl";
+        }
 
         private string aspectratio = "default";
         [XmlElement(ElementName = "aspect-ratio")]
@@ -35,6 +39,10 @@ namespace CasparCGFrontend
         {
             get { return this.aspectratio; }
             set { this.aspectratio = value; NotifyChanged("AspectRatio"); }
+        }
+        public bool ShouldSerializeAspectRatio()
+        {
+            return aspectratio != "default";
         }
 
         private string stretch = "fill";
@@ -44,6 +52,10 @@ namespace CasparCGFrontend
             get { return this.stretch; }
             set { this.stretch = value; NotifyChanged("Stretch"); }
         }
+        public bool ShouldSerializeStretch()
+        {
+            return stretch != "fill" && stretch != "default";
+        }
 
         private Boolean windowed = true;
         [XmlElement(ElementName = "windowed")]
@@ -51,6 +63,10 @@ namespace CasparCGFrontend
         {
             get { return this.windowed; }
             set { this.windowed = value; NotifyChanged("Windowed"); }
+        }
+        public bool ShouldSerializeWindowed()
+        {
+            return !windowed;
         }
 
         private Boolean keyonly = false;
@@ -60,6 +76,10 @@ namespace CasparCGFrontend
             get { return this.keyonly; }
             set { this.keyonly = value; NotifyChanged("KeyOnly"); }
         }
+        public bool ShouldSerializeKeyOnly()
+        {
+            return keyonly;
+        }
 
         private Boolean autodeinterlace = true;
         [XmlElement(ElementName = "auto-deinterlace")]
@@ -68,6 +88,10 @@ namespace CasparCGFrontend
             get { return this.autodeinterlace; }
             set { this.autodeinterlace = value; NotifyChanged("AutoDeinterlace"); }
         }
+        public bool ShouldSerializeAutoDeinterlace()
+        {
+            return !autodeinterlace;
+        }
 
         private Boolean vsync = false;
         [XmlElement(ElementName = "vsync")]
@@ -75,6 +99,10 @@ namespace CasparCGFrontend
         {
             get { return this.vsync; }
             set { this.vsync = value; NotifyChanged("vsync"); }
+        }
+        public bool ShouldSerializeVSync()
+        {
+            return vsync;
         }
 
         public override string ToString()

@@ -21,6 +21,11 @@ namespace CasparCGFrontend
             set { this.bufferDepth = value; NotifyChanged("BufferDepth"); }
         }
 
+        public bool IsOnlyDefaultValues()
+        {
+            return bufferDepth == "auto";
+        }
+
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         private void NotifyChanged(String info)

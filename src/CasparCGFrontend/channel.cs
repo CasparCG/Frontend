@@ -34,6 +34,10 @@ namespace CasparCGFrontend
             get { return this.channelLayout; }
             set { this.channelLayout = value; NotifyChanged("ChannelLayout"); }
         }
+        public bool ShouldSerializeChannelLayout()
+        {
+            return channelLayout != "stereo";
+        }
 
         private Boolean straightAlphaOutput = false;
         [XmlElement(ElementName = "straight-alpha-output")]
@@ -41,6 +45,10 @@ namespace CasparCGFrontend
         {
             get { return this.straightAlphaOutput; }
             set { this.straightAlphaOutput = value; NotifyChanged("StraightAlphaOutput"); }
+        }
+        public bool ShouldSerializeStraightAlphaOutput()
+        {
+            return straightAlphaOutput;
         }
 
         private BindingList<AbstractConsumer> consumers = new BindingList<AbstractConsumer>();

@@ -25,6 +25,10 @@ namespace CasparCGFrontend
             get { return this.channelLayout; }
             set { this.channelLayout = value; NotifyChanged("ChannelLayout"); }
         }
+        public bool ShouldSerializeChannelLayout()
+        {
+            return channelLayout != "stereo";
+        }
 
         public override event PropertyChangedEventHandler PropertyChanged = delegate { };
 

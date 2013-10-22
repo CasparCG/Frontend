@@ -34,6 +34,10 @@ namespace CasparCGFrontend
             get { return this.embeddedaudio; }
             set { this.embeddedaudio = value; NotifyChanged("EmbeddedAudio"); }
         }
+        public bool ShouldSerializeEmbeddedAudio()
+        {
+            return embeddedaudio;
+        }
 
         private string channelLayout = "stereo";
         [XmlElement(ElementName = "channel-layout")]
@@ -42,6 +46,10 @@ namespace CasparCGFrontend
             get { return this.channelLayout; }
             set { this.channelLayout = value; NotifyChanged("ChannelLayout"); }
         }
+        public bool ShouldSerializeChannelLayout()
+        {
+            return channelLayout != "stereo";
+        }
 
         private Boolean keyonly = false;
         [XmlElement(ElementName = "key-only")]
@@ -49,6 +57,10 @@ namespace CasparCGFrontend
         {
             get { return this.keyonly; }
             set { this.keyonly = value; NotifyChanged("KeyOnly"); }
+        }
+        public bool ShouldSerializeKeyOnly()
+        {
+            return keyonly;
         }
 
         public override string ToString()

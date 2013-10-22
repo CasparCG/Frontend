@@ -34,6 +34,10 @@ namespace CasparCGFrontend
             get { return this.embeddedaudio; }
             set { this.embeddedaudio = value; NotifyChanged("EmbeddedAudio"); }
         }
+        public bool ShouldSerializeEmbeddedAudio()
+        {
+            return embeddedaudio;
+        }
 
         private string channelLayout = "stereo";
         [XmlElement(ElementName = "channel-layout")]
@@ -41,6 +45,10 @@ namespace CasparCGFrontend
         {
             get { return this.channelLayout; }
             set { this.channelLayout = value; NotifyChanged("ChannelLayout"); }
+        }
+        public bool ShouldSerializeChannelLayout()
+        {
+            return channelLayout != "stereo";
         }
 
         private string latency = "normal";
@@ -50,6 +58,10 @@ namespace CasparCGFrontend
             get { return this.latency; }
             set { this.latency = value; NotifyChanged("Latency"); }
         }
+        public bool ShouldSerializeLatency()
+        {
+            return latency != "normal";
+        }
 
         private string keyer = "external";
         [XmlElement(ElementName = "keyer")]
@@ -57,6 +69,10 @@ namespace CasparCGFrontend
         {
             get { return this.keyer; }
             set { this.keyer = value; NotifyChanged("Keyer"); }
+        }
+        public bool ShouldSerializeKeyer()
+        {
+            return keyer != "external";
         }
 
         private Boolean keyonly = false;
@@ -66,6 +82,10 @@ namespace CasparCGFrontend
             get { return this.keyonly; }
             set { this.keyonly = value; NotifyChanged("KeyOnly"); }
         }
+        public bool ShouldSerializeKeyOnly()
+        {
+            return keyonly;
+        }
 
         private String bufferdepth = "3";
         [XmlElement(ElementName = "buffer-depth")]
@@ -74,6 +94,10 @@ namespace CasparCGFrontend
             get { return this.bufferdepth; }
             set { this.bufferdepth = value; NotifyChanged("BufferDepth"); }
         }
+        public bool ShouldSerializeBufferDepth()
+        {
+            return bufferdepth != "3";
+        }
 
         private Boolean customAllocator = true;
         [XmlElement(ElementName = "custom-allocator")]
@@ -81,6 +105,10 @@ namespace CasparCGFrontend
         {
             get { return this.customAllocator; }
             set { this.customAllocator = value; NotifyChanged("CustomAllocator"); }
+        }
+        public bool ShouldSerializeCustomAllocator()
+        {
+            return !customAllocator;
         }
 
         public override String ToString()

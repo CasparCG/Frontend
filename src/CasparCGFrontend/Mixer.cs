@@ -18,6 +18,10 @@ namespace CasparCGFrontend
             get { return this.blendModes; }
             set { this.blendModes = value; NotifyChanged("BlendModes"); }
         }
+        public bool ShouldSerializeBlendModes()
+        {
+            return blendModes;
+        }
 
         private Boolean straightAlpha = false;
         [XmlElement(ElementName = "straight-alpha")]
@@ -26,6 +30,10 @@ namespace CasparCGFrontend
             get { return this.straightAlpha; }
             set { this.straightAlpha = value; NotifyChanged("StraightAlpha"); }
         }
+        public bool ShouldSerializeStraightAlpha()
+        {
+            return straightAlpha;
+        }
 
         private Boolean chromaKey = false;
         [XmlElement(ElementName = "chroma-key")]
@@ -33,6 +41,17 @@ namespace CasparCGFrontend
         {
             get { return this.chromaKey; }
             set { this.chromaKey = value; NotifyChanged("ChromaKey"); }
+        }
+        public bool ShouldSerializeChromaKey()
+        {
+            return chromaKey;
+        }
+
+        public bool IsOnlyDefaultValues()
+        {
+            return !ShouldSerializeBlendModes()
+                && !ShouldSerializeChromaKey()
+                && !ShouldSerializeStraightAlpha();
         }
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };

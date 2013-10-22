@@ -34,6 +34,10 @@ namespace CasparCGFrontend
             get { return this.embeddedaudio; }
             set { this.embeddedaudio = value; NotifyChanged("EmbeddedAudio"); }
         }
+        public bool ShouldSerializeEmbeddedAudio()
+        {
+            return embeddedaudio;
+        }
 
         private string channelLayout = "stereo";
         [XmlElement(ElementName = "channel-layout")]
@@ -41,6 +45,10 @@ namespace CasparCGFrontend
         {
             get { return this.channelLayout; }
             set { this.channelLayout = value; NotifyChanged("ChannelLayout"); }
+        }
+        public bool ShouldSerializeChannelLayout()
+        {
+            return channelLayout != "stereo";
         }
 
         private string keyer = "external";
@@ -50,6 +58,10 @@ namespace CasparCGFrontend
             get { return this.keyer; }
             set { this.keyer = value; NotifyChanged("Keyer"); }
         }
+        public bool ShouldSerializeKeyer()
+        {
+            return keyer != "external";
+        }
 
         private Boolean keyonly = false;
         [XmlElement(ElementName = "key-only")]
@@ -58,6 +70,10 @@ namespace CasparCGFrontend
             get { return this.keyonly; }
             set { this.keyonly = value; NotifyChanged("KeyOnly"); }
         }
+        public bool ShouldSerializeKeyOnly()
+        {
+            return keyonly;
+        }
 
         private Boolean customAllocator = true;
         [XmlElement(ElementName = "custom-allocator")]
@@ -65,6 +81,10 @@ namespace CasparCGFrontend
         {
             get { return this.customAllocator; }
             set { this.customAllocator = value; NotifyChanged("CustomAllocator"); }
+        }
+        public bool ShouldSerializeCustomAllocator()
+        {
+            return !customAllocator;
         }
 
         public override String ToString()

@@ -20,6 +20,11 @@ namespace CasparCGFrontend
             set { this.channelLayouts = value; NotifyChanged("ChannelLayouts"); }
         }
 
+        public bool IsOnlyDefaultValues()
+        {
+            return channelLayouts.Count == 0;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         private void NotifyChanged(String info)

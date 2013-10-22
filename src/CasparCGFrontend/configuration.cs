@@ -34,6 +34,10 @@ namespace CasparCGFrontend
             get { return this.logLevel; }
             set { this.logLevel = value; NotifyChanged("LogLevel"); }
         }
+        public bool ShouldSerializeLogLevel()
+        {
+            return logLevel != "debug";
+        }
 
         private Boolean channelGrid = false;
         [XmlElement(ElementName = "channel-grid")]
@@ -42,6 +46,10 @@ namespace CasparCGFrontend
             get { return this.channelGrid; }
             set { this.channelGrid = value; NotifyChanged("ChannelGrid"); }
         }
+        public bool ShouldSerializeChannelGrid()
+        {
+            return channelGrid == true;
+        }
 
         private Mixer mixer = new Mixer();
         [XmlElement(ElementName = "mixer")]
@@ -49,6 +57,10 @@ namespace CasparCGFrontend
         {
             get { return this.mixer; }
             set { this.mixer = value; NotifyChanged("Mixer"); }
+        }
+        public bool ShouldSerializeMixer()
+        {
+            return !mixer.IsOnlyDefaultValues();
         }
 
         /*
@@ -68,6 +80,10 @@ namespace CasparCGFrontend
             get { return this.autoTranscode; }
             set { this.autoTranscode = value; NotifyChanged("AutoTranscode"); }
         }
+        public bool ShouldSerializeAutoTranscode()
+        {
+            return autoTranscode != true;
+        }
 
         /*
         private String accelerator = "auto";
@@ -86,6 +102,10 @@ namespace CasparCGFrontend
             get { return this.flash; }
             set { this.flash = value; NotifyChanged("Flash"); }
         }
+        public bool ShouldSerializeFlash()
+        {
+            return !flash.IsOnlyDefaultValues();
+        }
 
         private Thumbnails thumbnails = new Thumbnails();
         [XmlElement(ElementName = "thumbnails")]
@@ -93,6 +113,10 @@ namespace CasparCGFrontend
         {
             get { return this.thumbnails; }
             set { this.thumbnails = value; NotifyChanged("Thumbnail"); }
+        }
+        public bool ShouldSerializeThumbnails()
+        {
+            return !thumbnails.IsOnlyDefaultValues();
         }
 
         private BindingList<Channel> channels = new BindingList<Channel>();
@@ -111,6 +135,10 @@ namespace CasparCGFrontend
             get { return this.audio; }
             set { this.audio = value; NotifyChanged("Audio"); }
         }
+        public bool ShouldSerializeAudio()
+        {
+            return !audio.IsOnlyDefaultValues();
+        }
 
         private Osc osc = new Osc();
         [XmlElement(ElementName = "osc")]
@@ -118,6 +146,10 @@ namespace CasparCGFrontend
         {
             get { return this.osc; }
             set { this.osc = value; NotifyChanged("Osc"); }
+        }
+        public bool ShouldSerializeOsc()
+        {
+            return !osc.IsOnlyDefaultValues();
         }
 
         private List<String> defaultDecklinkIDs = new List<string>() { "1", "2", "3", "4", "5", "6", "7", "8", "9" };

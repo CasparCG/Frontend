@@ -20,6 +20,10 @@ namespace CasparCGFrontend
             get { return this.defaultPort; }
             set { this.defaultPort = value; NotifyChanged("DefaultPort"); }
         }
+        public bool ShouldSerializeDefaultPort()
+        {
+            return defaultPort != "6250";
+        }
 
         private BindingList<PredefinedClient> predefinedClients = new BindingList<PredefinedClient>();
         [XmlArray("predefined-clients")]
@@ -28,6 +32,15 @@ namespace CasparCGFrontend
         {
             get { return this.predefinedClients; }
             set { this.predefinedClients = value; NotifyChanged("PredefinedClients"); }
+        }
+        public bool ShouldSerializePredefinedClients()
+        {
+            return predefinedClients.Count != 0;
+        }
+
+        public bool IsOnlyDefaultValues()
+        {
+            return !ShouldSerializeDefaultPort() && !ShouldSerializePredefinedClients();
         }
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
