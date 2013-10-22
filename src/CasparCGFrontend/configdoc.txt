@@ -1,4 +1,4 @@
-﻿!!!DOCUMENTATION!!!
+﻿
 
 <log-level>        debug [trace|debug|info|warning|error]</log-level>
 <channel-grid>     false [true|false]</channel-grid>
