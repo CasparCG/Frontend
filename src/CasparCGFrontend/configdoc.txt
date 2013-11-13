@@ -46,6 +46,8 @@
                 <key-only>false [true|false]</key-only>
                 <auto-deinterlace>true [true|false]</auto-deinterlace>
                 <vsync>fasle [true|false]</vsync>
+                <name>[Screen Consumer]</name>
+                <borderless>false [true|false]</borderless>
             </screen>
             <blocking-decklink>
                 <device>[1..]</device>

@@ -69,6 +69,18 @@ namespace CasparCGFrontend
             return !windowed;
         }
 
+        private Boolean borderless = false;
+        [XmlElement(ElementName = "borderless")]
+        public Boolean Borderless
+        {
+            get { return this.borderless; }
+            set { this.borderless = value; NotifyChanged("Borderless"); }
+        }
+        public bool ShouldSerializeBorderless()
+        {
+            return borderless;
+        }
+
         private Boolean keyonly = false;
         [XmlElement(ElementName = "key-only")]
         public Boolean KeyOnly

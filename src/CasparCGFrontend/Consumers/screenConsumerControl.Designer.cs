@@ -37,6 +37,7 @@
             System.Windows.Forms.Label stretchLabel;
             System.Windows.Forms.Label vsyncLabel;
             System.Windows.Forms.Label windowedLabel;
+            System.Windows.Forms.Label borderlessLabel;
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.screenConsumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -46,6 +47,7 @@
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.vsyncCheckBox = new System.Windows.Forms.CheckBox();
             this.windowedCheckBox = new System.Windows.Forms.CheckBox();
+            this.borderlessCheckBox = new System.Windows.Forms.CheckBox();
             aspectratioLabel = new System.Windows.Forms.Label();
             autodeinterlaceLabel = new System.Windows.Forms.Label();
             deviceLabel = new System.Windows.Forms.Label();
@@ -54,8 +56,99 @@
             stretchLabel = new System.Windows.Forms.Label();
             vsyncLabel = new System.Windows.Forms.Label();
             windowedLabel = new System.Windows.Forms.Label();
+            borderlessLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.screenConsumerBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // aspectratioLabel
+            // 
+            aspectratioLabel.AutoSize = true;
+            aspectratioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            aspectratioLabel.Location = new System.Drawing.Point(43, 13);
+            aspectratioLabel.Name = "aspectratioLabel";
+            aspectratioLabel.Size = new System.Drawing.Size(71, 13);
+            aspectratioLabel.TabIndex = 1;
+            aspectratioLabel.Text = "Aspect Ratio";
+            // 
+            // autodeinterlaceLabel
+            // 
+            autodeinterlaceLabel.AutoSize = true;
+            autodeinterlaceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            autodeinterlaceLabel.Location = new System.Drawing.Point(21, 38);
+            autodeinterlaceLabel.Name = "autodeinterlaceLabel";
+            autodeinterlaceLabel.Size = new System.Drawing.Size(93, 13);
+            autodeinterlaceLabel.TabIndex = 3;
+            autodeinterlaceLabel.Text = "Auto Deinterlace";
+            // 
+            // deviceLabel
+            // 
+            deviceLabel.AutoSize = true;
+            deviceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            deviceLabel.Location = new System.Drawing.Point(64, 65);
+            deviceLabel.Name = "deviceLabel";
+            deviceLabel.Size = new System.Drawing.Size(50, 13);
+            deviceLabel.TabIndex = 5;
+            deviceLabel.Text = "Device #";
+            // 
+            // keyonlyLabel
+            // 
+            keyonlyLabel.AutoSize = true;
+            keyonlyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            keyonlyLabel.Location = new System.Drawing.Point(63, 94);
+            keyonlyLabel.Name = "keyonlyLabel";
+            keyonlyLabel.Size = new System.Drawing.Size(51, 13);
+            keyonlyLabel.TabIndex = 7;
+            keyonlyLabel.Text = "Key Only";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            nameLabel.Location = new System.Drawing.Point(31, 122);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(83, 13);
+            nameLabel.TabIndex = 9;
+            nameLabel.Text = "Window Name";
+            // 
+            // stretchLabel
+            // 
+            stretchLabel.AutoSize = true;
+            stretchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            stretchLabel.Location = new System.Drawing.Point(71, 148);
+            stretchLabel.Name = "stretchLabel";
+            stretchLabel.Size = new System.Drawing.Size(43, 13);
+            stretchLabel.TabIndex = 11;
+            stretchLabel.Text = "Stretch";
+            // 
+            // vsyncLabel
+            // 
+            vsyncLabel.AutoSize = true;
+            vsyncLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            vsyncLabel.Location = new System.Drawing.Point(78, 176);
+            vsyncLabel.Name = "vsyncLabel";
+            vsyncLabel.Size = new System.Drawing.Size(36, 13);
+            vsyncLabel.TabIndex = 13;
+            vsyncLabel.Text = "Vsync";
+            // 
+            // windowedLabel
+            // 
+            windowedLabel.AutoSize = true;
+            windowedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            windowedLabel.Location = new System.Drawing.Point(50, 200);
+            windowedLabel.Name = "windowedLabel";
+            windowedLabel.Size = new System.Drawing.Size(64, 13);
+            windowedLabel.TabIndex = 15;
+            windowedLabel.Text = "Windowed";
+            // 
+            // borderlessLabel
+            // 
+            borderlessLabel.AutoSize = true;
+            borderlessLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            borderlessLabel.Location = new System.Drawing.Point(53, 224);
+            borderlessLabel.Name = "borderlessLabel";
+            borderlessLabel.Size = new System.Drawing.Size(61, 13);
+            borderlessLabel.TabIndex = 21;
+            borderlessLabel.Text = "Borderless";
             // 
             // comboBox3
             // 
@@ -107,26 +200,6 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 17;
             // 
-            // aspectratioLabel
-            // 
-            aspectratioLabel.AutoSize = true;
-            aspectratioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            aspectratioLabel.Location = new System.Drawing.Point(43, 13);
-            aspectratioLabel.Name = "aspectratioLabel";
-            aspectratioLabel.Size = new System.Drawing.Size(71, 13);
-            aspectratioLabel.TabIndex = 1;
-            aspectratioLabel.Text = "Aspect Ratio";
-            // 
-            // autodeinterlaceLabel
-            // 
-            autodeinterlaceLabel.AutoSize = true;
-            autodeinterlaceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            autodeinterlaceLabel.Location = new System.Drawing.Point(21, 38);
-            autodeinterlaceLabel.Name = "autodeinterlaceLabel";
-            autodeinterlaceLabel.Size = new System.Drawing.Size(93, 13);
-            autodeinterlaceLabel.TabIndex = 3;
-            autodeinterlaceLabel.Text = "Auto Deinterlace";
-            // 
             // autodeinterlaceCheckBox
             // 
             this.autodeinterlaceCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.screenConsumerBindingSource, "AutoDeinterlace", true));
@@ -135,26 +208,6 @@
             this.autodeinterlaceCheckBox.Size = new System.Drawing.Size(104, 24);
             this.autodeinterlaceCheckBox.TabIndex = 4;
             this.autodeinterlaceCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // deviceLabel
-            // 
-            deviceLabel.AutoSize = true;
-            deviceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            deviceLabel.Location = new System.Drawing.Point(64, 65);
-            deviceLabel.Name = "deviceLabel";
-            deviceLabel.Size = new System.Drawing.Size(50, 13);
-            deviceLabel.TabIndex = 5;
-            deviceLabel.Text = "Device #";
-            // 
-            // keyonlyLabel
-            // 
-            keyonlyLabel.AutoSize = true;
-            keyonlyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            keyonlyLabel.Location = new System.Drawing.Point(63, 94);
-            keyonlyLabel.Name = "keyonlyLabel";
-            keyonlyLabel.Size = new System.Drawing.Size(51, 13);
-            keyonlyLabel.TabIndex = 7;
-            keyonlyLabel.Text = "Key Only";
             // 
             // keyonlyCheckBox
             // 
@@ -165,16 +218,6 @@
             this.keyonlyCheckBox.TabIndex = 8;
             this.keyonlyCheckBox.UseVisualStyleBackColor = true;
             // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            nameLabel.Location = new System.Drawing.Point(31, 122);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(83, 13);
-            nameLabel.TabIndex = 9;
-            nameLabel.Text = "Window Name";
-            // 
             // nameTextBox
             // 
             this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.screenConsumerBindingSource, "Name", true));
@@ -182,26 +225,6 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(104, 22);
             this.nameTextBox.TabIndex = 10;
-            // 
-            // stretchLabel
-            // 
-            stretchLabel.AutoSize = true;
-            stretchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            stretchLabel.Location = new System.Drawing.Point(71, 148);
-            stretchLabel.Name = "stretchLabel";
-            stretchLabel.Size = new System.Drawing.Size(43, 13);
-            stretchLabel.TabIndex = 11;
-            stretchLabel.Text = "Stretch";
-            // 
-            // vsyncLabel
-            // 
-            vsyncLabel.AutoSize = true;
-            vsyncLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            vsyncLabel.Location = new System.Drawing.Point(78, 176);
-            vsyncLabel.Name = "vsyncLabel";
-            vsyncLabel.Size = new System.Drawing.Size(36, 13);
-            vsyncLabel.TabIndex = 13;
-            vsyncLabel.Text = "Vsync";
             // 
             // vsyncCheckBox
             // 
@@ -212,16 +235,6 @@
             this.vsyncCheckBox.TabIndex = 14;
             this.vsyncCheckBox.UseVisualStyleBackColor = true;
             // 
-            // windowedLabel
-            // 
-            windowedLabel.AutoSize = true;
-            windowedLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            windowedLabel.Location = new System.Drawing.Point(50, 200);
-            windowedLabel.Name = "windowedLabel";
-            windowedLabel.Size = new System.Drawing.Size(64, 13);
-            windowedLabel.TabIndex = 15;
-            windowedLabel.Text = "Windowed";
-            // 
             // windowedCheckBox
             // 
             this.windowedCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.screenConsumerBindingSource, "Windowed", true));
@@ -231,11 +244,22 @@
             this.windowedCheckBox.TabIndex = 16;
             this.windowedCheckBox.UseVisualStyleBackColor = true;
             // 
+            // borderlessCheckBox
+            // 
+            this.borderlessCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.screenConsumerBindingSource, "Borderless", true));
+            this.borderlessCheckBox.Location = new System.Drawing.Point(120, 219);
+            this.borderlessCheckBox.Name = "borderlessCheckBox";
+            this.borderlessCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.borderlessCheckBox.TabIndex = 20;
+            this.borderlessCheckBox.UseVisualStyleBackColor = true;
+            // 
             // ScreenConsumerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(borderlessLabel);
+            this.Controls.Add(this.borderlessCheckBox);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -254,6 +278,7 @@
             this.Controls.Add(this.windowedCheckBox);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "ScreenConsumerControl";
+            this.Size = new System.Drawing.Size(261, 252);
             ((System.ComponentModel.ISupportInitialize)(this.screenConsumerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,6 +296,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.CheckBox borderlessCheckBox;
 
     }
 }
