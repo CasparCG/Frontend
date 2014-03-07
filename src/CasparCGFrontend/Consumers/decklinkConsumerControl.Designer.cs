@@ -37,6 +37,7 @@
             System.Windows.Forms.Label latencyLabel;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DecklinkConsumerControl));
             this.decklinkConsumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.embeddedaudioCheckBox = new System.Windows.Forms.CheckBox();
             this.keyonlyCheckBox = new System.Windows.Forms.CheckBox();
@@ -47,6 +48,7 @@
             this.availableIDsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             bufferdepthLabel = new System.Windows.Forms.Label();
             deviceLabel = new System.Windows.Forms.Label();
             embeddedaudioLabel = new System.Windows.Forms.Label();
@@ -151,6 +153,8 @@
             this.embeddedaudioCheckBox.Name = "embeddedaudioCheckBox";
             this.embeddedaudioCheckBox.Size = new System.Drawing.Size(104, 24);
             this.embeddedaudioCheckBox.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.embeddedaudioCheckBox, "Output audio embedded in the SDI signal. This adds another 1 frame of delay. Plea" +
+        "se also use a buffer depth of atleast 4. Default is false.");
             this.embeddedaudioCheckBox.UseVisualStyleBackColor = true;
             // 
             // keyonlyCheckBox
@@ -160,6 +164,7 @@
             this.keyonlyCheckBox.Name = "keyonlyCheckBox";
             this.keyonlyCheckBox.Size = new System.Drawing.Size(104, 24);
             this.keyonlyCheckBox.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.keyonlyCheckBox, "Output only the key signal for the channel. Default is false.");
             this.keyonlyCheckBox.UseVisualStyleBackColor = true;
             // 
             // comboBox1
@@ -175,6 +180,9 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.comboBox1, "Use either the internal or external keyer of the Decklink cards. Depending on the" +
+        " Decklink card, internal key can be used to overlay the output from Caspar with " +
+        "a signal on the Decklink cards input.");
             // 
             // comboBox2
             // 
@@ -189,6 +197,8 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.comboBox2, "Selecting low reduces the channels delay by 1 frame but it can have impact on per" +
+        "formance and spike tolerance. Default is normal.");
             // 
             // comboBox3
             // 
@@ -210,6 +220,7 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.comboBox3, resources.GetString("comboBox3.ToolTip"));
             // 
             // comboBox4
             // 
@@ -220,6 +231,9 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.comboBox4, "If you have multiple cards or cards supporting more than one output you can selec" +
+        "t the Device number here. Be careful to select a different device for all Deckli" +
+        "nk channels.");
             // 
             // availableIDsBindingSource
             // 
@@ -242,6 +256,9 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.comboBox5, "This is the audio channels configuration. Passthru will pass 16 channels of audio" +
+        " withour modifying it. More information: http://casparcg.com/wiki/Content_/_Medi" +
+        "a#Audio Default is Stereo.");
             // 
             // checkBox1
             // 
@@ -294,5 +311,6 @@
         private System.Windows.Forms.BindingSource availableIDsBindingSource;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

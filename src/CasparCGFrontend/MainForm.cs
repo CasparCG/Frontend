@@ -42,6 +42,7 @@ namespace CasparCGFrontend
         private string FlashVersion { get; set; }
         private string TemplatehostVersion { get; set; }
 
+        private delegate bool CheckForSaveCallback();
         private delegate void UpdateStatusCallback(bool isRunning);
         private delegate void UpdateUptimeCallback(bool isRunning);
         private delegate void ProcessOutputDataCallback(object sender, DataReceivedEventArgs e);
@@ -158,6 +159,15 @@ namespace CasparCGFrontend
             }
         }
 
+        private void SaveStatus(object state)
+        {
+            try
+            {
+                CheckForSave();
+            }
+            catch (Exception ex) { }
+        }
+
         private void CheckStatus(object state)
         {
             try
@@ -188,21 +198,25 @@ namespace CasparCGFrontend
                 {
                     if (e.Data.Contains("Starting CasparCG"))
                         this.ServerVersion = LogParser.ParseServerVersion(e.Data);
-                    else if (e.Data.Contains("FreeImage"))
+                    else if (e.Data.Contains("FreeImage "))
                         this.FreeImageVersion = LogParser.ParseComponentVersion(e.Data);
-                    else if (e.Data.Contains("FFMPEG-avcodec"))
+                    else if (e.Data.Contains("FFMPEG-avcodec "))
                         this.FFmpegAVCodecVersion = LogParser.ParseComponentVersion(e.Data);
-                    else if (e.Data.Contains("FFMPEG-avformat"))
+                    else if (e.Data.Contains("FFMPEG-avformat "))
                         this.FFmpegAVFormatVersion = LogParser.ParseComponentVersion(e.Data);
-                    else if (e.Data.Contains("FFMPEG-avfilter"))
+                    else if (e.Data.Contains("FFMPEG-avfilter "))
                         this.FFmpegAVFilterVersion = LogParser.ParseComponentVersion(e.Data);
-                    else if (e.Data.Contains("FFMPEG-avutil"))
+                    else if (e.Data.Contains("FFMPEG-avutil "))
                         this.FFmpegAVUtilVersion = LogParser.ParseComponentVersion(e.Data);
-                    else if (e.Data.Contains("FFMPEG-swscale"))
+                    else if (e.Data.Contains("FFMPEG-swscale "))
                         this.FFmpegSWScaleVersion = LogParser.ParseComponentVersion(e.Data);
-                    else if (e.Data.Contains("Flash"))
+                    else if (e.Data.Contains("Flash Not found"))
+                        this.FlashVersion = "Not found";
+                    else if (e.Data.Contains("Flash "))
                         this.FlashVersion = LogParser.ParseComponentVersion(e.Data);
-                    else if (e.Data.Contains("Template-Host"))
+                    else if (e.Data.Contains("Template-Host Unknown"))
+                        this.TemplatehostVersion = "Unknown";
+                    else if (e.Data.Contains("Template-Host "))
                         this.TemplatehostVersion = LogParser.ParseComponentVersion(e.Data);
 
                     this.textBoxLog.AppendText(e.Data + "\r\n");
@@ -526,12 +540,19 @@ namespace CasparCGFrontend
 
         private bool CheckForSave()
         {
-            var res = MessageBox.Show("Do you want to save this configuration before exiting?", "CasparCG Frontend", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (res == System.Windows.Forms.DialogResult.Yes || res == System.Windows.Forms.DialogResult.OK)
+            if (this.InvokeRequired)
+            {
+                this.BeginInvoke(new CheckForSaveCallback(CheckForSave));
+            }
+            else
+            {
+                //var res = MessageBox.Show("Do you want to save this configuration before exiting?", "CasparCG Frontend", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                //f (res == System.Windows.Forms.DialogResult.Yes || res == System.Windows.Forms.DialogResult.OK)
                 SerializeConfig();
-            //else if(res == System.Windows.Forms.DialogResult.No)           
-            else if (res == System.Windows.Forms.DialogResult.Cancel)
-                return true;
+                //else if(res == System.Windows.Forms.DialogResult.No)           
+                //else if (res == System.Windows.Forms.DialogResult.Cancel)
+                //    return true;
+            }
 
             return false;
         }
@@ -754,6 +775,5 @@ namespace CasparCGFrontend
             if (this.tabControl.SelectedTab == this.tabPageChannels)
                 checkStraightAlphaInconsistency();
         }
-
     }
 }

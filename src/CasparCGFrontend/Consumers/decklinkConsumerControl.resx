@@ -144,6 +144,12 @@
   <metadata name="decklinkConsumerBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>425, 17</value>
+  </metadata>
+  <data name="comboBox3.ToolTip" xml:space="preserve">
+    <value>Buffer depth configures the depth of CasparCG Server's consumer buffers. Lower buffer-depth will decrease frame latency, however the software will be less tolerant to performance spikes. Different consumers have different minimum buffer-depths to function properly. The buffer-depth setting should be set to the highest depth of any of the used consumers. Reccomended setting is 3, except for Decklink with embedded audio, which is 4.</value>
+  </data>
   <metadata name="availableIDsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>230, 17</value>
   </metadata>

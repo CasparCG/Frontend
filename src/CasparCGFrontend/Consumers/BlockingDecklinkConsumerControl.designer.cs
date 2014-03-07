@@ -37,13 +37,14 @@
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label2;
             this.embeddedaudioCheckBox = new System.Windows.Forms.CheckBox();
+            this.blockingDecklinkConsumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.keyonlyCheckBox = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.availableIDsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.blockingDecklinkConsumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             deviceLabel = new System.Windows.Forms.Label();
             embeddedaudioLabel = new System.Windows.Forms.Label();
             keyLabel = new System.Windows.Forms.Label();
@@ -51,8 +52,8 @@
             label1 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.availableIDsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blockingDecklinkConsumerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.availableIDsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // deviceLabel
@@ -114,6 +115,16 @@
             label3.TabIndex = 20;
             label3.Text = "Note: this consumer is to be considered experimental";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label2.Location = new System.Drawing.Point(4, 148);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(95, 13);
+            label2.TabIndex = 22;
+            label2.Text = "Custom Allocator";
+            // 
             // embeddedaudioCheckBox
             // 
             this.embeddedaudioCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.blockingDecklinkConsumerBindingSource, "EmbeddedAudio", true));
@@ -121,7 +132,13 @@
             this.embeddedaudioCheckBox.Name = "embeddedaudioCheckBox";
             this.embeddedaudioCheckBox.Size = new System.Drawing.Size(104, 24);
             this.embeddedaudioCheckBox.TabIndex = 6;
+            this.toolTip.SetToolTip(this.embeddedaudioCheckBox, "Output audio embedded in the SDI signal. This adds another 1 frame of delay. Plea" +
+        "se also use a buffer depth of atleast 4. Default is false.");
             this.embeddedaudioCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // blockingDecklinkConsumerBindingSource
+            // 
+            this.blockingDecklinkConsumerBindingSource.DataSource = typeof(CasparCGFrontend.BlockingDecklinkConsumer);
             // 
             // keyonlyCheckBox
             // 
@@ -130,6 +147,9 @@
             this.keyonlyCheckBox.Name = "keyonlyCheckBox";
             this.keyonlyCheckBox.Size = new System.Drawing.Size(104, 24);
             this.keyonlyCheckBox.TabIndex = 10;
+            this.toolTip.SetToolTip(this.keyonlyCheckBox, "Use either the internal or external keyer of the Decklink cards. Depending on the" +
+        " Decklink card, internal key can be used to overlay the output from Caspar with " +
+        "a signal on the Decklink cards input.");
             this.keyonlyCheckBox.UseVisualStyleBackColor = true;
             // 
             // comboBox1
@@ -155,6 +175,9 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(121, 21);
             this.comboBox4.TabIndex = 16;
+            this.toolTip.SetToolTip(this.comboBox4, "If you have multiple cards or cards supporting more than one output you can selec" +
+        "t the Device number here. Be careful to select a different device for all Deckli" +
+        "nk channels.");
             // 
             // availableIDsBindingSource
             // 
@@ -177,6 +200,9 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 18;
+            this.toolTip.SetToolTip(this.comboBox5, "This is the audio channels configuration. Passthru will pass 16 channels of audio" +
+        " withour modifying it. More information: http://casparcg.com/wiki/Content_/_Medi" +
+        "a#Audio Default is Stereo.");
             // 
             // checkBox1
             // 
@@ -186,20 +212,6 @@
             this.checkBox1.Size = new System.Drawing.Size(104, 24);
             this.checkBox1.TabIndex = 23;
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label2.Location = new System.Drawing.Point(4, 148);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(95, 13);
-            label2.TabIndex = 22;
-            label2.Text = "Custom Allocator";
-            // 
-            // blockingDecklinkConsumerBindingSource
-            // 
-            this.blockingDecklinkConsumerBindingSource.DataSource = typeof(CasparCGFrontend.BlockingDecklinkConsumer);
             // 
             // BlockingDecklinkConsumerControl
             // 
@@ -221,8 +233,8 @@
             this.Controls.Add(this.keyonlyCheckBox);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "BlockingDecklinkConsumerControl";
-            ((System.ComponentModel.ISupportInitialize)(this.availableIDsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.blockingDecklinkConsumerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.availableIDsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +250,6 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.BindingSource blockingDecklinkConsumerBindingSource;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

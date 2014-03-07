@@ -48,6 +48,7 @@
             this.vsyncCheckBox = new System.Windows.Forms.CheckBox();
             this.windowedCheckBox = new System.Windows.Forms.CheckBox();
             this.borderlessCheckBox = new System.Windows.Forms.CheckBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             aspectratioLabel = new System.Windows.Forms.Label();
             autodeinterlaceLabel = new System.Windows.Forms.Label();
             deviceLabel = new System.Windows.Forms.Label();
@@ -185,6 +186,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 18;
+            this.toolTip.SetToolTip(this.comboBox2, "Set the stretching behaviour of the window. Default is fill.");
             // 
             // comboBox1
             // 
@@ -199,6 +201,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 17;
+            this.toolTip.SetToolTip(this.comboBox1, "Sets the aspect ratio for the screen consumer.");
             // 
             // autodeinterlaceCheckBox
             // 
@@ -207,6 +210,8 @@
             this.autodeinterlaceCheckBox.Name = "autodeinterlaceCheckBox";
             this.autodeinterlaceCheckBox.Size = new System.Drawing.Size(104, 24);
             this.autodeinterlaceCheckBox.TabIndex = 4;
+            this.toolTip.SetToolTip(this.autodeinterlaceCheckBox, "Wether to deinterlace the output. This might affect performance. Default is true." +
+        "");
             this.autodeinterlaceCheckBox.UseVisualStyleBackColor = true;
             // 
             // keyonlyCheckBox
@@ -216,6 +221,7 @@
             this.keyonlyCheckBox.Name = "keyonlyCheckBox";
             this.keyonlyCheckBox.Size = new System.Drawing.Size(104, 24);
             this.keyonlyCheckBox.TabIndex = 8;
+            this.toolTip.SetToolTip(this.keyonlyCheckBox, "Select which monitor to create the window on.");
             this.keyonlyCheckBox.UseVisualStyleBackColor = true;
             // 
             // nameTextBox
@@ -225,6 +231,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(104, 22);
             this.nameTextBox.TabIndex = 10;
+            this.toolTip.SetToolTip(this.nameTextBox, "Sets the name for the window.");
             // 
             // vsyncCheckBox
             // 
@@ -233,6 +240,7 @@
             this.vsyncCheckBox.Name = "vsyncCheckBox";
             this.vsyncCheckBox.Size = new System.Drawing.Size(104, 24);
             this.vsyncCheckBox.TabIndex = 14;
+            this.toolTip.SetToolTip(this.vsyncCheckBox, "Default is false.");
             this.vsyncCheckBox.UseVisualStyleBackColor = true;
             // 
             // windowedCheckBox
@@ -242,6 +250,7 @@
             this.windowedCheckBox.Name = "windowedCheckBox";
             this.windowedCheckBox.Size = new System.Drawing.Size(104, 24);
             this.windowedCheckBox.TabIndex = 16;
+            this.toolTip.SetToolTip(this.windowedCheckBox, "Select between output to a window or fullscreen. Default is true.");
             this.windowedCheckBox.UseVisualStyleBackColor = true;
             // 
             // borderlessCheckBox
@@ -297,6 +306,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.CheckBox borderlessCheckBox;
+        private System.Windows.Forms.ToolTip toolTip;
 
     }
 }

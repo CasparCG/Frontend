@@ -32,6 +32,7 @@
             System.Windows.Forms.Label label1;
             this.newTekConsumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.newTekConsumerBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -68,8 +69,11 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 18;
+            this.toolTip.SetToolTip(this.comboBox5, "This is the audio channels configuration. Passthru will pass 16 channels of audio" +
+        " withour modifying it. More information: http://casparcg.com/wiki/Content_/_Medi" +
+        "a#Audio Default is Stereo.");
             // 
-            // NewTekConsumerControl
+            // NewTekIVGAConsumerControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -77,7 +81,7 @@
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(label1);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "NewTekConsumerControl";
+            this.Name = "NewTekIVGAConsumerControl";
             ((System.ComponentModel.ISupportInitialize)(this.newTekConsumerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -88,5 +92,6 @@
 
         private System.Windows.Forms.BindingSource newTekConsumerBindingSource;
         private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }

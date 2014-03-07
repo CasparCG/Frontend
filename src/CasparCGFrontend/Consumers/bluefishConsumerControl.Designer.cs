@@ -38,6 +38,7 @@
             this.keyonlyCheckBox = new System.Windows.Forms.CheckBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             deviceLabel = new System.Windows.Forms.Label();
             embeddedaudioLabel = new System.Windows.Forms.Label();
             keyonlyLabel = new System.Windows.Forms.Label();
@@ -99,6 +100,8 @@
             this.embeddedaudioCheckBox.Name = "embeddedaudioCheckBox";
             this.embeddedaudioCheckBox.Size = new System.Drawing.Size(104, 24);
             this.embeddedaudioCheckBox.TabIndex = 4;
+            this.toolTip.SetToolTip(this.embeddedaudioCheckBox, "Output audio embedded in the SDI signal. This adds another 1 frame of delay. Defa" +
+        "ult is false.");
             this.embeddedaudioCheckBox.UseVisualStyleBackColor = true;
             // 
             // keyonlyCheckBox
@@ -108,6 +111,7 @@
             this.keyonlyCheckBox.Name = "keyonlyCheckBox";
             this.keyonlyCheckBox.Size = new System.Drawing.Size(104, 24);
             this.keyonlyCheckBox.TabIndex = 6;
+            this.toolTip.SetToolTip(this.keyonlyCheckBox, "Output only the key signal for the channel. Default is false.");
             this.keyonlyCheckBox.UseVisualStyleBackColor = true;
             // 
             // comboBox2
@@ -119,6 +123,9 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 19;
+            this.toolTip.SetToolTip(this.comboBox2, "If you have multiple cards or cards supporting more than one output you can selec" +
+        "t the Device number here. Be careful to select a different device for all Bluefi" +
+        "sh channels.");
             // 
             // comboBox5
             // 
@@ -137,6 +144,9 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 21);
             this.comboBox5.TabIndex = 21;
+            this.toolTip.SetToolTip(this.comboBox5, "This is the audio channels configuration. Passthru will pass 16 channels of audio" +
+        " withour modifying it. More information: http://casparcg.com/wiki/Content_/_Medi" +
+        "a#Audio Default is Stereo.");
             // 
             // BluefishConsumerControl
             // 
@@ -166,6 +176,7 @@
         private System.Windows.Forms.CheckBox keyonlyCheckBox;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ToolTip toolTip;
 
     }
 }
