@@ -263,6 +263,8 @@ namespace CasparCGFrontend
 
                     this.statusLabel.Text = "Ready";
 
+                    this.buttonStart.Enabled = false;
+                    this.buttonStop.Enabled = true;
                     this.buttonRestart.Enabled = true;
                     this.buttonChannelGrid.Enabled = true;
                     this.buttonDiag.Enabled = true;
@@ -278,6 +280,8 @@ namespace CasparCGFrontend
                     this.statusLabel.Text = "";
                     this.labelUptime.Text = "";
 
+                    this.buttonStart.Enabled = true;
+                    this.buttonStop.Enabled = false;
                     this.buttonRestart.Enabled = false;
                     this.buttonChannelGrid.Enabled = false;
                     this.buttonDiag.Enabled = false;
@@ -647,6 +651,22 @@ namespace CasparCGFrontend
             this.textBoxLog.Clear();
 
             StartServer();
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            if (CheckForSave())
+                return;
+            
+            this.textBoxLog.Clear();
+
+            StartServer();
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            StopServer();
+            UpdateStatus(false);
         }
 
         private void buttonDiag_Click(object sender, EventArgs e)
