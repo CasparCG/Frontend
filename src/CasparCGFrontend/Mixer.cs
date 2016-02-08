@@ -47,11 +47,24 @@ namespace CasparCGFrontend
             return chromaKey;
         }
 
+        private Boolean mipmappingDefaultOn = false;
+        [XmlElement(ElementName = "mipmapping_default_on")]
+        public Boolean MipmappingDefaultOn
+        {
+            get { return this.mipmappingDefaultOn; }
+            set { this.mipmappingDefaultOn = value; NotifyChanged("MipmappingDefaultOn"); }
+        }
+        public bool ShouldSerializeMipmappingDefaultOn()
+        {
+            return mipmappingDefaultOn == true;
+        }
+
         public bool IsOnlyDefaultValues()
         {
             return !ShouldSerializeBlendModes()
                 && !ShouldSerializeChromaKey()
-                && !ShouldSerializeStraightAlpha();
+                && !ShouldSerializeStraightAlpha()
+                && !ShouldSerializeMipmappingDefaultOn();
         }
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };

@@ -54,12 +54,12 @@ namespace CasparCGFrontend
         private BindingList<AbstractConsumer> consumers = new BindingList<AbstractConsumer>();
         [XmlArray("consumers")]
         [XmlArrayItem("decklink", Type = typeof(DecklinkConsumer))]
-        [XmlArrayItem("blocking-decklink", Type = typeof(BlockingDecklinkConsumer))]
         [XmlArrayItem("screen", Type = typeof(ScreenConsumer))]
         [XmlArrayItem("system-audio", Type = typeof(SystemAudioConsumer))]
         [XmlArrayItem("bluefish", Type = typeof(BluefishConsumer))]
         [XmlArrayItem("synchronizing", Type = typeof(SynchronizingConsumer))]
         [XmlArrayItem("newtek-ivga", Type = typeof(NewTekIVGAConsumer))]
+        [XmlArrayItem("stream", Type = typeof(StreamConsumer))]
         public BindingList<AbstractConsumer> Consumers
         {
             get { return this.consumers; }

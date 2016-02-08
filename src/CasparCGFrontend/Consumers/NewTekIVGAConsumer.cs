@@ -30,6 +30,18 @@ namespace CasparCGFrontend
             return channelLayout != "stereo";
         }
 
+        private Boolean provideSync = true;
+        [XmlElement(ElementName = "provide-sync")]
+        public Boolean ProvideSync
+        {
+            get { return this.provideSync; }
+            set { this.provideSync = value; NotifyChanged("ProvideSync"); }
+        }
+        public bool ShouldSerializeProvideSync()
+        {
+            return provideSync != true;
+        }
+
         public override event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         private void NotifyChanged(String info)

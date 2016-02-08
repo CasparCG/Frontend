@@ -95,6 +95,18 @@ namespace CasparCGFrontend
             return videoMode != "720p2500";
         }
 
+        private bool mipmap = false;
+        [XmlElement(ElementName = "mipmap")]
+        public bool Mipmap
+        {
+            get { return this.mipmap; }
+            set { this.mipmap = value; NotifyChanged("Mipmap"); }
+        }
+        public bool ShouldSerializeMipmap()
+        {
+            return mipmap;
+        }
+
         public bool IsOnlyDefaultValues()
         {
             return !ShouldSerializeGenerateThumbnails()
@@ -103,7 +115,8 @@ namespace CasparCGFrontend
                 && !ShouldSerializeVideoGrid()
                 && !ShouldSerializeScanIntervallMillis()
                 && !ShouldSerializeGenerateDelayMillis()
-                && !ShouldSerializeVideoMode();
+                && !ShouldSerializeVideoMode()
+                && !ShouldSerializeMipmap();
         }
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };

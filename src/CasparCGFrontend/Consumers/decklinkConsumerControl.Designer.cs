@@ -37,6 +37,7 @@
             System.Windows.Forms.Label latencyLabel;
             System.Windows.Forms.Label label1;
             System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DecklinkConsumerControl));
             this.decklinkConsumerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.embeddedaudioCheckBox = new System.Windows.Forms.CheckBox();
@@ -49,6 +50,7 @@
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.comboKeyDevice = new System.Windows.Forms.ComboBox();
             bufferdepthLabel = new System.Windows.Forms.Label();
             deviceLabel = new System.Windows.Forms.Label();
             embeddedaudioLabel = new System.Windows.Forms.Label();
@@ -57,6 +59,7 @@
             latencyLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.decklinkConsumerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.availableIDsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +70,7 @@
             bufferdepthLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             bufferdepthLabel.Location = new System.Drawing.Point(25, 10);
             bufferdepthLabel.Name = "bufferdepthLabel";
-            bufferdepthLabel.Size = new System.Drawing.Size(74, 13);
+            bufferdepthLabel.Size = new System.Drawing.Size(87, 19);
             bufferdepthLabel.TabIndex = 1;
             bufferdepthLabel.Text = "Buffer Depth";
             // 
@@ -77,7 +80,7 @@
             deviceLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             deviceLabel.Location = new System.Drawing.Point(49, 38);
             deviceLabel.Name = "deviceLabel";
-            deviceLabel.Size = new System.Drawing.Size(50, 13);
+            deviceLabel.Size = new System.Drawing.Size(61, 19);
             deviceLabel.TabIndex = 3;
             deviceLabel.Text = "Device #";
             // 
@@ -87,7 +90,7 @@
             embeddedaudioLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             embeddedaudioLabel.Location = new System.Drawing.Point(3, 66);
             embeddedaudioLabel.Name = "embeddedaudioLabel";
-            embeddedaudioLabel.Size = new System.Drawing.Size(96, 13);
+            embeddedaudioLabel.Size = new System.Drawing.Size(114, 19);
             embeddedaudioLabel.TabIndex = 5;
             embeddedaudioLabel.Text = "Embedded Audio";
             // 
@@ -97,7 +100,7 @@
             keyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
             keyLabel.Location = new System.Drawing.Point(65, 94);
             keyLabel.Name = "keyLabel";
-            keyLabel.Size = new System.Drawing.Size(34, 13);
+            keyLabel.Size = new System.Drawing.Size(43, 19);
             keyLabel.TabIndex = 7;
             keyLabel.Text = "Keyer";
             // 
@@ -105,9 +108,9 @@
             // 
             keyonlyLabel.AutoSize = true;
             keyonlyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            keyonlyLabel.Location = new System.Drawing.Point(48, 122);
+            keyonlyLabel.Location = new System.Drawing.Point(48, 150);
             keyonlyLabel.Name = "keyonlyLabel";
-            keyonlyLabel.Size = new System.Drawing.Size(51, 13);
+            keyonlyLabel.Size = new System.Drawing.Size(64, 19);
             keyonlyLabel.TabIndex = 9;
             keyonlyLabel.Text = "Key Only";
             // 
@@ -115,9 +118,9 @@
             // 
             latencyLabel.AutoSize = true;
             latencyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            latencyLabel.Location = new System.Drawing.Point(54, 148);
+            latencyLabel.Location = new System.Drawing.Point(54, 176);
             latencyLabel.Name = "latencyLabel";
-            latencyLabel.Size = new System.Drawing.Size(45, 13);
+            latencyLabel.Size = new System.Drawing.Size(56, 19);
             latencyLabel.TabIndex = 11;
             latencyLabel.Text = "Latency";
             // 
@@ -125,9 +128,9 @@
             // 
             label1.AutoSize = true;
             label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label1.Location = new System.Drawing.Point(12, 176);
+            label1.Location = new System.Drawing.Point(12, 204);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(87, 13);
+            label1.Size = new System.Drawing.Size(105, 19);
             label1.TabIndex = 17;
             label1.Text = "Channel Layout";
             // 
@@ -135,11 +138,21 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label2.Location = new System.Drawing.Point(4, 204);
+            label2.Location = new System.Drawing.Point(4, 232);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(95, 13);
+            label2.Size = new System.Drawing.Size(115, 19);
             label2.TabIndex = 20;
             label2.Text = "Custom Allocator";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label3.Location = new System.Drawing.Point(35, 122);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(75, 19);
+            label3.TabIndex = 23;
+            label3.Text = "Key Device";
             // 
             // decklinkConsumerBindingSource
             // 
@@ -154,13 +167,13 @@
             this.embeddedaudioCheckBox.Size = new System.Drawing.Size(104, 24);
             this.embeddedaudioCheckBox.TabIndex = 6;
             this.toolTip1.SetToolTip(this.embeddedaudioCheckBox, "Output audio embedded in the SDI signal. This adds another 1 frame of delay. Plea" +
-        "se also use a buffer depth of atleast 4. Default is false.");
+                    "se also use a buffer depth of atleast 4. Default is false.");
             this.embeddedaudioCheckBox.UseVisualStyleBackColor = true;
             // 
             // keyonlyCheckBox
             // 
             this.keyonlyCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.decklinkConsumerBindingSource, "KeyOnly", true));
-            this.keyonlyCheckBox.Location = new System.Drawing.Point(105, 117);
+            this.keyonlyCheckBox.Location = new System.Drawing.Point(105, 145);
             this.keyonlyCheckBox.Name = "keyonlyCheckBox";
             this.keyonlyCheckBox.Size = new System.Drawing.Size(104, 24);
             this.keyonlyCheckBox.TabIndex = 10;
@@ -174,15 +187,16 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "external",
+            "external_separate_device",
             "internal",
             "default"});
             this.comboBox1.Location = new System.Drawing.Point(105, 91);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 27);
             this.comboBox1.TabIndex = 13;
             this.toolTip1.SetToolTip(this.comboBox1, "Use either the internal or external keyer of the Decklink cards. Depending on the" +
-        " Decklink card, internal key can be used to overlay the output from Caspar with " +
-        "a signal on the Decklink cards input.");
+                    " Decklink card, internal key can be used to overlay the output from Caspar with " +
+                    "a signal on the Decklink cards input.");
             // 
             // comboBox2
             // 
@@ -193,12 +207,12 @@
             "normal",
             "low",
             "default"});
-            this.comboBox2.Location = new System.Drawing.Point(105, 145);
+            this.comboBox2.Location = new System.Drawing.Point(105, 173);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.Size = new System.Drawing.Size(121, 27);
             this.comboBox2.TabIndex = 14;
             this.toolTip1.SetToolTip(this.comboBox2, "Selecting low reduces the channels delay by 1 frame but it can have impact on per" +
-        "formance and spike tolerance. Default is normal.");
+                    "formance and spike tolerance. Default is normal.");
             // 
             // comboBox3
             // 
@@ -218,7 +232,7 @@
             "10"});
             this.comboBox3.Location = new System.Drawing.Point(105, 7);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.Size = new System.Drawing.Size(121, 27);
             this.comboBox3.TabIndex = 15;
             this.toolTip1.SetToolTip(this.comboBox3, resources.GetString("comboBox3.ToolTip"));
             // 
@@ -229,11 +243,11 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(105, 35);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
+            this.comboBox4.Size = new System.Drawing.Size(121, 27);
             this.comboBox4.TabIndex = 16;
             this.toolTip1.SetToolTip(this.comboBox4, "If you have multiple cards or cards supporting more than one output you can selec" +
-        "t the Device number here. Be careful to select a different device for all Deckli" +
-        "nk channels.");
+                    "t the Device number here. Be careful to select a different device for all Deckli" +
+                    "nk channels.");
             // 
             // availableIDsBindingSource
             // 
@@ -252,28 +266,52 @@
             "dolbydigital",
             "smpte",
             "passthru"});
-            this.comboBox5.Location = new System.Drawing.Point(105, 173);
+            this.comboBox5.Location = new System.Drawing.Point(105, 201);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
+            this.comboBox5.Size = new System.Drawing.Size(121, 27);
             this.comboBox5.TabIndex = 18;
             this.toolTip1.SetToolTip(this.comboBox5, "This is the audio channels configuration. Passthru will pass 16 channels of audio" +
-        " withour modifying it. More information: http://casparcg.com/wiki/Content_/_Medi" +
-        "a#Audio Default is Stereo.");
+                    " withour modifying it. More information: http://casparcg.com/wiki/Content_/_Medi" +
+                    "a#Audio Default is Stereo.");
             // 
             // checkBox1
             // 
             this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.decklinkConsumerBindingSource, "CustomAllocator", true));
-            this.checkBox1.Location = new System.Drawing.Point(105, 199);
+            this.checkBox1.Location = new System.Drawing.Point(105, 227);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(104, 24);
             this.checkBox1.TabIndex = 21;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // comboKeyDevice
+            // 
+            this.comboKeyDevice.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.decklinkConsumerBindingSource, "KeyDevice", true));
+            this.comboKeyDevice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboKeyDevice.FormattingEnabled = true;
+            this.comboKeyDevice.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.comboKeyDevice.Location = new System.Drawing.Point(105, 119);
+            this.comboKeyDevice.Name = "comboKeyDevice";
+            this.comboKeyDevice.Size = new System.Drawing.Size(121, 27);
+            this.comboKeyDevice.TabIndex = 22;
+            this.toolTip1.SetToolTip(this.comboKeyDevice, "Specify the decklink card to output the key to when the keyer is set to external_" +
+                    "seperate_device");
+            // 
             // DecklinkConsumerControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.comboKeyDevice);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(label2);
             this.Controls.Add(this.comboBox5);
@@ -290,8 +328,11 @@
             this.Controls.Add(keyonlyLabel);
             this.Controls.Add(this.keyonlyCheckBox);
             this.Controls.Add(latencyLabel);
+            this.Controls.Add(label3);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "DecklinkConsumerControl";
+            this.Size = new System.Drawing.Size(464, 461);
             ((System.ComponentModel.ISupportInitialize)(this.decklinkConsumerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.availableIDsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -312,5 +353,6 @@
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ComboBox comboKeyDevice;
     }
 }

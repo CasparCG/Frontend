@@ -27,7 +27,7 @@ namespace CasparCGFrontend
             set { this.paths = value; NotifyChanged("Paths"); }
         }
 
-        private string logLevel = "debug";
+        private string logLevel = "trace";
         [XmlElement(ElementName = "log-level")]
         public string LogLevel
         {
@@ -36,7 +36,19 @@ namespace CasparCGFrontend
         }
         public bool ShouldSerializeLogLevel()
         {
-            return logLevel != "debug";
+            return logLevel != "trace";
+        }
+
+        private string pipelineTokens = "2";
+        [XmlElement(ElementName = "pipeline-tokens")]
+        public string PipelineTokens
+        {
+            get { return this.pipelineTokens; }
+            set { this.pipelineTokens = value; NotifyChanged("PipelineTokens"); }
+        }
+        public bool ShouldSerializePipelineTokens()
+        {
+            return pipelineTokens != "2";
         }
 
         private Boolean channelGrid = false;
@@ -172,10 +184,6 @@ namespace CasparCGFrontend
                         if (cs.GetType() == typeof(DecklinkConsumer))
                         {
                             availableDecklinkIDs.Remove(((DecklinkConsumer)cs).Device);
-                        }
-                        else if (cs.GetType() == typeof(BlockingDecklinkConsumer))
-                        {
-                            availableDecklinkIDs.Remove(((BlockingDecklinkConsumer)cs).Device);
                         }
                     }
                 }

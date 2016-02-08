@@ -64,6 +64,8 @@
             System.Windows.Forms.Label thumbnailspathLabel;
             System.Windows.Forms.Label label31;
             System.Windows.Forms.Label label45;
+            System.Windows.Forms.Label label46;
+            System.Windows.Forms.Label label47;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -88,54 +90,11 @@
             this.buttonStatus = new System.Windows.Forms.Button();
             this.labelSeparatorLeft = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.tabPageStatus = new System.Windows.Forms.TabPage();
-            this.panelStatus = new System.Windows.Forms.Panel();
-            this.checkboxAutoStart = new System.Windows.Forms.CheckBox();
-            this.buttonStop = new System.Windows.Forms.Button();
-            this.buttonStart = new System.Windows.Forms.Button();
-            this.buttonThumbnails = new System.Windows.Forms.Button();
-            this.labelComponentVersion = new System.Windows.Forms.Label();
-            this.labelUptime = new System.Windows.Forms.Label();
-            this.buttonChannelGrid = new System.Windows.Forms.Button();
-            this.buttonDiag = new System.Windows.Forms.Button();
-            this.labelServerVersion = new System.Windows.Forms.Label();
-            this.buttonRestart = new System.Windows.Forms.Button();
-            this.labelStatus = new System.Windows.Forms.Label();
-            this.tabPagePaths = new System.Windows.Forms.TabPage();
-            this.panelPaths = new System.Windows.Forms.Panel();
-            this.thumbnailspathTextBox = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
-            this.tabPageChannels = new System.Windows.Forms.TabPage();
-            this.panelChannels = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.labelStraightAlphaNote = new System.Windows.Forms.Label();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panelOutput = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPageAdvanced = new System.Windows.Forms.TabPage();
             this.panelAdvanced = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkMipmap = new System.Windows.Forms.CheckBox();
+            this.checkMipmappingDefault = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
@@ -172,6 +131,50 @@
             this.autotranscodeCheckBox = new System.Windows.Forms.CheckBox();
             this.blendmodesCheckBox = new System.Windows.Forms.CheckBox();
             this.channelgridCheckBox = new System.Windows.Forms.CheckBox();
+            this.tabPageStatus = new System.Windows.Forms.TabPage();
+            this.panelStatus = new System.Windows.Forms.Panel();
+            this.checkboxAutoStart = new System.Windows.Forms.CheckBox();
+            this.buttonStop = new System.Windows.Forms.Button();
+            this.buttonStart = new System.Windows.Forms.Button();
+            this.buttonThumbnails = new System.Windows.Forms.Button();
+            this.labelComponentVersion = new System.Windows.Forms.Label();
+            this.labelUptime = new System.Windows.Forms.Label();
+            this.buttonChannelGrid = new System.Windows.Forms.Button();
+            this.buttonDiag = new System.Windows.Forms.Button();
+            this.labelServerVersion = new System.Windows.Forms.Label();
+            this.buttonRestart = new System.Windows.Forms.Button();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.tabPagePaths = new System.Windows.Forms.TabPage();
+            this.panelPaths = new System.Windows.Forms.Panel();
+            this.thumbnailspathTextBox = new System.Windows.Forms.TextBox();
+            this.button14 = new System.Windows.Forms.Button();
+            this.tabPageChannels = new System.Windows.Forms.TabPage();
+            this.panelChannels = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.labelStraightAlphaNote = new System.Windows.Forms.Label();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panelOutput = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tabPageConsole = new System.Windows.Forms.TabPage();
             this.panelConsole = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -187,13 +190,14 @@
             this.statusLabel = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mixerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.thumbnailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mixerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.configurationBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.flashBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.oscBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pathsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.channelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button15 = new System.Windows.Forms.Button();
             datapathLabel = new System.Windows.Forms.Label();
             logpathLabel = new System.Windows.Forms.Label();
             mediapathLabel = new System.Windows.Forms.Label();
@@ -229,18 +233,14 @@
             thumbnailspathLabel = new System.Windows.Forms.Label();
             label31 = new System.Windows.Forms.Label();
             label45 = new System.Windows.Forms.Label();
+            label46 = new System.Windows.Forms.Label();
+            label47 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.tabControl.SuspendLayout();
-            this.tabPageStatus.SuspendLayout();
-            this.panelStatus.SuspendLayout();
-            this.tabPagePaths.SuspendLayout();
-            this.panelPaths.SuspendLayout();
-            this.tabPageChannels.SuspendLayout();
-            this.panelChannels.SuspendLayout();
             this.tabPageAdvanced.SuspendLayout();
             this.panelAdvanced.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -249,17 +249,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPageStatus.SuspendLayout();
+            this.panelStatus.SuspendLayout();
+            this.tabPagePaths.SuspendLayout();
+            this.panelPaths.SuspendLayout();
+            this.tabPageChannels.SuspendLayout();
+            this.panelChannels.SuspendLayout();
             this.tabPageConsole.SuspendLayout();
             this.panelConsole.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // datapathLabel
@@ -446,12 +452,11 @@
             // 
             label28.AutoSize = true;
             label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            label28.Location = new System.Drawing.Point(439, 101);
+            label28.Location = new System.Drawing.Point(416, 99);
             label28.Name = "label28";
-            label28.Size = new System.Drawing.Size(75, 19);
+            label28.Size = new System.Drawing.Size(102, 19);
             label28.TabIndex = 29;
-            label28.Text = "Mixer Type";
-            label28.Visible = false;
+            label28.Text = "Pipeline Tokens";
             // 
             // label29
             // 
@@ -612,6 +617,26 @@
             label45.Size = new System.Drawing.Size(137, 19);
             label45.TabIndex = 53;
             label45.Text = "Chroma Key Support";
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label46.Location = new System.Drawing.Point(188, 99);
+            label46.Name = "label46";
+            label46.Size = new System.Drawing.Size(153, 19);
+            label46.TabIndex = 55;
+            label46.Text = "Mipmapping default on";
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            label47.Location = new System.Drawing.Point(460, 200);
+            label47.Name = "label47";
+            label47.Size = new System.Drawing.Size(60, 19);
+            label47.TabIndex = 56;
+            label47.Text = "Mipmap";
             // 
             // menuStrip1
             // 
@@ -892,9 +917,9 @@
             // 
             // tabControl
             // 
+            this.tabControl.Controls.Add(this.tabPageChannels);
             this.tabControl.Controls.Add(this.tabPageStatus);
             this.tabControl.Controls.Add(this.tabPagePaths);
-            this.tabControl.Controls.Add(this.tabPageChannels);
             this.tabControl.Controls.Add(this.tabPageAdvanced);
             this.tabControl.Controls.Add(this.tabPageConsole);
             this.tabControl.Location = new System.Drawing.Point(-3, -21);
@@ -903,628 +928,6 @@
             this.tabControl.Size = new System.Drawing.Size(758, 617);
             this.tabControl.TabIndex = 38;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
-            // 
-            // tabPageStatus
-            // 
-            this.tabPageStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPageStatus.Controls.Add(this.panelStatus);
-            this.tabPageStatus.Location = new System.Drawing.Point(4, 28);
-            this.tabPageStatus.Name = "tabPageStatus";
-            this.tabPageStatus.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageStatus.Size = new System.Drawing.Size(750, 585);
-            this.tabPageStatus.TabIndex = 0;
-            this.tabPageStatus.Text = "Status";
-            // 
-            // panelStatus
-            // 
-            this.panelStatus.Controls.Add(this.checkboxAutoStart);
-            this.panelStatus.Controls.Add(this.buttonStop);
-            this.panelStatus.Controls.Add(this.buttonStart);
-            this.panelStatus.Controls.Add(this.buttonThumbnails);
-            this.panelStatus.Controls.Add(this.labelComponentVersion);
-            this.panelStatus.Controls.Add(this.labelUptime);
-            this.panelStatus.Controls.Add(this.buttonChannelGrid);
-            this.panelStatus.Controls.Add(this.buttonDiag);
-            this.panelStatus.Controls.Add(this.labelServerVersion);
-            this.panelStatus.Controls.Add(this.buttonRestart);
-            this.panelStatus.Controls.Add(this.labelStatus);
-            this.panelStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelStatus.Location = new System.Drawing.Point(3, 3);
-            this.panelStatus.Name = "panelStatus";
-            this.panelStatus.Size = new System.Drawing.Size(744, 579);
-            this.panelStatus.TabIndex = 31;
-            // 
-            // checkboxAutoStart
-            // 
-            this.checkboxAutoStart.AutoSize = true;
-            this.checkboxAutoStart.Location = new System.Drawing.Point(182, 443);
-            this.checkboxAutoStart.Name = "checkboxAutoStart";
-            this.checkboxAutoStart.Size = new System.Drawing.Size(94, 23);
-            this.checkboxAutoStart.TabIndex = 40;
-            this.checkboxAutoStart.Text = "Auto Start";
-            this.checkboxAutoStart.UseVisualStyleBackColor = true;
-            this.checkboxAutoStart.CheckedChanged += new System.EventHandler(this.checkboxAutoStart_CheckedChanged);
-            // 
-            // buttonStop
-            // 
-            this.buttonStop.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonStop.Enabled = false;
-            this.buttonStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStop.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonStop.Location = new System.Drawing.Point(379, 442);
-            this.buttonStop.Name = "buttonStop";
-            this.buttonStop.Size = new System.Drawing.Size(75, 23);
-            this.buttonStop.TabIndex = 39;
-            this.buttonStop.Text = "Stop";
-            this.toolTip.SetToolTip(this.buttonStop, "Stops the CasparCG server process");
-            this.buttonStop.UseVisualStyleBackColor = true;
-            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
-            // 
-            // buttonStart
-            // 
-            this.buttonStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonStart.Enabled = false;
-            this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStart.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonStart.Location = new System.Drawing.Point(289, 442);
-            this.buttonStart.Name = "buttonStart";
-            this.buttonStart.Size = new System.Drawing.Size(75, 23);
-            this.buttonStart.TabIndex = 38;
-            this.buttonStart.Text = "Start";
-            this.toolTip.SetToolTip(this.buttonStart, "Starts the CasparCG server process");
-            this.buttonStart.UseVisualStyleBackColor = true;
-            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
-            // 
-            // buttonThumbnails
-            // 
-            this.buttonThumbnails.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonThumbnails.Enabled = false;
-            this.buttonThumbnails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonThumbnails.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonThumbnails.Location = new System.Drawing.Point(464, 486);
-            this.buttonThumbnails.Name = "buttonThumbnails";
-            this.buttonThumbnails.Size = new System.Drawing.Size(146, 23);
-            this.buttonThumbnails.TabIndex = 37;
-            this.buttonThumbnails.Text = "Generate Thumbnails";
-            this.toolTip.SetToolTip(this.buttonThumbnails, "Start thumbnail generation");
-            this.buttonThumbnails.UseVisualStyleBackColor = true;
-            this.buttonThumbnails.Click += new System.EventHandler(this.buttonThumbnails_Click);
-            // 
-            // labelComponentVersion
-            // 
-            this.labelComponentVersion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelComponentVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelComponentVersion.Location = new System.Drawing.Point(130, 372);
-            this.labelComponentVersion.Name = "labelComponentVersion";
-            this.labelComponentVersion.Size = new System.Drawing.Size(480, 67);
-            this.labelComponentVersion.TabIndex = 36;
-            this.labelComponentVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // labelUptime
-            // 
-            this.labelUptime.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelUptime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelUptime.Location = new System.Drawing.Point(288, 314);
-            this.labelUptime.Name = "labelUptime";
-            this.labelUptime.Size = new System.Drawing.Size(166, 13);
-            this.labelUptime.TabIndex = 35;
-            this.labelUptime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonChannelGrid
-            // 
-            this.buttonChannelGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonChannelGrid.Enabled = false;
-            this.buttonChannelGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChannelGrid.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonChannelGrid.Location = new System.Drawing.Point(297, 486);
-            this.buttonChannelGrid.Name = "buttonChannelGrid";
-            this.buttonChannelGrid.Size = new System.Drawing.Size(146, 23);
-            this.buttonChannelGrid.TabIndex = 34;
-            this.buttonChannelGrid.Text = "View Channels";
-            this.toolTip.SetToolTip(this.buttonChannelGrid, "Opens up screen consumers for all the configured channels");
-            this.buttonChannelGrid.UseVisualStyleBackColor = true;
-            this.buttonChannelGrid.Click += new System.EventHandler(this.buttonChannelGrid_Click);
-            // 
-            // buttonDiag
-            // 
-            this.buttonDiag.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonDiag.Enabled = false;
-            this.buttonDiag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDiag.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonDiag.Location = new System.Drawing.Point(130, 486);
-            this.buttonDiag.Name = "buttonDiag";
-            this.buttonDiag.Size = new System.Drawing.Size(146, 23);
-            this.buttonDiag.TabIndex = 33;
-            this.buttonDiag.Text = "View Diagnostics";
-            this.toolTip.SetToolTip(this.buttonDiag, "Opens up the diagnostic window. Information on interpreting the graphs can be fou" +
-                    "nd here http://casparcg.com/wiki/CasparCG_Server#Diagnostics");
-            this.buttonDiag.UseVisualStyleBackColor = true;
-            this.buttonDiag.Click += new System.EventHandler(this.buttonDiag_Click);
-            // 
-            // labelServerVersion
-            // 
-            this.labelServerVersion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelServerVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelServerVersion.Location = new System.Drawing.Point(194, 344);
-            this.labelServerVersion.Name = "labelServerVersion";
-            this.labelServerVersion.Size = new System.Drawing.Size(355, 13);
-            this.labelServerVersion.TabIndex = 2;
-            this.labelServerVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonRestart
-            // 
-            this.buttonRestart.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.buttonRestart.Enabled = false;
-            this.buttonRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRestart.ForeColor = System.Drawing.Color.DarkGray;
-            this.buttonRestart.Location = new System.Drawing.Point(474, 442);
-            this.buttonRestart.Name = "buttonRestart";
-            this.buttonRestart.Size = new System.Drawing.Size(75, 23);
-            this.buttonRestart.TabIndex = 1;
-            this.buttonRestart.Text = "Restart";
-            this.toolTip.SetToolTip(this.buttonRestart, "Restarts the CasparCG server process");
-            this.buttonRestart.UseVisualStyleBackColor = true;
-            this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
-            // 
-            // labelStatus
-            // 
-            this.labelStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelStatus.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.labelStatus.Image = global::CasparCGFrontend.Properties.Resources.Disconnection;
-            this.labelStatus.Location = new System.Drawing.Point(283, 22);
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(179, 398);
-            this.labelStatus.TabIndex = 0;
-            this.labelStatus.Text = "\r\n\r\n\r\n\r\n\r\n\r\nOffline";
-            this.labelStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tabPagePaths
-            // 
-            this.tabPagePaths.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPagePaths.Controls.Add(this.panelPaths);
-            this.tabPagePaths.Location = new System.Drawing.Point(4, 28);
-            this.tabPagePaths.Name = "tabPagePaths";
-            this.tabPagePaths.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPagePaths.Size = new System.Drawing.Size(750, 585);
-            this.tabPagePaths.TabIndex = 1;
-            this.tabPagePaths.Text = "Paths";
-            // 
-            // panelPaths
-            // 
-            this.panelPaths.Controls.Add(this.thumbnailspathTextBox);
-            this.panelPaths.Controls.Add(this.button14);
-            this.panelPaths.Controls.Add(thumbnailspathLabel);
-            this.panelPaths.Controls.Add(datapathLabel);
-            this.panelPaths.Controls.Add(this.templatepathTextBox);
-            this.panelPaths.Controls.Add(this.button11);
-            this.panelPaths.Controls.Add(templatepathLabel);
-            this.panelPaths.Controls.Add(this.button10);
-            this.panelPaths.Controls.Add(this.mediapathTextBox);
-            this.panelPaths.Controls.Add(this.button9);
-            this.panelPaths.Controls.Add(this.button8);
-            this.panelPaths.Controls.Add(mediapathLabel);
-            this.panelPaths.Controls.Add(this.logpathTextBox);
-            this.panelPaths.Controls.Add(this.datapathTextBox);
-            this.panelPaths.Controls.Add(logpathLabel);
-            this.panelPaths.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPaths.Location = new System.Drawing.Point(3, 3);
-            this.panelPaths.Name = "panelPaths";
-            this.panelPaths.Size = new System.Drawing.Size(744, 582);
-            this.panelPaths.TabIndex = 0;
-            // 
-            // thumbnailspathTextBox
-            // 
-            this.thumbnailspathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.thumbnailspathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.thumbnailspathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.thumbnailspathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "thumbnailspath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.thumbnailspathTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.thumbnailspathTextBox.Location = new System.Drawing.Point(103, 129);
-            this.thumbnailspathTextBox.Name = "thumbnailspathTextBox";
-            this.thumbnailspathTextBox.Size = new System.Drawing.Size(573, 26);
-            this.thumbnailspathTextBox.TabIndex = 9;
-            this.toolTip.SetToolTip(this.thumbnailspathTextBox, "Directory for storing thumbnails");
-            // 
-            // button14
-            // 
-            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.Color.DarkGray;
-            this.button14.Location = new System.Drawing.Point(687, 130);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(29, 20);
-            this.button14.TabIndex = 14;
-            this.button14.Text = "...";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // tabPageChannels
-            // 
-            this.tabPageChannels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPageChannels.Controls.Add(this.panelChannels);
-            this.tabPageChannels.Location = new System.Drawing.Point(4, 28);
-            this.tabPageChannels.Name = "tabPageChannels";
-            this.tabPageChannels.Size = new System.Drawing.Size(750, 585);
-            this.tabPageChannels.TabIndex = 2;
-            this.tabPageChannels.Text = "Channels";
-            // 
-            // panelChannels
-            // 
-            this.panelChannels.Controls.Add(this.button16);
-            this.panelChannels.Controls.Add(this.labelStraightAlphaNote);
-            this.panelChannels.Controls.Add(this.checkBox6);
-            this.panelChannels.Controls.Add(this.checkBox1);
-            this.panelChannels.Controls.Add(this.button15);
-            this.panelChannels.Controls.Add(this.comboBox5);
-            this.panelChannels.Controls.Add(this.label1);
-            this.panelChannels.Controls.Add(this.button2);
-            this.panelChannels.Controls.Add(this.button1);
-            this.panelChannels.Controls.Add(this.panelOutput);
-            this.panelChannels.Controls.Add(this.label11);
-            this.panelChannels.Controls.Add(this.label12);
-            this.panelChannels.Controls.Add(this.label13);
-            this.panelChannels.Controls.Add(this.label14);
-            this.panelChannels.Controls.Add(this.label15);
-            this.panelChannels.Controls.Add(this.label16);
-            this.panelChannels.Controls.Add(this.label17);
-            this.panelChannels.Controls.Add(this.button7);
-            this.panelChannels.Controls.Add(this.button6);
-            this.panelChannels.Controls.Add(this.label18);
-            this.panelChannels.Controls.Add(this.comboBox1);
-            this.panelChannels.Controls.Add(this.button5);
-            this.panelChannels.Controls.Add(this.button4);
-            this.panelChannels.Controls.Add(this.listBox2);
-            this.panelChannels.Controls.Add(this.button3);
-            this.panelChannels.Controls.Add(this.listBox1);
-            this.panelChannels.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChannels.Location = new System.Drawing.Point(0, 0);
-            this.panelChannels.Name = "panelChannels";
-            this.panelChannels.Size = new System.Drawing.Size(750, 588);
-            this.panelChannels.TabIndex = 8;
-            // 
-            // button16
-            // 
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.Color.DarkGray;
-            this.button16.Location = new System.Drawing.Point(299, 359);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(128, 23);
-            this.button16.TabIndex = 45;
-            this.button16.Text = "Add &NewTek iVGA";
-            this.button16.UseVisualStyleBackColor = false;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // labelStraightAlphaNote
-            // 
-            this.labelStraightAlphaNote.Location = new System.Drawing.Point(152, 143);
-            this.labelStraightAlphaNote.Name = "labelStraightAlphaNote";
-            this.labelStraightAlphaNote.Size = new System.Drawing.Size(140, 83);
-            this.labelStraightAlphaNote.TabIndex = 44;
-            this.labelStraightAlphaNote.Text = "Warning: Without checking Straight Alpha Support under Advanced, this setting wil" +
-                "l be uneffective";
-            this.labelStraightAlphaNote.Visible = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(153, 123);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(145, 23);
-            this.checkBox6.TabIndex = 43;
-            this.checkBox6.Text = "Use Straight Alpha";
-            this.toolTip.SetToolTip(this.checkBox6, "Some equipment might support straight alpha instead of a pre-multiplied against b" +
-                    "lack alpha. Default is false.");
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(299, 388);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(267, 23);
-            this.checkBox1.TabIndex = 42;
-            this.checkBox1.Text = "Synchronize Consumers (experimental)";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // button15
-            // 
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.Color.DarkGray;
-            this.button15.Location = new System.Drawing.Point(299, 334);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(128, 23);
-            this.button15.TabIndex = 41;
-            this.button15.Text = "Add Syn&c Decklink";
-            this.button15.UseVisualStyleBackColor = false;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.channelBindingSource, "ChannelLayout", true));
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "mono",
-            "stereo",
-            "dts",
-            "dolbye",
-            "dolbydigital",
-            "smpte",
-            "passthru"});
-            this.comboBox5.Location = new System.Drawing.Point(153, 96);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(140, 27);
-            this.comboBox5.TabIndex = 40;
-            this.toolTip.SetToolTip(this.comboBox5, "This is the audio channels configuration. Passthru will pass 16 channels of audio" +
-                    " withour modifying it. More information: http://casparcg.com/wiki/Content_/_Medi" +
-                    "a#Audio Default is Stereo.");
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.label1.Location = new System.Drawing.Point(150, 80);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 19);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Channel Layout";
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.DarkGray;
-            this.button2.Location = new System.Drawing.Point(299, 309);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 23);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Add &Bluefish";
-            this.toolTip.SetToolTip(this.button2, "Will output the channel through Bluefish hardware");
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.DarkGray;
-            this.button1.Location = new System.Drawing.Point(299, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 23);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Add System &Audio";
-            this.toolTip.SetToolTip(this.button1, "Audio for the channel will be output through the default sound output as configur" +
-                    "ed in Windows");
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panelOutput
-            // 
-            this.panelOutput.Location = new System.Drawing.Point(465, 55);
-            this.panelOutput.Name = "panelOutput";
-            this.panelOutput.Size = new System.Drawing.Size(261, 240);
-            this.panelOutput.TabIndex = 35;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(460, 14);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 29);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "Step 4";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.label12.Location = new System.Drawing.Point(462, 39);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(107, 19);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Output Options";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(294, 14);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 29);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "Step 3";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(148, 14);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 29);
-            this.label14.TabIndex = 31;
-            this.label14.Text = "Step 2";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(11, 14);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(92, 29);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Step 1";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.label16.Location = new System.Drawing.Point(296, 39);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(114, 19);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "Channel Outputs";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.label17.Location = new System.Drawing.Point(13, 39);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(109, 19);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "Choose Channel";
-            // 
-            // button7
-            // 
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.DarkGray;
-            this.button7.Location = new System.Drawing.Point(433, 234);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(25, 23);
-            this.button7.TabIndex = 27;
-            this.button7.Text = "-";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.DarkGray;
-            this.button6.Location = new System.Drawing.Point(121, 234);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(25, 23);
-            this.button6.TabIndex = 26;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
-            this.label18.Location = new System.Drawing.Point(150, 39);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 19);
-            this.label18.TabIndex = 25;
-            this.label18.Text = "Channel Format";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "PAL",
-            "NTSC",
-            "576p2500",
-            "720p2398",
-            "720p2400",
-            "720p2500",
-            "720p5000",
-            "720p2997",
-            "720p5994",
-            "720p3000",
-            "720p6000",
-            "1080p2398",
-            "1080p2400",
-            "1080i5000",
-            "1080i5994",
-            "1080i6000",
-            "1080p2500",
-            "1080p2997",
-            "1080p3000",
-            "1080p5000",
-            "1080p5994",
-            "1080p6000",
-            "1556p2398",
-            "1556p2400",
-            "1556p2500",
-            "2160p2398",
-            "2160p2400",
-            "2160p2500",
-            "2160p2997",
-            "2160p3000"});
-            this.comboBox1.Location = new System.Drawing.Point(153, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 27);
-            this.comboBox1.TabIndex = 24;
-            this.toolTip.SetToolTip(this.comboBox1, "This is the video format for the output of the channel. Note that 576p2500, 720p2" +
-                    "398, 720p2400,720p2997 and 720p3000 are not support on Decklink hardware. Defaul" +
-                    "t is PAL.");
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // button5
-            // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.DarkGray;
-            this.button5.Location = new System.Drawing.Point(299, 259);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 23);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Add &Screen";
-            this.toolTip.SetToolTip(this.button5, "Will output the channel to your screen");
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.DarkGray;
-            this.button4.Location = new System.Drawing.Point(299, 234);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 23);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "Add &Decklink";
-            this.toolTip.SetToolTip(this.button4, "Will output the channel through Decklink hardware. This should work for most vide" +
-                    "o hardware from Blackmagic, not just the Decklink line of cards.");
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBox2.ForeColor = System.Drawing.Color.White;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 19;
-            this.listBox2.Location = new System.Drawing.Point(299, 55);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(159, 154);
-            this.listBox2.TabIndex = 21;
-            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.DarkGray;
-            this.button3.Location = new System.Drawing.Point(16, 234);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 23);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Add &Channel";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBox1.DisplayMember = "videomode";
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
-            this.listBox1.Location = new System.Drawing.Point(14, 55);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(132, 154);
-            this.listBox1.TabIndex = 19;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // tabPageAdvanced
             // 
@@ -1566,11 +969,14 @@
             this.panelAdvanced.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAdvanced.Location = new System.Drawing.Point(0, 0);
             this.panelAdvanced.Name = "panelAdvanced";
-            this.panelAdvanced.Size = new System.Drawing.Size(750, 588);
+            this.panelAdvanced.Size = new System.Drawing.Size(750, 585);
             this.panelAdvanced.TabIndex = 9;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkMipmap);
+            this.panel1.Controls.Add(this.checkMipmappingDefault);
+            this.panel1.Controls.Add(label46);
             this.panel1.Controls.Add(this.checkBox8);
             this.panel1.Controls.Add(label45);
             this.panel1.Controls.Add(this.checkBox7);
@@ -1613,11 +1019,31 @@
             this.panel1.Controls.Add(label34);
             this.panel1.Controls.Add(this.checkBox4);
             this.panel1.Controls.Add(label35);
+            this.panel1.Controls.Add(label47);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 588);
+            this.panel1.Size = new System.Drawing.Size(750, 585);
             this.panel1.TabIndex = 35;
+            // 
+            // checkMipmap
+            // 
+            this.checkMipmap.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.thumbnailBindingSource, "Mipmap", true));
+            this.checkMipmap.Location = new System.Drawing.Point(507, 195);
+            this.checkMipmap.Name = "checkMipmap";
+            this.checkMipmap.Size = new System.Drawing.Size(20, 24);
+            this.checkMipmap.TabIndex = 57;
+            this.toolTip.SetToolTip(this.checkMipmap, "Automatically generate thumbnails of all media. Default is true.");
+            this.checkMipmap.UseVisualStyleBackColor = true;
+            // 
+            // checkMipmappingDefault
+            // 
+            this.checkMipmappingDefault.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.mixerBindingSource, "MipmappingDefaultOn", true));
+            this.checkMipmappingDefault.Location = new System.Drawing.Point(329, 94);
+            this.checkMipmappingDefault.Name = "checkMipmappingDefault";
+            this.checkMipmappingDefault.Size = new System.Drawing.Size(25, 24);
+            this.checkMipmappingDefault.TabIndex = 54;
+            this.checkMipmappingDefault.UseVisualStyleBackColor = true;
             // 
             // checkBox8
             // 
@@ -1854,18 +1280,39 @@
             // 
             // comboBox6
             // 
-            this.comboBox6.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.configurationBindingSource, "Accelerator", true));
+            this.comboBox6.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.configurationBindingSource, "PipelineTokens", true));
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.FormattingEnabled = true;
             this.comboBox6.Items.AddRange(new object[] {
-            "auto",
-            "gpu",
-            "cpu"});
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25"});
             this.comboBox6.Location = new System.Drawing.Point(508, 98);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 27);
             this.comboBox6.TabIndex = 30;
-            this.comboBox6.Visible = false;
             // 
             // button13
             // 
@@ -2135,6 +1582,622 @@
             this.channelgridCheckBox.TabIndex = 24;
             this.channelgridCheckBox.UseVisualStyleBackColor = true;
             // 
+            // tabPageStatus
+            // 
+            this.tabPageStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPageStatus.Controls.Add(this.panelStatus);
+            this.tabPageStatus.Location = new System.Drawing.Point(4, 28);
+            this.tabPageStatus.Name = "tabPageStatus";
+            this.tabPageStatus.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageStatus.Size = new System.Drawing.Size(750, 585);
+            this.tabPageStatus.TabIndex = 0;
+            this.tabPageStatus.Text = "Status";
+            // 
+            // panelStatus
+            // 
+            this.panelStatus.Controls.Add(this.checkboxAutoStart);
+            this.panelStatus.Controls.Add(this.buttonStop);
+            this.panelStatus.Controls.Add(this.buttonStart);
+            this.panelStatus.Controls.Add(this.buttonThumbnails);
+            this.panelStatus.Controls.Add(this.labelComponentVersion);
+            this.panelStatus.Controls.Add(this.labelUptime);
+            this.panelStatus.Controls.Add(this.buttonChannelGrid);
+            this.panelStatus.Controls.Add(this.buttonDiag);
+            this.panelStatus.Controls.Add(this.labelServerVersion);
+            this.panelStatus.Controls.Add(this.buttonRestart);
+            this.panelStatus.Controls.Add(this.labelStatus);
+            this.panelStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelStatus.Location = new System.Drawing.Point(3, 3);
+            this.panelStatus.Name = "panelStatus";
+            this.panelStatus.Size = new System.Drawing.Size(744, 579);
+            this.panelStatus.TabIndex = 31;
+            // 
+            // checkboxAutoStart
+            // 
+            this.checkboxAutoStart.AutoSize = true;
+            this.checkboxAutoStart.Location = new System.Drawing.Point(182, 443);
+            this.checkboxAutoStart.Name = "checkboxAutoStart";
+            this.checkboxAutoStart.Size = new System.Drawing.Size(94, 23);
+            this.checkboxAutoStart.TabIndex = 40;
+            this.checkboxAutoStart.Text = "Auto Start";
+            this.checkboxAutoStart.UseVisualStyleBackColor = true;
+            this.checkboxAutoStart.CheckedChanged += new System.EventHandler(this.checkboxAutoStart_CheckedChanged);
+            // 
+            // buttonStop
+            // 
+            this.buttonStop.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonStop.Enabled = false;
+            this.buttonStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStop.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonStop.Location = new System.Drawing.Point(379, 442);
+            this.buttonStop.Name = "buttonStop";
+            this.buttonStop.Size = new System.Drawing.Size(75, 23);
+            this.buttonStop.TabIndex = 39;
+            this.buttonStop.Text = "Stop";
+            this.toolTip.SetToolTip(this.buttonStop, "Stops the CasparCG server process");
+            this.buttonStop.UseVisualStyleBackColor = true;
+            this.buttonStop.Click += new System.EventHandler(this.buttonStop_Click);
+            // 
+            // buttonStart
+            // 
+            this.buttonStart.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonStart.Enabled = false;
+            this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStart.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonStart.Location = new System.Drawing.Point(289, 442);
+            this.buttonStart.Name = "buttonStart";
+            this.buttonStart.Size = new System.Drawing.Size(75, 23);
+            this.buttonStart.TabIndex = 38;
+            this.buttonStart.Text = "Start";
+            this.toolTip.SetToolTip(this.buttonStart, "Starts the CasparCG server process");
+            this.buttonStart.UseVisualStyleBackColor = true;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // buttonThumbnails
+            // 
+            this.buttonThumbnails.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonThumbnails.Enabled = false;
+            this.buttonThumbnails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonThumbnails.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonThumbnails.Location = new System.Drawing.Point(464, 486);
+            this.buttonThumbnails.Name = "buttonThumbnails";
+            this.buttonThumbnails.Size = new System.Drawing.Size(146, 23);
+            this.buttonThumbnails.TabIndex = 37;
+            this.buttonThumbnails.Text = "Generate Thumbnails";
+            this.toolTip.SetToolTip(this.buttonThumbnails, "Start thumbnail generation");
+            this.buttonThumbnails.UseVisualStyleBackColor = true;
+            this.buttonThumbnails.Click += new System.EventHandler(this.buttonThumbnails_Click);
+            // 
+            // labelComponentVersion
+            // 
+            this.labelComponentVersion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelComponentVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.labelComponentVersion.Location = new System.Drawing.Point(130, 372);
+            this.labelComponentVersion.Name = "labelComponentVersion";
+            this.labelComponentVersion.Size = new System.Drawing.Size(480, 67);
+            this.labelComponentVersion.TabIndex = 36;
+            this.labelComponentVersion.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // labelUptime
+            // 
+            this.labelUptime.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelUptime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.labelUptime.Location = new System.Drawing.Point(288, 314);
+            this.labelUptime.Name = "labelUptime";
+            this.labelUptime.Size = new System.Drawing.Size(166, 13);
+            this.labelUptime.TabIndex = 35;
+            this.labelUptime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonChannelGrid
+            // 
+            this.buttonChannelGrid.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonChannelGrid.Enabled = false;
+            this.buttonChannelGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonChannelGrid.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonChannelGrid.Location = new System.Drawing.Point(297, 486);
+            this.buttonChannelGrid.Name = "buttonChannelGrid";
+            this.buttonChannelGrid.Size = new System.Drawing.Size(146, 23);
+            this.buttonChannelGrid.TabIndex = 34;
+            this.buttonChannelGrid.Text = "View Channels";
+            this.toolTip.SetToolTip(this.buttonChannelGrid, "Opens up screen consumers for all the configured channels");
+            this.buttonChannelGrid.UseVisualStyleBackColor = true;
+            this.buttonChannelGrid.Click += new System.EventHandler(this.buttonChannelGrid_Click);
+            // 
+            // buttonDiag
+            // 
+            this.buttonDiag.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonDiag.Enabled = false;
+            this.buttonDiag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDiag.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonDiag.Location = new System.Drawing.Point(130, 486);
+            this.buttonDiag.Name = "buttonDiag";
+            this.buttonDiag.Size = new System.Drawing.Size(146, 23);
+            this.buttonDiag.TabIndex = 33;
+            this.buttonDiag.Text = "View Diagnostics";
+            this.toolTip.SetToolTip(this.buttonDiag, "Opens up the diagnostic window. Information on interpreting the graphs can be fou" +
+                    "nd here http://casparcg.com/wiki/CasparCG_Server#Diagnostics");
+            this.buttonDiag.UseVisualStyleBackColor = true;
+            this.buttonDiag.Click += new System.EventHandler(this.buttonDiag_Click);
+            // 
+            // labelServerVersion
+            // 
+            this.labelServerVersion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelServerVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.labelServerVersion.Location = new System.Drawing.Point(194, 344);
+            this.labelServerVersion.Name = "labelServerVersion";
+            this.labelServerVersion.Size = new System.Drawing.Size(355, 13);
+            this.labelServerVersion.TabIndex = 2;
+            this.labelServerVersion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // buttonRestart
+            // 
+            this.buttonRestart.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.buttonRestart.Enabled = false;
+            this.buttonRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRestart.ForeColor = System.Drawing.Color.DarkGray;
+            this.buttonRestart.Location = new System.Drawing.Point(474, 442);
+            this.buttonRestart.Name = "buttonRestart";
+            this.buttonRestart.Size = new System.Drawing.Size(75, 23);
+            this.buttonRestart.TabIndex = 1;
+            this.buttonRestart.Text = "Restart";
+            this.toolTip.SetToolTip(this.buttonRestart, "Restarts the CasparCG server process");
+            this.buttonRestart.UseVisualStyleBackColor = true;
+            this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelStatus.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.labelStatus.Image = global::CasparCGFrontend.Properties.Resources.Disconnection;
+            this.labelStatus.Location = new System.Drawing.Point(283, 22);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(179, 398);
+            this.labelStatus.TabIndex = 0;
+            this.labelStatus.Text = "\r\n\r\n\r\n\r\n\r\n\r\nOffline";
+            this.labelStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPagePaths
+            // 
+            this.tabPagePaths.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPagePaths.Controls.Add(this.panelPaths);
+            this.tabPagePaths.Location = new System.Drawing.Point(4, 28);
+            this.tabPagePaths.Name = "tabPagePaths";
+            this.tabPagePaths.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePaths.Size = new System.Drawing.Size(750, 585);
+            this.tabPagePaths.TabIndex = 1;
+            this.tabPagePaths.Text = "Paths";
+            // 
+            // panelPaths
+            // 
+            this.panelPaths.Controls.Add(this.thumbnailspathTextBox);
+            this.panelPaths.Controls.Add(this.button14);
+            this.panelPaths.Controls.Add(thumbnailspathLabel);
+            this.panelPaths.Controls.Add(datapathLabel);
+            this.panelPaths.Controls.Add(this.templatepathTextBox);
+            this.panelPaths.Controls.Add(this.button11);
+            this.panelPaths.Controls.Add(templatepathLabel);
+            this.panelPaths.Controls.Add(this.button10);
+            this.panelPaths.Controls.Add(this.mediapathTextBox);
+            this.panelPaths.Controls.Add(this.button9);
+            this.panelPaths.Controls.Add(this.button8);
+            this.panelPaths.Controls.Add(mediapathLabel);
+            this.panelPaths.Controls.Add(this.logpathTextBox);
+            this.panelPaths.Controls.Add(this.datapathTextBox);
+            this.panelPaths.Controls.Add(logpathLabel);
+            this.panelPaths.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPaths.Location = new System.Drawing.Point(3, 3);
+            this.panelPaths.Name = "panelPaths";
+            this.panelPaths.Size = new System.Drawing.Size(744, 579);
+            this.panelPaths.TabIndex = 0;
+            // 
+            // thumbnailspathTextBox
+            // 
+            this.thumbnailspathTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.thumbnailspathTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.thumbnailspathTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.thumbnailspathTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pathsBindingSource, "thumbnailspath", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.thumbnailspathTextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.thumbnailspathTextBox.Location = new System.Drawing.Point(103, 129);
+            this.thumbnailspathTextBox.Name = "thumbnailspathTextBox";
+            this.thumbnailspathTextBox.Size = new System.Drawing.Size(573, 26);
+            this.thumbnailspathTextBox.TabIndex = 9;
+            this.toolTip.SetToolTip(this.thumbnailspathTextBox, "Directory for storing thumbnails");
+            // 
+            // button14
+            // 
+            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.Color.DarkGray;
+            this.button14.Location = new System.Drawing.Point(687, 130);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(29, 20);
+            this.button14.TabIndex = 14;
+            this.button14.Text = "...";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // tabPageChannels
+            // 
+            this.tabPageChannels.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPageChannels.Controls.Add(this.panelChannels);
+            this.tabPageChannels.Location = new System.Drawing.Point(4, 28);
+            this.tabPageChannels.Name = "tabPageChannels";
+            this.tabPageChannels.Size = new System.Drawing.Size(750, 585);
+            this.tabPageChannels.TabIndex = 2;
+            this.tabPageChannels.Text = "Channels";
+            // 
+            // panelChannels
+            // 
+            this.panelChannels.Controls.Add(this.button15);
+            this.panelChannels.Controls.Add(this.button16);
+            this.panelChannels.Controls.Add(this.labelStraightAlphaNote);
+            this.panelChannels.Controls.Add(this.checkBox6);
+            this.panelChannels.Controls.Add(this.checkBox1);
+            this.panelChannels.Controls.Add(this.comboBox5);
+            this.panelChannels.Controls.Add(this.label1);
+            this.panelChannels.Controls.Add(this.button2);
+            this.panelChannels.Controls.Add(this.button1);
+            this.panelChannels.Controls.Add(this.panelOutput);
+            this.panelChannels.Controls.Add(this.label11);
+            this.panelChannels.Controls.Add(this.label12);
+            this.panelChannels.Controls.Add(this.label13);
+            this.panelChannels.Controls.Add(this.label14);
+            this.panelChannels.Controls.Add(this.label15);
+            this.panelChannels.Controls.Add(this.label16);
+            this.panelChannels.Controls.Add(this.label17);
+            this.panelChannels.Controls.Add(this.button7);
+            this.panelChannels.Controls.Add(this.button6);
+            this.panelChannels.Controls.Add(this.label18);
+            this.panelChannels.Controls.Add(this.comboBox1);
+            this.panelChannels.Controls.Add(this.button5);
+            this.panelChannels.Controls.Add(this.button4);
+            this.panelChannels.Controls.Add(this.listBox2);
+            this.panelChannels.Controls.Add(this.button3);
+            this.panelChannels.Controls.Add(this.listBox1);
+            this.panelChannels.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChannels.Location = new System.Drawing.Point(0, 0);
+            this.panelChannels.Name = "panelChannels";
+            this.panelChannels.Size = new System.Drawing.Size(750, 585);
+            this.panelChannels.TabIndex = 8;
+            // 
+            // button16
+            // 
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.ForeColor = System.Drawing.Color.DarkGray;
+            this.button16.Location = new System.Drawing.Point(299, 334);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(128, 23);
+            this.button16.TabIndex = 45;
+            this.button16.Text = "Add &NewTek iVGA";
+            this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // labelStraightAlphaNote
+            // 
+            this.labelStraightAlphaNote.Location = new System.Drawing.Point(152, 143);
+            this.labelStraightAlphaNote.Name = "labelStraightAlphaNote";
+            this.labelStraightAlphaNote.Size = new System.Drawing.Size(140, 83);
+            this.labelStraightAlphaNote.TabIndex = 44;
+            this.labelStraightAlphaNote.Text = "Warning: Without checking Straight Alpha Support under Advanced, this setting wil" +
+                "l be uneffective";
+            this.labelStraightAlphaNote.Visible = false;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(153, 123);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(145, 23);
+            this.checkBox6.TabIndex = 43;
+            this.checkBox6.Text = "Use Straight Alpha";
+            this.toolTip.SetToolTip(this.checkBox6, "Some equipment might support straight alpha instead of a pre-multiplied against b" +
+                    "lack alpha. Default is false.");
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(299, 388);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(267, 23);
+            this.checkBox1.TabIndex = 42;
+            this.checkBox1.Text = "Synchronize Consumers (experimental)";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DataBindings.Add(new System.Windows.Forms.Binding("SelectedItem", this.channelBindingSource, "ChannelLayout", true));
+            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "mono",
+            "stereo",
+            "dts",
+            "dolbye",
+            "dolbydigital",
+            "smpte",
+            "passthru"});
+            this.comboBox5.Location = new System.Drawing.Point(153, 96);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(140, 27);
+            this.comboBox5.TabIndex = 40;
+            this.toolTip.SetToolTip(this.comboBox5, "This is the audio channels configuration. Passthru will pass 16 channels of audio" +
+                    " withour modifying it. More information: http://casparcg.com/wiki/Content_/_Medi" +
+                    "a#Audio Default is Stereo.");
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.label1.Location = new System.Drawing.Point(150, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 19);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Channel Layout";
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.DarkGray;
+            this.button2.Location = new System.Drawing.Point(299, 309);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 23);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Add &Bluefish";
+            this.toolTip.SetToolTip(this.button2, "Will output the channel through Bluefish hardware");
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.DarkGray;
+            this.button1.Location = new System.Drawing.Point(299, 284);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 23);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "Add System &Audio";
+            this.toolTip.SetToolTip(this.button1, "Audio for the channel will be output through the default sound output as configur" +
+                    "ed in Windows");
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panelOutput
+            // 
+            this.panelOutput.Location = new System.Drawing.Point(465, 55);
+            this.panelOutput.Name = "panelOutput";
+            this.panelOutput.Size = new System.Drawing.Size(261, 280);
+            this.panelOutput.TabIndex = 35;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(460, 14);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(92, 29);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Step 4";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.label12.Location = new System.Drawing.Point(462, 39);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(107, 19);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Output Options";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(294, 14);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(92, 29);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Step 3";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(148, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(92, 29);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Step 2";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(11, 14);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(92, 29);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Step 1";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.label16.Location = new System.Drawing.Point(296, 39);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(114, 19);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "Channel Outputs";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.label17.Location = new System.Drawing.Point(13, 39);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(109, 19);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "Choose Channel";
+            // 
+            // button7
+            // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.DarkGray;
+            this.button7.Location = new System.Drawing.Point(433, 234);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(25, 23);
+            this.button7.TabIndex = 27;
+            this.button7.Text = "-";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button6
+            // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.DarkGray;
+            this.button6.Location = new System.Drawing.Point(121, 234);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(25, 23);
+            this.button6.TabIndex = 26;
+            this.button6.Text = "-";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(190)))), ((int)(((byte)(190)))));
+            this.label18.Location = new System.Drawing.Point(150, 39);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(107, 19);
+            this.label18.TabIndex = 25;
+            this.label18.Text = "Channel Format";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "PAL",
+            "NTSC",
+            "576p2500",
+            "720p2398",
+            "720p2400",
+            "720p2500",
+            "720p5000",
+            "720p2997",
+            "720p5994",
+            "720p3000",
+            "720p6000",
+            "1080p2398",
+            "1080p2400",
+            "1080i5000",
+            "1080i5994",
+            "1080i6000",
+            "1080p2500",
+            "1080p2997",
+            "1080p3000",
+            "1080p5000",
+            "1080p5994",
+            "1080p6000",
+            "1556p2398",
+            "1556p2400",
+            "1556p2500",
+            "dci1080p2398",
+            "dci1080p2400",
+            "dci1080p2500",
+            "2160p2398",
+            "2160p2400",
+            "2160p2500",
+            "2160p2997",
+            "2160p3000",
+            "dci2160p2398",
+            "dci2160p2400",
+            "dci2160p2500"});
+            this.comboBox1.Location = new System.Drawing.Point(153, 55);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(140, 27);
+            this.comboBox1.TabIndex = 24;
+            this.toolTip.SetToolTip(this.comboBox1, "This is the video format for the output of the channel. Note that 576p2500, 720p2" +
+                    "398, 720p2400,720p2997 and 720p3000 are not support on Decklink hardware. Defaul" +
+                    "t is PAL.");
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.DarkGray;
+            this.button5.Location = new System.Drawing.Point(299, 259);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(128, 23);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "Add &Screen";
+            this.toolTip.SetToolTip(this.button5, "Will output the channel to your screen");
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.DarkGray;
+            this.button4.Location = new System.Drawing.Point(299, 234);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 23);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "Add &Decklink";
+            this.toolTip.SetToolTip(this.button4, "Will output the channel through Decklink hardware. This should work for most vide" +
+                    "o hardware from Blackmagic, not just the Decklink line of cards.");
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox2.ForeColor = System.Drawing.Color.White;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 19;
+            this.listBox2.Location = new System.Drawing.Point(299, 55);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(159, 154);
+            this.listBox2.TabIndex = 21;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.DarkGray;
+            this.button3.Location = new System.Drawing.Point(16, 234);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 23);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Add &Channel";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox1.DisplayMember = "videomode";
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 19;
+            this.listBox1.Location = new System.Drawing.Point(14, 55);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(132, 154);
+            this.listBox1.TabIndex = 19;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
             // tabPageConsole
             // 
             this.tabPageConsole.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
@@ -2267,21 +2330,13 @@
             this.panel2.Size = new System.Drawing.Size(922, 22);
             this.panel2.TabIndex = 15;
             // 
-            // pathsBindingSource
+            // thumbnailBindingSource
             // 
-            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
-            // 
-            // channelBindingSource
-            // 
-            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
+            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
             // 
             // mixerBindingSource
             // 
             this.mixerBindingSource.DataSource = typeof(CasparCGFrontend.Mixer);
-            // 
-            // thumbnailBindingSource
-            // 
-            this.thumbnailBindingSource.DataSource = typeof(CasparCGFrontend.Thumbnails);
             // 
             // configurationBindingSource
             // 
@@ -2294,6 +2349,26 @@
             // oscBindingSource
             // 
             this.oscBindingSource.DataSource = typeof(CasparCGFrontend.Osc);
+            // 
+            // pathsBindingSource
+            // 
+            this.pathsBindingSource.DataSource = typeof(CasparCGFrontend.Paths);
+            // 
+            // channelBindingSource
+            // 
+            this.channelBindingSource.DataSource = typeof(CasparCGFrontend.Channel);
+            // 
+            // button15
+            // 
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.ForeColor = System.Drawing.Color.DarkGray;
+            this.button15.Location = new System.Drawing.Point(299, 359);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(128, 23);
+            this.button15.TabIndex = 46;
+            this.button15.Text = "Add Stream";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // MainForm
             // 
@@ -2324,15 +2399,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
-            this.tabPageStatus.ResumeLayout(false);
-            this.panelStatus.ResumeLayout(false);
-            this.panelStatus.PerformLayout();
-            this.tabPagePaths.ResumeLayout(false);
-            this.panelPaths.ResumeLayout(false);
-            this.panelPaths.PerformLayout();
-            this.tabPageChannels.ResumeLayout(false);
-            this.panelChannels.ResumeLayout(false);
-            this.panelChannels.PerformLayout();
             this.tabPageAdvanced.ResumeLayout(false);
             this.panelAdvanced.ResumeLayout(false);
             this.panelAdvanced.PerformLayout();
@@ -2343,18 +2409,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabPageStatus.ResumeLayout(false);
+            this.panelStatus.ResumeLayout(false);
+            this.panelStatus.PerformLayout();
+            this.tabPagePaths.ResumeLayout(false);
+            this.panelPaths.ResumeLayout(false);
+            this.panelPaths.PerformLayout();
+            this.tabPageChannels.ResumeLayout(false);
+            this.panelChannels.ResumeLayout(false);
+            this.panelChannels.PerformLayout();
             this.tabPageConsole.ResumeLayout(false);
             this.panelConsole.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.thumbnailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mixerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.configurationBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flashBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.oscBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pathsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.channelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2415,12 +2490,8 @@
         private System.Windows.Forms.Button buttonStatus;
         private System.Windows.Forms.Label labelSeparatorRight;
         private System.Windows.Forms.Label labelSeparatorLeft;
-        private System.Windows.Forms.Panel panelStatus;
-        private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Panel panelConsole;
         private System.Windows.Forms.Button buttonConsole;
-        private System.Windows.Forms.Button buttonRestart;
-        private System.Windows.Forms.Label labelServerVersion;
         private System.Windows.Forms.TextBox textBoxLog;
         private System.Windows.Forms.TextBox textBoxCommand;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;
@@ -2431,12 +2502,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
-        private System.Windows.Forms.Button buttonChannelGrid;
-        private System.Windows.Forms.Button buttonDiag;
-        private System.Windows.Forms.Label labelUptime;
-        private System.Windows.Forms.Label labelComponentVersion;
         private System.Windows.Forms.Label labelSpacerBottom;
-        private System.Windows.Forms.Button buttonThumbnails;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPageStatus;
         private System.Windows.Forms.TabPage tabPagePaths;
@@ -2477,7 +2543,6 @@
         public System.Windows.Forms.CheckBox checkBox4;
         public System.Windows.Forms.TextBox thumbnailspathTextBox;
         public System.Windows.Forms.Button button14;
-        public System.Windows.Forms.Button button15;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox6;
         public System.Windows.Forms.CheckBox checkBox8;
@@ -2488,9 +2553,21 @@
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Button button16;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Panel panelStatus;
+        private System.Windows.Forms.CheckBox checkboxAutoStart;
         private System.Windows.Forms.Button buttonStop;
         private System.Windows.Forms.Button buttonStart;
-        private System.Windows.Forms.CheckBox checkboxAutoStart;
+        private System.Windows.Forms.Button buttonThumbnails;
+        private System.Windows.Forms.Label labelComponentVersion;
+        private System.Windows.Forms.Label labelUptime;
+        private System.Windows.Forms.Button buttonChannelGrid;
+        private System.Windows.Forms.Button buttonDiag;
+        private System.Windows.Forms.Label labelServerVersion;
+        private System.Windows.Forms.Button buttonRestart;
+        private System.Windows.Forms.Label labelStatus;
+        public System.Windows.Forms.CheckBox checkMipmappingDefault;
+        public System.Windows.Forms.CheckBox checkMipmap;
+        public System.Windows.Forms.Button button15;
     }
 }
 

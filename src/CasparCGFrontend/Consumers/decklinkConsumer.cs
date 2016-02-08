@@ -75,6 +75,18 @@ namespace CasparCGFrontend
             return keyer != "external";
         }
 
+        private string keyDevice = "2";
+        [XmlElement(ElementName = "key-device")]
+        public string KeyDevice
+        {
+            get { return this.keyDevice; }
+            set { this.keyDevice = value; NotifyChanged("KeyDevice"); }
+        }
+        public bool ShouldSerializeKeyDevice()
+        {
+            return keyDevice != "2";
+        }
+
         private Boolean keyonly = false;
         [XmlElement(ElementName = "key-only")]
         public Boolean KeyOnly

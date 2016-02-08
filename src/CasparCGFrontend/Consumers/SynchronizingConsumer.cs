@@ -15,7 +15,6 @@ namespace CasparCGFrontend
 
         private BindingList<AbstractConsumer> consumers = new BindingList<AbstractConsumer>();
         [XmlElementAttribute("decklink", Type = typeof(DecklinkConsumer))]
-        [XmlElementAttribute("blocking-decklink", Type = typeof(BlockingDecklinkConsumer))]
         [XmlElementAttribute("screen", Type = typeof(ScreenConsumer))]
         [XmlElementAttribute("system-audio", Type = typeof(SystemAudioConsumer))]
         [XmlElementAttribute("bluefish", Type = typeof(BluefishConsumer))]
