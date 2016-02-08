@@ -55,6 +55,7 @@ namespace CasparCGFrontend
             this.Text += " " + Settings.Default.Version;
 
             this.tabControl.SelectedTab = this.tabPageStatus;
+            this.checkboxAutoStart.Checked = Settings.Default.AutoStartServer;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -801,6 +802,12 @@ namespace CasparCGFrontend
         {
             if (this.tabControl.SelectedTab == this.tabPageChannels)
                 checkStraightAlphaInconsistency();
+        }
+
+        private void checkboxAutoStart_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.Default["AutoStartServer"] = checkboxAutoStart.Checked;
+            Settings.Default.Save();
         }
     }
 }
