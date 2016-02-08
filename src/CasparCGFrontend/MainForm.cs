@@ -71,7 +71,14 @@ namespace CasparCGFrontend
             this.WireBindings();
             this.Updatechannel();
 
-            StartServer();
+            if (Settings.Default.AutoStartServer)
+            {
+                StartServer();
+            }
+            else
+            {
+                buttonStart.Enabled = true;
+            }
         }
 
         private void DockControls()
