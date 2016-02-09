@@ -25,7 +25,7 @@ namespace CasparCGFrontend.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("../../../../Server/casparcg.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("casparcg.exe")]
         public string ServerPath {
             get {
                 return ((string)(this["ServerPath"]));
