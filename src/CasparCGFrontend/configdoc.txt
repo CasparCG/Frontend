@@ -1,13 +1,15 @@
 ﻿
 
-<log-level>        debug [trace|debug|info|warning|error]</log-level>
+<log-level>        trace [trace|debug|info|warning|error]</log-level>
 <channel-grid>     false [true|false]</channel-grid>
 <auto-deinterlace> true  [true|false]</auto-deinterlace>
-<auto-transcode>   true [true|false]</auto-transcode>
+<auto-transcode>   true  [true|false]</auto-transcode>
+<pipeline-tokens>  2     [1..]       </pipeline-tokens>
 <mixer>
-    <blend-modes>    false  [true|false]</blend-modes>
-    <straight-alpha> false  [true|false]</straight-alpha>
-    <chroma-key>     false  [true|false]</chroma-key>
+    <blend-modes>          false [true|false]</blend-modes>
+    <straight-alpha>       false [true|false]</straight-alpha>
+    <chroma-key>           false [true|false]</chroma-key>
+    <mipmapping_default_on>false [true|false]</mipmapping_default_on>
 </mixer>
 <template-hosts>
     <template-host>
@@ -20,21 +22,37 @@
 <flash>
     <buffer-depth>auto [auto|1..]</buffer-depth>
 </flash>
+<thumbnails>
+	<generate-thumbnails>true [true|false]</generate-thumbnails>
+	<width>256</width>
+	<height>144</height>
+	<video-grid>2</video-grid>
+	<scan-interval-millis>5000</scan-interval-millis>
+	<generate-delay-millis>2000</generate-delay-millis>
+	<video-mode>720p2500</video-mode>
+	<mipmap>false</mipmap>
+</thumbnails>
 <channels>
     <channel>
-        <video-mode> PAL [PAL|NTSC|576p2500|720p2398|720p2400|720p2500|720p5000|720p2997|720p5994|720p3000|720p6000|1080p2398|1080p2400|1080i5000|1080i5994|1080i6000|1080p2500|1080p2997|1080p3000|1080p5000|1080p5994|1080p6000|1556p2398|1556p2400|1556p2500|2160p2398|2160p2400|2160p2500|2160p2997|2160p3000] </video-mode>
+        <video-mode> PAL [PAL|NTSC|576p2500|720p2398|720p2400|720p2500|720p5000|720p2997|720p5994|720p3000|720p6000|1080p2398|1080p2400|1080i5000|1080i5994|1080i6000|1080p2500|1080p2997|1080p3000|1080p5000|1080p5994|1080p6000|1556p2398|1556p2400|1556p2500|dci1080p2398|dci1080p2400|dci1080p2500|2160p2398|2160p2400|2160p2500|2160p2997|2160p3000|dci2160p2398|dci2160p2400|dci2160p2500] </video-mode>
+        <channel-layout>stereo [mono|stereo|dts|dolbye|dolbydigital|smpte|passthru]</channel-layout>
+        <straight-alpha-output>false [true|false]</straight-alpha-output>
         <consumers>
             <decklink>
                 <device>[1..]</device>
+                <key-device>device + 1 [1..]</key-device>
                 <embedded-audio>false [true|false]</embedded-audio>
+                <channel-layout>stereo [mono|stereo|dts|dolbye|dolbydigital|smpte|passthru]</channel-layout>
                 <latency>normal [normal|low|default]</latency>
-                <keyer>external [external|internal|default]</keyer>
+                <keyer>external [external|external_separate_device|internal|default]</keyer>
                 <key-only>false [true|false]</key-only>
                 <buffer-depth>3 [1..]</buffer-depth>
+                <custom-allocator>true [true|false]</custom-allocator>
             </decklink>
             <bluefish>
                 <device>[1..]</device>
                 <embedded-audio>false [true|false]</embedded-audio>
+                <channel-layout>stereo [mono|stereo|dts|dolbye|dolbydigital|smpte|passthru]</channel-layout>
                 <key-only>false [true|false]</key-only>
             </bluefish>
             <system-audio></system-audio>
@@ -45,33 +63,26 @@
                 <windowed>false [true|false]</windowed>
                 <key-only>false [true|false]</key-only>
                 <auto-deinterlace>true [true|false]</auto-deinterlace>
-                <vsync>fasle [true|false]</vsync>
+                <vsync>false [true|false]</vsync>
                 <name>[Screen Consumer]</name>
                 <borderless>false [true|false]</borderless>
             </screen>
-            <blocking-decklink>
-                <device>[1..]</device>
-                <embedded-audio>false [true|false]</embedded-audio>
-                <keyer>external [external|internal|default]</keyer>
-                <key-only>false [true|false]</key-only>
-            </blocking-decklink>
             <newtek-ivga>
               <channel-layout>stereo [mono|stereo|dts|dolbye|dolbydigital|smpte|passthru]</channel-layout>
+              <provide-sync>true [true|false]</provide-sync>
             </newtek-ivga>
             <file>
                 <path></path>
                 <vcodec>libx264 [libx264|qtrle]</vcodec>
                 <separate-key>false [true|false]</separate-key>
             </file>
+            <stream>
+                <path></path>
+                <args></args>
+            </stream>
         </consumers>
     </channel>
 </channels>
-<controllers>
-	<tcp>
-		<port>5250</port>
-		<protocol>AMCP</protocol>
-	</tcp>
-</controllers>
 <osc>
 	<default-port>6250</default-port>
 	<predefined-clients>

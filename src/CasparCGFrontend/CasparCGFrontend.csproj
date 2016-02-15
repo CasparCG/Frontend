@@ -83,13 +83,6 @@
     <Compile Include="Consumers\ConsumerControlBase.designer.cs">
       <DependentUpon>ConsumerControlBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consumers\BlockingDecklinkConsumer.cs" />
-    <Compile Include="Consumers\BlockingDecklinkConsumerControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Consumers\BlockingDecklinkConsumerControl.designer.cs">
-      <DependentUpon>BlockingDecklinkConsumerControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Consumers\NewTekIVGAConsumerControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +90,13 @@
       <DependentUpon>NewTekIVGAConsumerControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Consumers\NewTekIVGAConsumer.cs" />
+    <Compile Include="Consumers\StreamConsumer.cs" />
+    <Compile Include="Consumers\StreamConsumerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Consumers\StreamConsumerControl.designer.cs">
+      <DependentUpon>StreamConsumerControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consumers\SynchronizingConsumer.cs" />
     <Compile Include="Consumers\DecklinkConsumer.cs" />
     <Compile Include="Consumers\DecklinkConsumerControl.cs">
@@ -143,9 +143,6 @@
     <EmbeddedResource Include="Consumers\ConsumerControlBase.resx">
       <DependentUpon>ConsumerControlBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consumers\BlockingDecklinkConsumerControl.resx">
-      <DependentUpon>BlockingDecklinkConsumerControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Consumers\NewTekIVGAConsumerControl.resx">
       <DependentUpon>NewTekIVGAConsumerControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consumers\ScreenConsumerControl.resx">
       <DependentUpon>ScreenConsumerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consumers\StreamConsumerControl.resx">
+      <DependentUpon>StreamConsumerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -174,7 +174,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\DataSources\BlockingDecklinkConsumer.datasource" />
     <None Include="Properties\DataSources\BluefishConsumer.datasource" />
     <None Include="Properties\DataSources\Channel.datasource" />
     <None Include="Properties\DataSources\configuration.datasource" />

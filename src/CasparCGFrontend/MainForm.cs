@@ -55,6 +55,7 @@ namespace CasparCGFrontend
             this.Text += " " + Settings.Default.Version;
 
             this.tabControl.SelectedTab = this.tabPageStatus;
+            this.checkboxAutoStart.Checked = Settings.Default.AutoStartServer;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -71,7 +72,14 @@ namespace CasparCGFrontend
             this.WireBindings();
             this.Updatechannel();
 
-            StartServer();
+            if (Settings.Default.AutoStartServer)
+            {
+                StartServer();
+            }
+            else
+            {
+                buttonStart.Enabled = true;
+            }
         }
 
         private void DockControls()
@@ -263,6 +271,8 @@ namespace CasparCGFrontend
 
                     this.statusLabel.Text = "Ready";
 
+                    this.buttonStart.Enabled = false;
+                    this.buttonStop.Enabled = true;
                     this.buttonRestart.Enabled = true;
                     this.buttonChannelGrid.Enabled = true;
                     this.buttonDiag.Enabled = true;
@@ -278,6 +288,8 @@ namespace CasparCGFrontend
                     this.statusLabel.Text = "";
                     this.labelUptime.Text = "";
 
+                    this.buttonStart.Enabled = true;
+                    this.buttonStop.Enabled = false;
                     this.buttonRestart.Enabled = false;
                     this.buttonChannelGrid.Enabled = false;
                     this.buttonDiag.Enabled = false;
@@ -376,12 +388,12 @@ namespace CasparCGFrontend
                     }
                     else if (listBox2.SelectedItem.GetType() == typeof(BluefishConsumer))
                     {
-                        this.consumerEditorControl = new BluefishConsumerControl(listBox2.SelectedItem as BluefishConsumer,config.AvailableBluefishIDs);
+                        this.consumerEditorControl = new BluefishConsumerControl(listBox2.SelectedItem as BluefishConsumer, config.AvailableBluefishIDs);
                         this.panelOutput.Controls.Add(consumerEditorControl);
                     }
-                    else if (listBox2.SelectedItem.GetType() == typeof(BlockingDecklinkConsumer))
+                    else if (listBox2.SelectedItem.GetType() == typeof(StreamConsumer))
                     {
-                        this.consumerEditorControl = new BlockingDecklinkConsumerControl(listBox2.SelectedItem as BlockingDecklinkConsumer, config.AvailableDecklinkIDs);
+                        this.consumerEditorControl = new StreamConsumerControl(listBox2.SelectedItem as StreamConsumer);
                         this.panelOutput.Controls.Add(consumerEditorControl);
                     }
                     else if (listBox2.SelectedItem.GetType() == typeof(NewTekIVGAConsumer))
@@ -406,8 +418,8 @@ namespace CasparCGFrontend
                 this.button7.Enabled = true;
                 this.button1.Enabled = true;
                 this.button2.Enabled = true;
-                this.button15.Enabled = true;
                 this.button16.Enabled = true;
+                this.button15.Enabled = true;
                 ignoreEvents = true;
                 this.checkBox1.Checked = false;
                 ignoreEvents = false;
@@ -426,8 +438,8 @@ namespace CasparCGFrontend
                 this.button7.Enabled = false;
                 this.button1.Enabled = false;
                 this.button2.Enabled = false;
-                this.button15.Enabled = false;
                 this.button16.Enabled = false;
+                this.button15.Enabled = false;
                 this.checkBox1.Checked = false;
                 this.listBox2.DataSource = null;
                 this.comboBox1.SelectedItem = null;
@@ -453,16 +465,16 @@ namespace CasparCGFrontend
             RefreshConsumerPanel();
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void button16_Click(object sender, EventArgs e)
         {
-            (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new BlockingDecklinkConsumer(config.AvailableDecklinkIDs));
+            (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new NewTekIVGAConsumer());
 
             RefreshConsumerPanel();
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
         {
-            (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new NewTekIVGAConsumer());
+            (listBox2.DataSource as BindingList<AbstractConsumer>).Add(new StreamConsumer());
 
             RefreshConsumerPanel();
         }
@@ -649,6 +661,22 @@ namespace CasparCGFrontend
             StartServer();
         }
 
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            if (CheckForSave())
+                return;
+            
+            this.textBoxLog.Clear();
+
+            StartServer();
+        }
+
+        private void buttonStop_Click(object sender, EventArgs e)
+        {
+            StopServer();
+            UpdateStatus(false);
+        }
+
         private void buttonDiag_Click(object sender, EventArgs e)
         {
             this.process.StandardInput.Write("DIAG\r\n");
@@ -774,6 +802,12 @@ namespace CasparCGFrontend
         {
             if (this.tabControl.SelectedTab == this.tabPageChannels)
                 checkStraightAlphaInconsistency();
+        }
+
+        private void checkboxAutoStart_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.Default["AutoStartServer"] = checkboxAutoStart.Checked;
+            Settings.Default.Save();
         }
     }
 }
