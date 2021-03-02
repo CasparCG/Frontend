@@ -21,9 +21,22 @@ namespace CasparCGFrontend
             set { this.bufferDepth = value; NotifyChanged("BufferDepth"); }
         }
 
+        private Boolean? enabled = null;
+        [XmlElement(ElementName = "enabled")]
+        public Boolean Enabled
+        {
+            get { return this.enabled ?? true; }
+            set { this.enabled = value; NotifyChanged("Enabled"); }
+        }
+
+        public bool ShouldSerializEnabled()
+        {
+            return this.enabled != null;
+        }
+
         public bool IsOnlyDefaultValues()
         {
-            return bufferDepth == "auto";
+            return bufferDepth == "auto" && (this.enabled == null || this.enabled == false);
         }
 
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
